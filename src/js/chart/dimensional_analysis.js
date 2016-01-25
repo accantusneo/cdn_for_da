@@ -177,16 +177,6 @@ TimeSeries.dimensionalAnalysis = (function(){
 
         TimeSeries.mediator.publish("createTooltip", tooltip_options, "dimensional_analysis_chart_tooltip");
 
-        modal_div.id = chart_selector + "_dimensional_analysis_modal";
-        modal_div.className = "modal-body-content";
-
-        series_div.id = chart_selector + "_dimensional_analysis_series";
-        series_div.className = "series-selection-group";
-
-        chart_holder.id = chart_selector + "_dimensional_analysis_holder";
-        chart_holder.style.clear = "both";
-        modal_div.appendChild(chart_holder);
-
         daOnDrop(target_selector);
 
         reset_all_button = createResetAllButton();
@@ -383,7 +373,6 @@ TimeSeries.dimensionalAnalysis = (function(){
         output.weekday = da_weekday_query.Exec();
         output.week = da_week_query.Exec();
         output.quarter = da_quarter_query.Exec();
-        console.log("output",output);
 
         // if(typeof selected_series != 'object') {
             query.setQuery(options.selector+"_DA","DA_year",{"dimension":[{'year':function(d){

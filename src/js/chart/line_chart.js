@@ -101,14 +101,9 @@ TimeSeries.lineChartFunctions = (function() {
         options.chartColor = validateArrayOfColor(options, "chartColor");
         updateFeatureToChartMapping(options);
 
-        if (TimeSeries.chartToFeatureMapping[options.selector].length !== 0/* && TimeSeries.chart_options.menu*/) {
-            TimeSeries.mediator.publish("addChartMenuIcon",options);
-        }
-
         TimeSeries.mediator.publish("addChartOverlay",options.selector);
         TimeSeries.chart_options[options.selector] = {};
         TimeSeries.chart_options[options.selector] = options;
-        TimeSeries.chart_configs[options.selector].refresh_process_initiated = false;
         TimeSeries.chart_status[options.selector] = TimeSeries.chart_status[options.selector] || {status:false, onComplete:[] };
 
         //Done for managing features applied on a series.
@@ -123,8 +118,6 @@ TimeSeries.lineChartFunctions = (function() {
         }
         series = options.metricsColumnName;
         series_length = series.length;
-        TimeSeries.chart_configs[options.selector].smoothingCheckboxState = [];
-        TimeSeries.chart_configs[options.selector].anomalyCheckboxState = [];
         for (i = 0; i < series_length ;i++) {
             if (typeof series[i] === "object") {
                 featuresApplied[series[i].metric.replace(/[\(\)\!\@\#\$\%\^\&\*\+\=\[\]\{\}\;\'\:\"\|, \.]*/gi,"") + "_" + series[i].seriesName.replace(/[\(\)\!\@\#\$\%\^\&\*\+\=\[\]\{\}\;\'\:\"\|, \.]*/gi,"")] = [];
@@ -140,127 +133,18 @@ TimeSeries.lineChartFunctions = (function() {
         }
 
         parameters.options = options;
-        // console.log();
-        // renderLineChart(options,options.globalData);
-        if (options.enableLiveData) {
-            TimeSeries.mediator.publish("initLiveData", options.selector+"_cfr", options);
-        }
-
         chart_div = document.getElementById(options.selector);
         chart_div.style.outline = "none";
 
-        if (options.showChartBorder) {
-            // console.log(options.showChartBorder, " >>>>");
-            cogwheel = chart_div.querySelector(".cogwheelContainer");
-            chart_div.addEventListener("mouseover", function () {
-                // impact_switch = chart_div.querySelector(".impactSwitchContainer");
-                // chart_div.style.border = "1px solid #f3f3f3";
-                chart_div.style["box-shadow"] = "0px 0px 7px lightgray";
-                chart_div.style["border-radius"] = "3px";
-                if(cogwheel) {
-                    cogwheel.style.opacity = 1;
-                    cogwheel.style.zIndex = 9;
-                }
-            });
-            chart_div.addEventListener("mouseout", function () {
-                chart_div.style["box-shadow"] = "none";
-            });
-        }
-
         if (!options.isGlobalData) {
             TimeSeries.mediator.publish("parseData", options.data, "lineChartCallBack", parameters, callbacks, feature);//[{function_name:"initializeLiveData",attribute:[parameters]}]);
-            // TimeSeries.getData.parseData(options.data, "initializeLiveData", parameters);
         } else {
             TimeSeries.chart_status[options.selector].status = "inprogress";
-            //TimeSeries.getData.parseData(options.data, "initializeLiveData", {"options": options});//, parameters);
             TimeSeries.mediator.publish("lineChartCallBack", {"options": options}, JSON.parse(JSON.stringify(options.globalData)), callbacks, feature);
             TimeSeries.chart_options[options.selector].globalData = null;
             options.globalData = null;
-            // TimeSeries.mediator.publish("initLiveData", options.selector+"_cfr", options);
         }
     };
-    /**
-    *   @function: renderLineChart
-    *   @param {Object} options - Object which contains all the chart configuration parameters passed by the user.
-    *   @description: It creates the svg and the group within that svg to place the chart. It also creates the group to place the axis and translates it based on the position of the axis
-    */
-    // var renderLineChart = function (options) {
-    //     var xAxis = TimeSeries.xAxisFunctions,
-    //         yAxis = TimeSeries.yAxisFunctions,
-    //         svg,
-    //         group,
-    //         xGroup,
-    //         yGroup,
-    //         plot_group,
-    //         x_translate = [],
-    //         y_translate = [],
-    //         chart_configs = TimeSeries.chart_configs[options.selector],
-    //         legends_group,
-    //         xCaption;
-
-    //     y_translate[1] =  0;// translate y for y-axis
-    //     chart_configs.extra_width = 0;
-    //     chart_configs.extra_height = 0;
-    //     chart_configs.width = options.width - options.marginLeft - options.marginRight;
-    //     chart_configs.height = options.height - options.marginTop - options.marginBottom;
-    //     chart_configs.previousGroupsHeight = 0;
-
-    //     svg = TimeSeries.mediator.publish("createSVG",options);
-    //     svg.append("svg:image")
-    //         .attr({
-    //             'x': options.width - 29,
-    //             'y': 10,
-    //             'width': 18,
-    //             'height': 18,
-    //             "xlink:href": "../../src/img/cogwheel.png",
-    //             "id": options.selector + "_settings"
-    //         })
-    //         .style({
-    //             cursor: "pointer"
-    //         });
-
-    //     document.querySelector("#" + options.selector + "_settings").addEventListener("click", function() {
-    //         TimeSeries.mediator.publish("pauseLiveData",options.selector + "_cfr");
-    //         TimeSeries.mediator.publish("initEditModal",options.selector,"edit");
-    //     });
-
-    //     TimeSeries.mediator.publish("addCaption",options,svg);
-    //     TimeSeries.mediator.publish("addSubCaption",options,svg);
-    //     TimeSeries.mediator.publish("createGrowthViewsGroup",options,svg);
-
-    //     group = TimeSeries.mediator.publish("createGroup",options,svg,options.marginLeft,chart_configs.previousGroupsHeight + options.marginTop,(options.selector + "_svg_group")); //Group to place the chart
-    //     if(options.showLegends) {
-    //         legends_group = TimeSeries.mediator.publish("createGroup",options,svg,0,chart_configs.previousGroupsHeight + options.marginTop,(options.selector + "_legends"));
-    //         TimeSeries.mediator.publish("renderLegends",options,legends_group);
-    //     }
-    //     // console.log("first");
-    //     chart_configs.height -= chart_configs.extra_height;
-    //     chart_configs.width -= chart_configs.extra_width;
-    //     y_translate[0] = (options.yAxisPosition === "right") ? chart_configs.width : 0; // translate x for y-axis
-
-    //     if(options.showXAxis) {
-    //         x_translate[0] = 0; // translate x for x-axis
-    //         x_translate[1] = (options.xAxisPosition === "bottom") ? (chart_configs.height) : 0; // translate y for x-axis
-    //         xGroup = xAxis.createAxisGroup(options,group,x_translate[0],x_translate[1]); // group to place x-axis
-    //     }
-
-    //     if(options.xAxisGrid) {
-    //         x_grid_group = TimeSeries.xAxisFunctions.createGridGroup(group,x_translate[0],x_translate[1]);
-    //     }
-
-    //     if(options.showYAxis) {
-    //         yGroup = yAxis.createAxisGroup(options,group,y_translate[0],y_translate[1]);
-    //     }
-
-    //     if(options.yAxisGrid) {
-    //         y_grid_group = TimeSeries.yAxisFunctions.createGridGroup(group,y_translate[0],y_translate[1]);
-    //     }
-
-    //     plot_group = TimeSeries.mediator.publish("createGroup",options,group,y_translate[0],y_translate[1],options.selector + "_plot_group");
-
-    //     // console.log(options.selector, "renderLineChart");
-    // };
-
 
     var createMetricForChart = function(series,dataset) {
         var return_series = [],
