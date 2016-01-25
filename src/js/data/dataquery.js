@@ -637,14 +637,14 @@ TimeSeries.Query = (function() {
                     value = local_filter.values;
                     dataset = dataset.filter(createFilterFunction(condition_type,attr,value));
                 }
-                console.log(dataset);
+                // console.log(dataset);
             } else {
                 local_filter = config.filter;
                 condition_type = local_filter.condition;
                 attr = local_filter.column;
                 value = local_filter.values;
                 dataset = dataset.filter(createFilterFunction(condition_type,attr,value));
-                console.log(dataset);
+                // console.log(dataset);
             }
         }
         if (config.bottom && typeof config.bottom === "number") {

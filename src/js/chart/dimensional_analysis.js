@@ -149,7 +149,6 @@ TimeSeries.dimensionalAnalysis = (function(){
 
     // var init = function(options,metricsColumnName,aggregation_fun) {
     var init = function(chart_selector, target_selector, ds_list) {
-        console.log(chart_selector, target_selector, ds_list);
         var chart_options = TimeSeries.chart_options[chart_selector],
             chart_configs = TimeSeries.chart_configs[chart_selector],
             modal_div = document.createElement("div"),
@@ -178,30 +177,6 @@ TimeSeries.dimensionalAnalysis = (function(){
 
         TimeSeries.mediator.publish("createTooltip", tooltip_options, "dimensional_analysis_chart_tooltip");
 
-        function onClickHandler () {
-            var series_name = document.querySelector('input[name="' + chart_selector+ "_dimensional_analysis_group"+'"]:checked').getAttribute();
-            setTimeout(function() {
-                for (var i = 0; i < metrics_length; i++) {
-                    if (series_name === metrics[i]) {
-                        document.getElementById(new_metrics[i] + "_rb_background").innerHTML = "<div class='radio-inner-circle' style = 'background-color:"+ chart_colors[i] + ";'></div>";
-                    } else {
-                        document.getElementById(new_metrics[i] + "_rb_background").innerHTML = "";
-                    }
-                }
-                updateChart(chart_selector,series_name,data, chart_selector);
-                createGranularity({selector: chart_selector+"_DA",dateColumnName: chart_options.dateColumnName },data);
-                d3.select(".when-loading")
-                    .transition()
-                    .ease("linear")
-                    .duration(100)
-                    .style({
-                        opacity: 0
-                    })
-                    .remove();
-            }, 100);
-
-        }
-
         modal_div.id = chart_selector + "_dimensional_analysis_modal";
         modal_div.className = "modal-body-content";
 
@@ -209,32 +184,10 @@ TimeSeries.dimensionalAnalysis = (function(){
         series_div.className = "series-selection-group";
 
         chart_holder.id = chart_selector + "_dimensional_analysis_holder";
-        // chart_holder.style.width = (0.8 * window_width - window.getComputedStyle(chart_holder, null).getPropertyValue('padding')) + "px";
-
         chart_holder.style.clear = "both";
         modal_div.appendChild(chart_holder);
 
-        var li = document.createElement("li"),
-            a = document.createElement("a"),
-            main_DA_container = document.createElement("div"),
-            panel_container = document.createElement("div"),
-            add_panel_container = document.createElement("div"),
-            div_cont = document.createElement("div");
-
-        li.innerHTML = "<a name='tab' href='javascript:void(0)' class='active'>Roll-up by time</a><span id='DA_close' class='tab-close'>x</span>";
-
-        li.id = "dimensionalAnalysis_tab";
-        li.addEventListener("mouseover", function(){
-
-        });
-
         daOnDrop(target_selector);
-
-        $('#dAnalysis a').click(function (e) {
-            e.preventDefault();
-            $(this).tab('show');
-        });
-
 
         reset_all_button = createResetAllButton();
         document.getElementById("DA_highlight_view").appendChild(reset_all_button);
@@ -244,7 +197,7 @@ TimeSeries.dimensionalAnalysis = (function(){
 
 
     //Creating in general select boxes.
-    var createChartSelectBox = function (dashboard_id, chart_id, series_id, chart_selector, count, mode) {
+    var createChartSelectBox = function (chart_id, series_id, chart_selector, count, mode) {
         var dashboards_list = document.createElement('div'),
             chart_list = document.createElement("div"),
             series_list = document.createElement("div"),
@@ -285,7 +238,7 @@ TimeSeries.dimensionalAnalysis = (function(){
         dashboards_list.className = "comcharts-TS-da-dashboard-box";
         // dashboards_list.className = 'comcharts-TS-dashboards-dropdown';
 
-        dashboards_list.innerHTML = TimeSeries.chart_options.menu.dashboards[0].list[dashboard_id].subCategoryText + " / " + (TimeSeries.chart_options[chart_id].caption || "Filter by time");
+        dashboards_list.innerHTML = (TimeSeries.chart_options[chart_id].caption || "Filter by time");
 
         list_holder = document.createElement("div");
         list_holder.appendChild(dashboards_list);
@@ -324,13 +277,13 @@ TimeSeries.dimensionalAnalysis = (function(){
     };
 
 
-    var createDimensionCharts = function (dashboard_id, chart_id, series_id, chart_selector, count, series_attributes) {
-        var div_id = "DA_panel_"+count;
-        seeDimensionalAnalysis(dashboard_id, chart_id, series_id, chart_selector, div_id, count, series_attributes);
+    var createDimensionCharts = function (chart_id, series_id, chart_selector, count, series_attributes) {
+        var div_id = "DA_panel_" + count;
+        seeDimensionalAnalysis(chart_id, series_id, chart_selector, div_id, count, series_attributes);
     };
 
 
-    var seeDimensionalAnalysis = function (dashboard_id, chart_id, series_id, chart_selector, div_id, panel_no, series_attributes) {
+    var seeDimensionalAnalysis = function (chart_id, series_id, chart_selector, div_id, panel_no, series_attributes) {
         var user_div = document.getElementById(div_id),
             chart_options = TimeSeries.chart_options[chart_selector],
             chart_holder,
@@ -360,41 +313,40 @@ TimeSeries.dimensionalAnalysis = (function(){
 
                 renderDA("DA_panel_2",false);
             } else if(panel_no == 2 && !document.getElementById("DA_panel_3")) {
-                // chart_description_div = document.getElementById("description_div");
-                // chart_description_div.parentNode.removeChild(chart_description_div);
                 main_DA_container = document.getElementById("dimensionalAnalysis");
                 panel_3 = document.createElement("div");
-                // panel_4 = document.createElement("div");
                 panel_3.id = "DA_panel_3";
                 panel_3.className = "col-sm-4 comcharts-TS-da-tab";
                 main_DA_container.insertBefore(panel_3, document.getElementById("comchart_TS_clearfix"));
-
-                // panel_4.id = "DA_panel_4";
-                // panel_4.className = "col-sm-3 comcharts-TS-da-tab";
-                // main_DA_container.appendChild(panel_4);
-
                 renderDA("DA_panel_3",false);
-                // renderDA("DA_panel_4",false);
             }
             chart_holder.id = div_id + "_dimensional_analysis_holder";
             user_div.appendChild(chart_holder);
         }
-        updateChart(dashboard_id, chart_id, series_id, chart_selector, div_id, data, series_attributes);
+        updateChart(chart_id, series_id, chart_selector, div_id, data, series_attributes);
         createGranularity({selector: chart_selector+"_DA",dateColumnName: chart_options.dateColumnName },data);
     };
 
-    var updateChart = function (dashboard_id, chart_id, series_id, chart_selector, div_id, data, series_attributes) {
+    var updateChart = function (chart_id, series_id, chart_selector, div_id, data, series_attributes) {
         var chart_options = TimeSeries.chart_options[chart_selector];
         data = data || TimeSeries.Query.getData(chart_selector + "_cfr","query_cfr",{filter:{"column":"isRawData","condition":"Equal","values":true}});
         document.getElementById(div_id + "_dimensional_analysis_holder").innerHTML = "";
         createData(chart_options, data, series_id, "sum", series_attributes);
-        createCharts(dashboard_id, chart_id, series_id, chart_options, div_id, series_attributes);
+        createCharts(chart_id, series_id, chart_options, div_id, series_attributes);
     };
 
     var createData = function(options, data, selected_series, aggregation_fun, series_attributes) {
         console.time("metric+dimnsion");
         var series =  {},
             query = TimeSeries.Query,
+            table,
+            da_year_query,
+            da_month_query,
+            da_day_query,
+            da_hour_query,
+            da_weekday_query,
+            da_week_query,
+            da_quarter_query,
             date_column_name = options.dateColumnName;
 
         if(series_attributes.metric) {
@@ -403,8 +355,36 @@ TimeSeries.dimensionalAnalysis = (function(){
             var metric = options.metricsColumnName[options.newMetricsColumn.indexOf(selected_series)];
             series[metric] = aggregation_fun;
         }
-        console.log(series);
+
         query.init(options.selector+"_DA",data);
+
+        table = ActiveQuery.createTable(options.selector+"_DA", "InBrowser", data);
+        da_year_query = ActiveQuery.createQuery("da_year_query");
+        da_month_query = ActiveQuery.createQuery("da_month_query");
+        da_day_query = ActiveQuery.createQuery("da_day_query");
+        da_hour_query = ActiveQuery.createQuery("da_hour_query");
+        da_weekday_query = ActiveQuery.createQuery("da_weekday_query");
+        da_week_query = ActiveQuery.createQuery("da_week_query");
+        da_quarter_query = ActiveQuery.createQuery("da_quarter_query");
+
+        da_year_query.Select({'year': ActiveQueryHelpers.DateTimeHelpers.field(date_column_name).year}, series).From(options.selector+"_DA").Group();
+        da_month_query.Select({'month': ActiveQueryHelpers.DateTimeHelpers.field(date_column_name).month}, series).From(options.selector+"_DA").Group();
+        da_day_query.Select({'day': ActiveQueryHelpers.DateTimeHelpers.field(date_column_name).day}, series).From(options.selector+"_DA").Group();
+        da_hour_query.Select({'hour': ActiveQueryHelpers.DateTimeHelpers.field(date_column_name).hour}, series).From(options.selector+"_DA").Group();
+        da_weekday_query.Select({'weekday': ActiveQueryHelpers.DateTimeHelpers.field(date_column_name).weekday}, series).From(options.selector+"_DA").Group();
+        da_week_query.Select({'week': ActiveQueryHelpers.DateTimeHelpers.field(date_column_name).week}, series).From(options.selector+"_DA").Group();
+        da_quarter_query.Select({'quarter': ActiveQueryHelpers.DateTimeHelpers.field(date_column_name).quarter}, series).From(options.selector+"_DA").Group();
+
+        var output = {};
+        output.year = da_year_query.Exec();
+        output.month = da_month_query.Exec();
+        output.day = da_day_query.Exec();
+        output.hour = da_hour_query.Exec();
+        output.weekday = da_weekday_query.Exec();
+        output.week = da_week_query.Exec();
+        output.quarter = da_quarter_query.Exec();
+        console.log("output",output);
+
         // if(typeof selected_series != 'object') {
             query.setQuery(options.selector+"_DA","DA_year",{"dimension":[{'year':function(d){
                 // return +d3.time.format('%Y')(new Date(d[date_column_name]));
@@ -452,7 +432,7 @@ TimeSeries.dimensionalAnalysis = (function(){
 
             console.timeEnd("metric+dimnsion");
             console.time("metric");
-            // console.log(series)
+             //console.log(series)
             query.createMetric(options.selector+"_DA","DA_year",{"metric":[series]});
             query.createMetric(options.selector+"_DA","DA_month",{"metric":[series]});
             query.createMetric(options.selector+"_DA","DA_day",{"metric":[series]});
@@ -462,6 +442,7 @@ TimeSeries.dimensionalAnalysis = (function(){
             query.createMetric(options.selector+"_DA","DA_quarter",{"metric":[series]});
             console.timeEnd("metric");
             getGroupData(options,"kokok", selected_series, series_attributes);
+            // console.log("after grouping:", granular_data);
         // } else {
 
         // }
@@ -576,7 +557,7 @@ TimeSeries.dimensionalAnalysis = (function(){
         }
     };
 
-    var createCharts = function(dashboard_id, chart_id, series_id, options, parent_id, series_attributes) {
+    var createCharts = function(chart_id, series_id, options, parent_id, series_attributes) {
         var parent_container =  document.getElementById(parent_id + "_dimensional_analysis_holder"),
             overlay,
             chart_caption = ["Year", "Quarter", "Month", "Week Number", "Day", "Weekday", "Hour"],
@@ -634,12 +615,12 @@ TimeSeries.dimensionalAnalysis = (function(){
                     }
                 }
         });
-        parent_div.setAttribute("data-dashboard", dashboard_id);
+        // parent_div.setAttribute("data-dashboard", dashboard_id);
         parent_div.setAttribute("data-chart", chart_id);
         parent_div.setAttribute("data-series", series_id);
 
         var panel_id = parent_id.split("DA_panel_")[1],
-            list_holder = createChartSelectBox(dashboard_id, chart_id, series_id, parent_id, panel_id, "charts");
+            list_holder = createChartSelectBox(chart_id, series_id, parent_id, panel_id, "charts");
         if (document.querySelector("#" + parent_id + " #suggestions_div")) {
             document.querySelector("#" + parent_id + " #suggestions_div").remove();
         } else if (document.querySelector("#" + parent_id + " #panel_header_container")) {
@@ -663,7 +644,7 @@ TimeSeries.dimensionalAnalysis = (function(){
                         map_function = granularity_obj.func;
 
                     render_da = true;
-                    console.log(granularity,data);
+                    // console.log(granularity,data);
 
                     data.sort(function(a,b){
                         return a.key - b.key;
@@ -824,7 +805,7 @@ TimeSeries.dimensionalAnalysis = (function(){
                             previous_click_granularity = clicked_object[+panel_id];
                             clicked_object[+panel_id] = d;
                             interactions(granularity,d,options,parent_id,series_id);
-                            updateTooltip(dashboard_id, chart_id, series_id, options, clicked_object[+panel_id], d, tooltip, this, granular_data, count);
+                            updateTooltip(chart_id, series_id, options, clicked_object[+panel_id], d, tooltip, this, granular_data, count);
                             var next_empty_panel,
                                 nep;
                             for (nep = 2; nep <= 4; nep++) {
@@ -835,7 +816,7 @@ TimeSeries.dimensionalAnalysis = (function(){
                             }
                             if (next_empty_panel) {
                                 var compare_suggestions = document.querySelector("#DA_panel_" + next_empty_panel + " #suggestions_div #compare_suggestion"),
-                                    dashboard_name = TimeSeries.chart_options.menu.dashboards[0].list[document.getElementById("DA_panel_" + panel_id).dataset.dashboard].subCategoryText,
+                                    // dashboard_name = TimeSeries.chart_options.menu.dashboards[0].list[document.getElementById("DA_panel_" + panel_id).dataset.dashboard].subCategoryText,
                                     chart_name = TimeSeries.chart_options[document.getElementById("DA_panel_" + panel_id).dataset.chart].caption || "Filter by time",
                                     series_name = document.getElementById("DA_panel_" + panel_id).dataset,
                                     clicked_object_granularity = clicked_object[+panel_id].granularity,
@@ -871,9 +852,9 @@ TimeSeries.dimensionalAnalysis = (function(){
                                     x_selected.text(' [' + original_key + ']');
                                 }
 
-                                if (!document.querySelector("#DA_panel_" + next_empty_panel + " #" + dashboard_name.replace(/ /g,"_") + "_" + chart_name.replace(/ /g,"_") + "_" + series_name.replace(/ /g,"_") + "_suggestion")) {
+                                if (!document.querySelector("#DA_panel_" + next_empty_panel + " #" + /*dashboard_name.replace(/ /g,"_") + "_" + */chart_name.replace(/ /g,"_") + "_" + series_name.replace(/ /g,"_") + "_suggestion")) {
                                     if (previous_click_granularity) {
-                                        var previous_span = document.querySelector("#DA_panel_" + next_empty_panel + " #" + dashboard_name.replace(/ /g,"_") + "_" + chart_name.replace(/ /g,"_") + "_" + series_name.replace(/ /g,"_") + "_suggestion");
+                                        var previous_span = document.querySelector("#DA_panel_" + next_empty_panel + " #" + /*dashboard_name.replace(/ /g,"_") + "_" + */chart_name.replace(/ /g,"_") + "_" + series_name.replace(/ /g,"_") + "_suggestion");
                                         if (previous_span) {
                                             previous_span.remove();
                                         }
@@ -882,7 +863,7 @@ TimeSeries.dimensionalAnalysis = (function(){
                                         desc_span = document.createElement("span");
 
                                     desc_span.id = "suggestion_desc";
-                                    span.id =  dashboard_name.replace(/ /g,"_") + "_" + chart_name.replace(/ /g,"_") + "_" + series_name.replace(/ /g,"_") + "_suggestion";
+                                    span.id =  /*dashboard_name.replace(/ /g,"_") + "_" + chart_name.replace(/ /g,"_") + "_" +*/ series_name.replace(/ /g,"_") + "_suggestion";
                                     span.className = 'suggestion_div';
                                     or_span = document.createElement("span");
                                     or_span.className = 'or_span';
@@ -907,7 +888,7 @@ TimeSeries.dimensionalAnalysis = (function(){
                                                 document.querySelector("#DA_panel_" + pnext_empty_panel + " #suggestions_div #compare_suggestion").appendChild(childrens[c]);
                                             }
                                         }
-                                        createDimensionCharts(dashboard_id, chart_id, series_id, chart_id, next_empty_panel, series_attributes);
+                                        createDimensionCharts(chart_id, series_id, chart_id, next_empty_panel, series_attributes);
                                         TimeSeries.mediator.publish("setDashboardHeight");
                                     });
                                     span.appendChild(desc_span);
@@ -919,13 +900,13 @@ TimeSeries.dimensionalAnalysis = (function(){
                         })
                         .on("mousemove",function(d,i){
                             var panel_id = this.parentNode.id.split("_")[2];
-                            updateTooltip(dashboard_id, chart_id, series_id, options, clicked_object[+panel_id], d, tooltip, this, granular_data, count);
+                            updateTooltip(chart_id, series_id, options, clicked_object[+panel_id], d, tooltip, this, granular_data, count);
                         })
                         .on("mouseover",function(d,i){
                             var yourSelect = document.querySelector(".dimension_filter"),
                                 panel_id;
                             panel_id = this.parentNode.id.split("_")[2];
-                            updateTooltip(dashboard_id, chart_id, series_id, options, clicked_object[+panel_id], d, tooltip, this, granular_data, count);
+                            updateTooltip(chart_id, series_id, options, clicked_object[+panel_id], d, tooltip, this, granular_data, count);
                             if(!clicked_object[+panel_id]) {
                                 if(yourSelect.options[yourSelect.selectedIndex].value !== "none") {
                                     for (var l = 1; l < panel_count; l++) {
@@ -986,11 +967,11 @@ TimeSeries.dimensionalAnalysis = (function(){
         var panel_id = parent_id.split("DA_panel_")[1];
 
         if (clicked_object[+panel_id]) {
-            var dashboard_name = TimeSeries.chart_options.menu.dashboards[0].list[document.getElementById("DA_panel_" + panel_id).dataset.dashboard].subCategoryText,
-                chart_name = TimeSeries.chart_options[document.getElementById("DA_panel_" + panel_id).dataset.chart].caption || "Filter by time",
+            var chart_name = TimeSeries.chart_options[document.getElementById("DA_panel_" + panel_id).dataset.chart].caption || "Filter by time",
                 series_name = document.getElementById("DA_panel_" + panel_id).dataset.series,
                 suggestion;
-            suggestion = document.getElementById(dashboard_name.replace(/ /g,"_") + "_" + chart_name.replace(/ /g,"_") + "_" + series_name.replace(/ /g,"_") + "_suggestion");
+
+            suggestion = document.getElementById(chart_name.replace(/ /g,"_") + "_" + series_name.replace(/ /g,"_") + "_suggestion");
             if (suggestion) {
                 suggestion.remove();
             }
@@ -1017,8 +998,8 @@ TimeSeries.dimensionalAnalysis = (function(){
         return reset_all_button;
     };
 
-    var updateTooltip = function(dashboard_id, chart_id, series_id, options, clicked_object, hovered_object, tooltip, rect, data, count) {
-        var tooltip_text = createTooltipText(dashboard_id, chart_id, series_id, options, data, clicked_object, hovered_object, count),
+    var updateTooltip = function(chart_id, series_id, options, clicked_object, hovered_object, tooltip, rect, data, count) {
+        var tooltip_text = createTooltipText(chart_id, series_id, options, data, clicked_object, hovered_object, count),
             // dimensions = rect.getBoundingClientRect(),
             mouseX,
             mouseY;
@@ -1033,7 +1014,7 @@ TimeSeries.dimensionalAnalysis = (function(){
         tooltip.style.left = mouseX  + "px";
     };
 
-    var createTooltipText = function(dashboard_id, chart_id, series_id, options, data, clicked_object, hovered_object, count) {
+    var createTooltipText = function(chart_id, series_id, options, data, clicked_object, hovered_object, count) {
         var hovered_granularity = hovered_object.granularity,
             clicked_granularity,
             granularity_array,
@@ -1582,8 +1563,6 @@ TimeSeries.dimensionalAnalysis = (function(){
         series_list.id = "panel_DA_series_" + count + "_select_box";
         series_list.setAttribute("panel-id",count);
         series_list.className = 'comcharts-TS-sidebar-ul comcharts-TS-card-effect';
-        // series_first_option.innerHTML = "series";
-        // series_list.appendChild(series_first_option);
 
         //mimicking the behaviour of a drop down.......
         series_list.onfocus = function () { this.options[0].style.display = "none";};
@@ -1612,7 +1591,8 @@ TimeSeries.dimensionalAnalysis = (function(){
             d3.selectAll("#panel_DA_series_"+count+"_select_box li").classed('active', false);
             d3.select(event.srcElement).classed('active', true);
 
-            createDimensionCharts(dashboard_id, chart_id, series_id, chart_id, count, series_attributes);
+            console.log(series_id, chart_id);
+            createDimensionCharts(chart_id, series_id, chart_id, count, series_attributes);
             TimeSeries.mediator.publish("closeModal");
             TimeSeries.mediator.publish("setDashboardHeight");
             if(current_highlight_value !== "none") {
@@ -1620,13 +1600,7 @@ TimeSeries.dimensionalAnalysis = (function(){
             }
         });
 
-        // filters_div.appendChild(filters_span);
-        // filters_div.appendChild(dashboard_div);
-        // filters_div.appendChild(chart_div);
-
         modal_container.appendChild(series_div);
-        // modal_container.appendChild(filters_div);
-
         panel_body.appendChild(modal_container);
         return panel_body;
     };
@@ -1652,7 +1626,6 @@ TimeSeries.dimensionalAnalysis = (function(){
 
         main_DA_container.appendChild(panel_1);
         main_DA_container.appendChild(clearfix);
-
 
         document.querySelector(target_selector).appendChild(main_DA_container);
 

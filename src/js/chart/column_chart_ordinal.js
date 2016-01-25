@@ -39,7 +39,6 @@ TimeSeries.columnChartOrdinalFunctions = (function() {
     };
 
     var columnChartOrdinal = function(options,data, feature) {
-        console.log("columnChart", options);
         var x_axis,
             y_axis,
             svg,
@@ -91,7 +90,6 @@ TimeSeries.columnChartOrdinalFunctions = (function() {
         y_domain[1] = d3.max(data, function(d) { return +d.value; });
 
         chart_configs.svg = svg = d3.select("#" + options.selector + "_svg");
-        console.log(chart_configs.svg);
         chart_configs.group = group = d3.select("#" + options.selector + "_svg_group");
         chart_configs.xGroup = xGroup = d3.select("#" + options.selector + "_svg_group #xaxis");
         chart_configs.yGroup = yGroup = d3.select("#" + options.selector + "_svg_group #yaxis");
