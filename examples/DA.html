@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TS Design v3</title>
+    <link rel="stylesheet" type="text/css" href="/lib/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../lib/css/bootstrap-switch.min.css">
+    <link rel="stylesheet" type="text/css" href="../src/css/modal.css">
+    <link rel="stylesheet" type="text/css" href="../src/css/style-guide.css">
+    <link rel="stylesheet" type="text/css" href="../src/css/timeseries.css">
+    <link rel="stylesheet" type="text/css" href="../src/css/modal.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <style type="text/css">
+      .show {
+        display: block !important;
+      }
+
+      .comcharts-TS-sidebar-content {
+        display: none;
+      }
+
+      .comcharts-TS-dashboard {
+        margin-top: 10px;
+      }
+
+      .comcharts-TS-suggestions-div-select-dashboard {
+        margin-top: 10px;
+      }
+
+      .comcharts-TS-dashboards-dropdown {
+        width: 30%;
+      }
+    </style>
+    <link rel="stylesheet" type="text/css" href="../src/css/style-guide-v3.css">
+</head>
+<body>
+    <div id="home">
+      <!-- <div id = "chart1"></div> -->
+      <!-- <div id = "chart2"></div> -->
+      <div id="navigator"></div>
+    </div>
+
+    <div id="home-1">
+      <!-- <div id = "live-chart1"></div> -->
+      <!-- <div id = "live-chart2"></div> -->
+      <div id="live-navigator"></div>
+    </div>
+
+    <div id="side-bar-menu"></div>
+
+    <script type="text/javascript" src="../lib/js/d3.min.js"></script>
+    <script type="text/javascript" src="../lib/js/crossfilter.js"></script>
+    <script type="text/javascript" src="../lib/js/papaparser.js"></script>
+    <script type="text/javascript" src="../lib/js/jquery.js"></script>
+    <script type="text/javascript" src="../lib/js/moment.min.js"></script>
+    <script type="text/javascript" src="../lib/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../lib/js/bootstrap-switch.min.js"></script>
+
+    <script type="text/javascript" src="../src/js/chart/global_objects.js"></script>
+    <script type="text/javascript" src="../src/js/chart/mediator.js"></script>
+    <script type="text/javascript" src="../src/js/chart/utility.js"></script>
+    <script type="text/javascript" src="../src/js/chart/errors.js"></script>
+
+    <script type="text/javascript" src="../src/js/chart/api.js"></script>
+
+    <script type="text/javascript" src="../src/js/data/dataquery.js"></script>
+    <script type="text/javascript" src="../src/js/data/data_manipulation.js"></script>
+    <script type="text/javascript" src="../src/js/data/get_data.js"></script>
+    <script type="text/javascript" src="../src/js/data/number_format.js"></script>
+
+    <script type="text/javascript" src="../src/js/chart/date_format.js"></script>
+
+    <script type="text/javascript" src="../src/js/chart/config_validation.js"></script>
+    <script type="text/javascript" src="../src/js/chart/caption_subCaption.js"></script>
+    <script type="text/javascript" src="../src/js/chart/svg.js"></script>
+    <script type="text/javascript" src="../src/js/chart/x_axis.js"></script>
+    <script type="text/javascript" src="../src/js/chart/y_axis.js"></script>
+    <script type="text/javascript" src="../src/js/chart/crosshair.js"></script>
+    <script type="text/javascript" src="../../src/js/chart/column_chart_ordinal.js"></script>
+    <script type="text/javascript" src="../src/js/chart/line_chart.js"></script>
+    <script type="text/javascript" src="../src/js/view/side_bar.js"></script>
+    <script type="text/javascript" src="../src/js/view/modal.js"></script>
+
+    <script type="text/javascript" src="../src/js/chart/dimensional_analysis.js"></script>
+    <script type="text/javascript" src="../src/js/view/view_container.js"></script>
+    <script type="text/javascript" src="../src/js/view/cell.js"></script>
+    <script type="text/javascript" src="../src/js/view/view_div.js"></script>
+    <script type="text/javascript" src="../src/js/view/timeseries-dom.js"></script>
+
+    <script type="text/javascript">
+
+      loadData({
+        1: {
+          data: "../data/weather.csv",
+          dataFormat: "csv",
+          dataSource: "",
+          dataFor: ["chart1"],
+          dataName: "Weather.csv",
+          dataDescription: "This file contains weather data with Surface Pressure, Precipitation, Humidity, Ozone and Temperature"
+        }
+      });
+
+      var configurations = {
+        'container_id':'dashboard-1',
+        'parent_id':'home',
+        'cell_size':45 ,
+        'inter_cell_spacing':10,
+        'width':0.8 * 0.8 * screen.width,
+        'height':900
+      };
+      TimeSeries.viewContainerFunctions.createContainer(configurations);
+
+      var configurations_1 = {
+        'container_id':'live-dashboard',
+        'parent_id':'home-1',
+        'cell_size':45 ,
+        'inter_cell_spacing':10,
+        'width':0.8 * 0.8 * screen.width,
+        'height':900
+      };
+      TimeSeries.viewContainerFunctions.createContainer(configurations_1);
+
+      /*** Side-bar ***/
+      createMenuBar({
+        menubarLocation: "side",
+        selector: 'side-bar-menu',
+        enableTimeSearcher: true,
+        enableTimeShift: true,
+        enableDimensionalAnalysis: true,
+
+        dashboards: [{
+          categoryDisplayText: "Dashboards",
+          className: 'dashboards',
+          list: {
+            "dashboard-1": {
+              className: 'home',
+              subCategoryText: 'Content',
+              heading: 'Top Content',
+              subHeading: 'Which content is performing well?',
+              secondaryHeading: '45,000',
+              secondarySubHeading: 'Views this month'
+            },
+            "live-dashboard": {
+              className: 'live-data',
+              subCategoryText: 'Demographics',
+              // heading: 'ABC2-heading',
+              // subHeading: 'ABC2-subheading',
+              // secondaryHeading: 'XYZ2-heading',
+              // secondarySubHeading: 'XYZ2-subheading'
+            }
+          }
+        }]
+      });
+
+      /*** Dashboard-1 ***/
+      /*** Mean Monthly Surface Pressure ***/
+      var options = {
+        parent: "dashboard-1",
+        width: 8,
+        height: 4,
+        // data: "../data/weather.csv",
+        // dataFormat: "csv",
+        //   dataSource: "",
+        // dataName: "Weather.csv",
+        // dataDescription: "This file contains weather data with Surface Pressure, Precipitation, Humidity, Ozone and Temperature",
+        selector: "chart1",
+        chartType: "line",
+        marginLeft: 60,
+        marginTop: 20,
+        marginRight: 30,
+        marginBottom: 80,
+        showCaption: true,
+        caption: "Views across time",
+        showSubCaption: true,
+        subCaption: "sub caption text goes here",
+        showYAxis: true,
+        showXAxis: true,
+        yAxisNoOfTicks: 4,
+        yAxisTitle: "value in millibars",
+        yAxisGrid: true,
+        chartColor: ["#8A568A","#259EE4","#15C18B","#b7b7b7"],
+        xAxisTickInterval: 0,
+        enableZoom: true,
+        "processMissingDataPoint": false,
+        "dateColumnName": "Date",
+        "metricsColumnName": [/*"Surface Pressure",*/"Page 2"],
+        enableAnomalyDetection: false,
+        anomalyPointCircleRadius: 3,
+        anomalyPointOnHoverColor: "#FF0000",
+        anomalyDetectionIconImgSrc: "",
+        enableSmoothing: true,
+        rangeFilter: true,
+        outputDateFormat: "%a %b %e %Y",
+        enableSmoothing: true,
+        enableVisualComparison: true,
+        enableDimensionalAnalysis: true,
+        enableAnomalyDetection: true,
+        rangeFilter: true,
+        dimensionFilter : true,
+        showImpacts: true,
+        impactsColor: "orange",
+        showLegends: false,
+      };
+      createChart(options);
+
+      document.getElementById("dashboard-1").appendChild(document.getElementById("navigator"));
+      document.getElementById("live-dashboard").appendChild(document.getElementById("live-navigator"));
+    </script>
+</body>
+</html>

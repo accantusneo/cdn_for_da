@@ -1,0 +1,451 @@
+/*======== js/core/view/chart_menu.js ==========*/
+/*339*/
+.droppable-overlay{
+	border:1px solid black;
+}
+
+/*======== js/core/view/menu_bar.js ==========*/
+/*133*/
+.menu-bar .icon-holder #raw_data_help{
+	float:right;
+	margin-right:10px;
+	margin-top:5px;
+	cursor:pointer;
+}
+
+/*167*/
+.menu-bar .icon-holder span.dataset_see_data_set{
+	border-bottom: 1px solid blue;
+	cursor: pointer;
+}
+
+
+.menu-bar .icon-holder #raw_data_help span#raw_data_close{
+	cursor:pointer;
+	margin-left:-8px;
+	margin-top:-2px;
+}
+
+/*230*/
+.menu-bar .icon-holder span.charts_see_data_set{
+	cursor:pointer;
+	border-bottom:1px solid blue;
+}
+
+/*437*/
+
+
+/*======== js/core/view/modal.js ==========*/
+/*385*/
+ .comcharts-TS-close-modal-help{
+ 	float:right;
+ }
+
+ /*455*/
+ .comcharts-TS-vm-modal-heading-div{
+ 	width: 100%;
+ }
+
+/*======== js/core/view/view_container.js ==========*/
+/*======== js/core/view/view_div.js ==========*/
+/*171*/
+.div_parent .delete-button{
+	width:15px;
+	height:15px;
+}
+
+/*======== js/core/features/anomaly_detection.js ==========*/
+/*216*/
+.modal-body-content .anomaly_detection_apply_to{
+	font-size: 16px;
+	color : black;
+    font-weight : 500;
+	padding-bottom : 10px;
+    margin-bottom : 5px;
+	border-bottom : 1px solid lightgrey;
+}
+
+/*238 class .comcharts-TS-series-indicator copied to v3.csss*/
+.comcharts-TS-series-indicator{
+	width: 3px;
+	height: 22px;
+	float: left;
+	margin-left: 10px;
+	margin-right: 10px;
+	/*margin-top: -5px;*/
+}
+
+.comcharts-TS-series-indicator-holder{
+	float: right;
+	margin-top: 10px;
+	padding-right: 10px;
+}
+
+/*247*/
+.comcharts-TS-series-indicator-text{
+	position: relative;
+	float: left;
+	width: 80%;
+	font-size: 14px;
+	color: black;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	/*margin-top: 5px;
+	margin-bottom: 5px;*/
+}
+
+.comcharts-TS-series-indicator-text-impact-switch{
+	position: relative;
+	float: left;
+	width: 80%;
+	font-size: 14px;
+	color: black;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-left: 10px;
+}
+
+/*======== js/core/features/dimension_filter.js ==========*/
+.dimension-filter-div {
+    border: 1px solid transparent;
+}
+
+#aggregationFunction {
+    display: inline-block;
+}
+
+#applyDimensionFilter {
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+#clearDimensionFilter {
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+#impact_indicator {
+    border-radius:50%;
+    width:10px;
+    height:10px;
+    display:inline-block;
+}
+
+/*======== js/core/features/dimensional_analysis.js ==========*/
+
+#DA_reset_all_button {
+    float: right;
+    visibility: hidden;
+    margin-left: 30px;
+}
+
+.dimension_filter {
+    margin-bottom: 20px;
+}
+
+.comcharts-TS-da-tab .compare_suggestion .suggestion_div {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.or_span {
+    text-align: center;
+    cursor: default;
+}
+
+/*.comcharts-TS-da-tab .suggestions_div {
+	font-size: 16px;
+    font-weight: 300;
+    color: #5388ee;
+	text-decoration: underline;
+}*/
+
+.comcharts-TS-da-tab .suggestions_div #suggestion_desc, .comcharts-TS-DA-analyze-series {
+	font-size: 16px;
+    font-weight: 300;
+    color: #5388ee;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.comcharts-TS-TS-analyze-series {
+    font-size: 16px;
+    font-weight: 300;
+    color: #5388ee;
+    text-decoration: underline;
+  /*  margin-left: "10px" !important;
+    margin-top: "10px" !important;*/
+}
+
+/*** DA tooltip ***/
+.hovered_clicked_granularity_eq .first_row td{
+    font-size:12px;
+    padding:1px;
+    text-align:center;
+}
+
+.hovered_clicked_granularity_eq .first_row td span {
+    font-weight: 900;
+}
+
+.hovered_clicked_granularity_eq .second_row td {
+    font-size:12px;
+    font-weight:900;
+    text-align:center;
+    padding:1px;
+}
+
+.hovered_clicked_granularity_eq .third_row td {
+    padding:1px;
+    text-align:center;
+}
+
+.hovered_clicked_granularity_eq .fourth_row td {
+    padding:1px;
+    text-align:center;
+}
+
+.hovered_clicked_granularity_eq .fourth_row td .first_span{
+    font-size:12px;
+    color:steelblue;
+    font-weight:900;
+}
+
+.hovered_clicked_granularity_eq .fourth_row td .second_span{
+    font-weight:900;
+}
+
+.hovered_clicked_granularity_uneq .first_row td{
+    font-size:12px;
+    padding:1px;
+    text-align:center;
+}
+
+.hovered_clicked_granularity_uneq .first_row td span {
+    font-weight:900;
+}
+
+.hovered_clicked_granularity_uneq .second_row td {
+    font-size:12px;
+    font-weight:900;
+    color:steelblue;
+    text-align:center;
+    padding:1px;
+}
+
+.hovered_clicked_granularity_uneq .third_row td {
+    padding:1px;
+    text-align:center;
+}
+
+.hovered_clicked_granularity_uneq .fourth_row td {
+    padding:1px;
+    text-align:center;
+}
+.hovered_clicked_granularity_uneq .fourth_row td .first_span{
+    font-size:12px;
+    color:red;
+    font-weight:900;
+}
+
+.hovered_clicked_granularity_uneq .fourth_row td .second_span{
+    font-weight:900;
+}
+
+.comcharts-TS-da-tab .suggestions-div-title{
+	margin-top: 60px;
+	font-size: 12px;
+	color: gray;
+}
+
+.comcharts-TS-da-tab .suggestions-div-select-chart, .comcharts-TS-da-tab .suggestions-div-select-series {
+	font-size: 13px;
+}
+
+/* Shifted to v3 */
+/*.comcharts-TS-tabs #dimensionalAnalysis {
+	width: 70%;
+}*/
+
+.comcharts-TS-tabs #timeShift {
+    width: 70%;
+}
+
+.comcharts-TS-tabs #dimensionalAnalysis .description-text {
+	font-size: 11px;
+	color: gray;
+	font-style: italic;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+
+/*======== js/core/features/impact_switch.js ==========*/
+/*49*/
+.comcharts-TS-impact-switch-helptext{
+	border-bottom: 1px solid lightgrey;
+    padding-bottom: 10px;
+    font-size: 11px;
+	color:grey;
+}
+
+/*======== js/core/features/range_filter.js ==========*/
+.comcharts-TS-range-filter-from, .comcharts-TS-range-filter-to {
+	text-align: center;
+}
+
+.comcharts-TS-range-filter-div #impact_indicator {
+	width:2px;
+	height:100%;
+	display:inline-block;
+}
+
+#range_filter_inside_tn .comcharts-TS-range-filter-from {
+	text-align: left;
+    background-color: transparent;
+    color: lightgray;
+    font-weight: bold;
+    font-size: 11px;
+    padding: 0px;
+}
+
+#range_filter_inside_tn .comcharts-TS-range-filter-to {
+	text-align: left;
+    background-color: transparent;
+    color: lightgray;
+    font-weight: bold;
+    font-size: 11px;
+    padding: 0px;
+}
+
+#range_filter_inside_tn .comcharts-TS-range-filter-div {
+	background-color: transparent;
+}
+
+/*======== js/core/features/range_selector.js ==========*/
+/*======== js/core/features/smoothing.js ==========*/
+.comcharts-TS-modal-non-chartarea {
+	width: 34%;
+    float: left;
+}
+
+.comcharts-TS-modal-chartarea {
+	width: 66%;
+    float: right;
+}
+
+.comcharts-TS-modal-chartarea-title {
+	font-weight: 500;
+    font-size: 20px;
+    padding: 10px 0px 10px 10px;
+    border-bottom:1px solid lightgrey;
+}
+
+.anomalyDetection_apply_to{
+	font-weight: 500;
+    font-size: 20px;
+    padding: 10px 0px 10px 10px;
+    border-bottom:1px solid lightgrey;
+}
+
+.comcharts-TS-range-filter-text {
+	font-size: 11px;
+	color: gray;
+	font-weight: 200;
+}
+
+/*298*/
+.smoothing-methods{
+	display: none;
+}
+
+/*308*/
+.comcharts-TS-modal-helptext{
+	font-size: 11px;
+    color: gray;
+    margin: 5px 10px;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+}
+
+/*======== js/core/features/time_searcher.js ==========*/
+.comcharts-TS-tsc-tab .TSC-line {
+	text-align: center;
+}
+
+.comcharts-TS-tsc-tab .modal-close {
+	margin-right: 60px;
+}
+
+.comcharts-TS-tsc-tab .TSC-slider {
+	text-align: center;
+    width: 100%;
+}
+
+.comcharts-TS-tsc-tab .time-searcher-details {
+	width: 200px;
+    display: inline-block;
+	margin-top: 220px;
+}
+
+.comcharts-TS-tsc-tab .ts-hint {
+	color: grey;
+    text-align: left;
+    padding-left: 40px;
+    padding-bottom: 0px;
+}
+
+.comcharts-TS-tsc-tab #TSC_close {
+	cursor: pointer;
+	margin-left:-8px;
+	margin-top:-2px;
+}
+
+
+
+/*======== js/core/features/time_shift.js ==========*/
+/*======== js/core/features/visual_comparison.js ==========*/
+/*======== src/css/views.css ========*/
+.div_parent {
+    /*outline-style: solid;
+    outline-width: 1px;*/
+    position: absolute;
+}
+
+.div_inner {
+    /*outline-style: solid;
+    outline-width: 1px;*/
+    z-index: 5;
+    /*background-color: white;*/
+    position: absolute;
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+}
+
+.delete-button {
+    display: none;
+    /*float: right;*/
+    margin: 2px;
+    z-index: 10;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    margin-top: 4px;
+    padding: 0.5px;
+}
+
+.resize-button {
+    display: none;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    margin: 2px;
+}
+
+

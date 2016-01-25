@@ -1,0 +1,100 @@
+
+/*------ headings ------*/
+.comchart-TS-h1 {
+	font-size: 3em;
+	font-weight: 600;
+	margin: 5px 0px;
+}
+
+.comchart-TS-h2 {
+	font-size: 2.5em;
+	font-weight: 600;
+	margin: 5px 0px;
+}
+
+.comchart-TS-h3 {
+	font-size: 2em;
+	font-weight: 600;
+	margin: 5px 0px;
+}
+
+.comchart-TS-h4 {
+	font-size: 1.5em;
+	font-weight: 600;
+	margin: 5px 0px;
+}
+
+small {
+	font-size: 0.6em;
+	font-weight: normal;
+	color: grey;
+}
+
+/* Shifted to v3 */
+/*.comcharts-TS-help {
+	font-size: 0.8em;
+	color: grey;
+	margin:5px 0px;
+	font-style: italic;
+}*/
+
+
+/*------- Buttons -------*/
+.comcharts-TS-btn {
+	padding: 5px 10px;
+	border:1px solid lightgrey;
+	border-radius: 4px;
+	float: left;
+	line-height: 1.4;
+	background-color: white;
+	font-size: 1em;
+	margin-right:5px;
+	transition: box-shadow 0.2s ease-in;
+	cursor: pointer;
+}
+
+.comcharts-TS-btn:focus {
+	outline: none;
+	box-shadow: 0px 0px 0px grey !important;
+}
+
+.comcharts-TS-btn:hover {
+	box-shadow: 2px 2px 3px lightgrey;
+}
+
+.btn-inactive {
+	background-color: #e8e8e8;
+	border: 1px solid #e8e8e8;
+}
+
+.btn-submit {
+	background-color: #009688;
+	border: 1px solid #009688;
+	color: white;
+}
+
+/*------ modal ------*/
+.comcharts-TS-modal-chart * {
+	pointer-events: none !important;
+	padding-left: 10px;
+}
+
+
+.comcharts-ts-page-content{
+    margin: 10px;
+}
+
+.same-type-class-group{
+    background-color: white;
+    padding: 10px;
+    margin: 20px;
+}
+
+.single-file-css{
+	/*background-color: white;*/
+    padding: 10px;
+    margin: 20px;
+    border: 1px solid grey;
+}
+
+

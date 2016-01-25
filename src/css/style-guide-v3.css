@@ -1,0 +1,1078 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    padding: 10px;
+    background-color: #3B3B3B;
+    font-size: 12px;
+    line-height: 1.43;
+    color: #333;
+}
+
+:focus {
+    outline: none;
+}
+
+.comcharts-TS-container {
+    width: 80%;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+/* ====== chart area ====== */
+.chart-div {
+    position: relative;
+    border: 1px solid transparent;
+    /*margin: 20px 5px;*/
+    float: left;
+    border: 1px solid #e7e7e7;
+}
+
+/* ====== side-bar ====== */
+.show {
+    display: block !important;
+}
+
+.comcharts-TS-sidebar-tooltip {
+    width: 250px;
+    height: auto;
+    background-color: #fff;
+}
+
+.comcharts-TS-sidebar-content {
+    display: none;
+}
+
+.comcharts-TS-sidebar {
+    background-color: white;
+    width: 20%;
+    min-width: 200px;
+    padding: 10px;
+    margin-bottom: -10px;
+    border-right: 1px solid #d9d9d9;
+    float: left;
+    box-sizing: border-box;
+    min-height: 668px;
+}
+
+.comcharts-TS-sidebar ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.comcharts-TS-category,.comcharts-TS-modal-title,.suggestions-div-select-chart,.suggestions-div-select-series{
+	margin: 10px 0px;
+	font-size: 14px;
+	font-weight: 600;
+	color: #333;
+}
+
+.comcharts-TS-modal-title{
+    padding: 10px;
+    margin: 0;
+}
+
+.comcharts-TS-sidebar ul li.comcharts-TS-category:first-child {
+    margin-top: 0px;
+}
+
+.comcharts-TS-sub-category {
+    padding: 10px;
+    padding-left: 20px;
+    font-size: 12px;
+    margin: 0px -10px;
+    color: #333;
+    cursor: pointer;
+}
+
+.comcharts-TS-sub-category-feature-modal {
+    padding: 10px;
+    padding-left: 20px;
+    font-size: 12px;
+    margin: 0px -10px;
+    color: #333;
+    cursor: pointer;
+}
+
+.comcharts-TS-sidebar ul li.comcharts-TS-sub-category.active {
+    background-color: #9a9a9a;
+    color: white;
+    border-right: 1px solid #9a9a9a;
+}
+
+.comcharts-TS-sidebar ul li.comcharts-TS-sub-category-feature-modal.active {
+    background-color: #9a9a9a;
+    color: white;
+    border-right: 1px solid #9a9a9a;
+}
+
+.comcharts-TS-sidebar ul li.comcharts-TS-sub-category.active .comcharts-TS-counter {
+    color: #9A9A9A;
+    background-color: white;
+}
+
+.comcharts-TS-sidebar ul li.comcharts-TS-sub-category-feature-modal.active .comcharts-TS-counter {
+    color: #9A9A9A;
+    background-color: white;
+}
+
+.comcharts-TS-sidebar ul li.comcharts-TS-sub-category.active:hover {
+    background-color: #9a9a9a;
+    color: white;
+}
+
+.comcharts-TS-sidebar ul li.comcharts-TS-sub-category-feature-modal.active:hover {
+    background-color: #9a9a9a;
+    color: white;
+}
+
+.comcharts-TS-sidebar ul li.comcharts-TS-sub-category:hover {
+    background-color: #eaeaea;
+}
+
+.comcharts-TS-sidebar ul li.comcharts-TS-sub-category-feature-modal:hover {
+    background-color: #eaeaea;
+}
+
+.comcharts-TS-sidebar-content {
+    background-color: #f6f6f6;
+    float: left;
+    padding: 10px;
+    width: 80%;
+    box-sizing: border-box;
+    min-height: 668px;
+}
+
+.comcharts-TS-counter {
+    float: right;
+    background: #9A9A9A;
+    padding: 2px 6px;
+    border-radius: 50%;
+    font-size: 10px;
+    color: white;
+}
+
+/* ====== content-area ====== */
+.comcharts-TS-dashboard{
+	position: relative;
+}
+
+.comcharts-TS-modal-chartarea-title{
+    margin: 0px;
+}
+
+.comcharts-TS-content-super-heading {
+    overflow: hidden;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    margin-left: -10px;
+    border-bottom: 1px solid #D9D9D9;
+    margin-right: -10px;
+}
+
+.comcharts-TS-content-heading,.comcharts-TS-modal-chartarea-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    float: left;
+}
+
+.comcharts-TS-content-heading-modal{
+    width: 100%;
+    margin: 0px;
+    padding: 10px;
+    background: #F3F3F3;
+    border-bottom: 1px solid #DADADA;
+}
+
+.comcharts-TS-content-sub-heading {
+    font-size: 11px;
+    font-weight: normal;
+    color: #777;
+    /*padding-right: 5px !important;*/
+}
+
+.comcharts-TS-sidebar-content #dimensionalAnalysis .comcharts-TS-content-sub-heading {
+    margin-top: 10px;
+    text-align: right;
+}
+
+.comcharts-TS-content-secondary-heading {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    float: right;
+    text-align: right;
+    /*margin-top: 10px;*/
+    margin-right: 10px;
+}
+
+.comcharts-TS-content-secondary-heading .comcharts-TS-content-sub-heading {
+    text-align: right;
+}
+
+.comcharts-TS-content-body {
+    padding: 10px 0px;
+}
+
+/* ====== buttons ====== */
+.comcharts-TS-button.comcharts-TS-button-submit {
+
+}
+
+.comcharts-TS-button {
+    border: 1px solid #333;
+    float: left;
+    font-weight: 300;
+    padding: 7px 25px;
+    color: #333;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-out;
+}
+
+.comcharts-TS-button:hover {
+    background-color: #333;
+    color: #f2f2f2;
+    transition: background-color 0.3s ease-in;
+}
+
+.comcharts-TS-button-submit {
+    border-color: #009688;
+    color: #009688;
+    background-color: transparent;
+}
+
+.comcharts-TS-button-submit:hover {
+    color: white;
+    background-color: #009688;
+}
+
+.comcharts-TS-button-delete {
+    border-color: #EF5350;
+    color: #EF5350;
+    background-color: transparent;
+}
+
+.comcharts-TS-button-delete:hover {
+    color: white;
+    background-color: #EF5350;
+}
+
+.comcharts-TS-button-disabled {
+    border-color: #b5b5b5;
+    color: #b5b5b5;
+    background-color: transparent;
+}
+
+.comcharts-TS-button-disabled:hover {
+    color: #b5b5b5;
+    background-color: transparent;
+}
+
+/* ====== dropdown ====== */
+select{
+    padding: 7px 20px;
+    border-radius: 0px;
+    border:0px;
+    border-bottom: 1px solid grey;
+    /*-webkit-appearance: none;*/
+}
+
+.comcharts-TS-dropdown {
+    background-color: transparent;
+    padding: 1px 20px !important;
+}
+
+/* ====== chart heading & subheading ====== */
+.comcharts-TS-chart-caption {
+    font-size: 14px;
+    color: #333;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    text-align: none;
+    margin: 0px;
+}
+
+.comcharts-TS-chart-sub-caption {
+    font-size: 11px;
+    color: #777;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+}
+
+/* ====== Axis ====== */
+.comcharts-TS-axis hr {
+    border-color: #e7e7e7;
+    opacity: 1;
+}
+
+.comcharts-TS-grid hr {
+    border-color: #e7e7e7;
+    opacity: 1;
+}
+
+.comcharts-TS-axis-label {
+    font-size: 11px;
+    color: #545454;
+}
+
+.comcharts-TS-axis-title {
+    font-size: 11px;
+    font-weight: 500;
+    color: #777;
+    opacity: 1;
+    font-family: 'roboto', sans-serif;
+}
+
+/* ====== legend ====== */
+.comcharts-TS-legend-icon {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    float: left;
+    background-color: #EF5350;
+    margin-right: 5px;
+}
+
+.comcharts-TS-legend-label {
+    font-size: 12px;
+}
+
+/* ====== settings modal ====== */
+
+#comcharts_TS_DA_modal_series_selection {
+	background-color: white;
+    width: 55%;
+}
+
+#comcharts_TS_TS_modal_series_selection {
+    background-color: white;
+    width: 55%;
+}
+
+#comcharts_TS_TSC_modal_series_selection {
+    background-color: white;
+    width: 55%;
+}
+
+.suggestions-div-title {
+	border-bottom: 1px solid #DCDCDC;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+
+}
+
+.comcharts-TS-modal-chart-TN {
+    padding-left: 0px;
+    margin-top: 15px;
+}
+
+.comcharts-TS-modal-chart-TN * {
+    pointer-events: none !important;
+}
+
+.comcharts-TS-modal-chartarea-TN {
+    padding-left: 15px;
+    border-left: 1px solid #eaeaea;
+}
+
+.comcharts-TS-modal-non-chartarea-TN {
+    background-color: #f6f6f6;
+}
+
+.suggestions-div-title:last-child {
+	/*border-bottom: 1px solid #d0d0d0;*/
+}
+
+.comcharts-TS-feature-container {
+    /*background-color: #f6f6f6;*/
+    background-color: #fff;
+}
+
+.comcharts-TS-modal-non-chartarea {
+    width: 25%;
+    float: left;
+}
+
+.comcharts-TS-modal-non-chartarea .comcharts-TS-sub-category-modal {
+    width: 70%;
+}
+
+.comcharts-TS-modal-chartarea {
+    width: 75%;
+    float: right;
+}
+
+.comcharts-TS-sub-category-modal {
+    float: left;
+    padding-left: 25px;
+}
+
+.comcharts-TS-modal-series-indicator-text {
+    width: 60%;
+    margin-left: 15px;
+}
+
+.comcharts-TS-content-sub-heading-modal {
+    padding: 10px 0px;
+    padding-bottom: 15px;
+    font-style: normal;
+    margin: 5px 15px;
+    font-weight: 400;
+    color: #777;
+}
+
+.comcharts-TS-category-modal {
+    margin-left: 15px;
+    /*border-bottom: 1px solid grey;*/
+}
+
+.comcharts-TS-modal-chart {
+    padding-left: 10px;
+}
+
+.comcharts-TS-modal-chart * {
+    pointer-events: none !important;
+}
+
+.comcharts-TS-series-indicator{
+    width: 3px;
+    height: 20px;
+    float: left;
+    margin-left: 0px;
+    margin-right: 10px;
+    margin-top: -2px;
+}
+
+.comcharts-TS-series-indicator-holder {
+    padding: 10px;
+    padding-top: 7px;
+    float: right;
+    margin-top: 0px;
+}
+
+.comcharts-TS-preview-text {
+    font-size: 22px;
+    height: 200px;
+    text-align: center;
+    /*margin-left: 15px;*/
+    padding-top: 80px;
+    color: lightgray;
+    font-weight: 200;
+    border: 1px solid #e7e7e7;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
+    background-color: #9a9a9a;
+    color: white;
+    border-right: 1px solid #9a9a9a;
+}
+
+a {
+    color: #333;
+    font-weight: 400;
+}
+
+a:hover {
+    color: #333;
+    font-weight: 400;
+}
+
+.bootstrap-switch .bootstrap-switch-focused {
+    border-color: none;
+}
+
+/* ====== others ====== */
+.comcharts-TS-clearfix {
+    clear: both;
+}
+
+hr {
+    border: 0px !important;
+    border-top: 1px solid lightgrey !important;
+    margin: 0px !important;
+}
+
+/* ====== Dimensional Analysis ====== */
+#dimensionalAnalysis {
+    width: 100%;
+}
+
+.comcharts-TS-DA-modal-filters {
+    width: 37%;
+    display: inline-block;
+    padding: 10px;
+}
+
+.comcharts-TS-modal-inner-container .comcharts-TS-sidebar-ul {
+    /*margin-top: 10px;*/
+}
+
+.comcharts-TS-modal-inner-container .comcharts-TS-sub-category {
+    padding: 7px 0px 7px 0px !important;
+    margin: 0px !important;
+    padding-left: 5px !important;
+    /*float: left;*/
+    /*margin-bottom: 8px !important;*/
+    /*border-top: 1px solid #ededed;*/
+}
+
+.comcharts-TS-tsc-saved-charts {
+    border: 1px solid #E7E7E7;
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 5px;
+    float: left;
+}
+
+.comcharts-TS-tsc-saved-charts:hover {
+    border: 1px solid #E7E7E7;
+    box-shadow: 2px 2px 5px lightgrey;
+}
+
+.comcharts-TS-tsc-saved-selected-chart {
+    /*box-shadow: 2px 2px 5px grey;*/
+}
+
+.comcharts-TS-tsc-saved-selected-chart:hover {
+    box-shadow: 2px 2px 5px grey;
+}
+
+.comcharts-TS-button-Trend-Searcher {
+    padding-left: 15px;
+    float: right;
+    padding-right: 15px;
+}
+
+.comcharts-TS-sub-category-Trend-Searcher {
+    margin-top: 10px;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+
+.comcharts-TS-DA-modal-selection-list-box {
+    width: 100%;
+    float: left;
+    padding: 10px;
+    overflow: scroll;
+}
+
+.comcharts-TS-DA-modal-dropdown {
+    width: 100%;
+    float: left;
+    padding: 10px;
+}
+
+/*.comcharts-TS-DA-modal-selection-list-box.thin {
+    width: 28%;
+}
+.comcharts-TS-DA-modal-selection-list-box.thick {
+    width: 44%;
+}*/
+
+.comcharts-TS-DA-modal-selection-list-box li {
+    margin: 0px;
+}
+
+.comcharts-background-lightgray {
+	/*background: #F6F6F6;*/
+}
+
+.comcharts-TS-DA-modal-container {
+    /*margin: -10px !important;*/
+    border: 0px;
+    padding: 0px;
+}
+
+.comcharts-TS-modal-inner-container .comcharts-TS-DA-modal-selection-list-box {
+	padding:15px;
+	border-right: 1px dashed #f1f1f1;
+    overflow: scroll;
+}
+
+.comcharts-TS-DA-column-charts-container div:not(:first-child) {
+	border-top: 1px solid #e7e7e7;
+}
+
+.comcharts-TS-da-header-container #chart_header {
+    float:left;
+    width: 91%;
+}
+
+.comcharts-TS-da-header-container #remove_panel {
+    float:left;
+    width: 9%;
+    cursor: pointer;
+    color: lightgrey;
+    font-size: 14px;
+    margin-top: -4px;
+}
+
+.comcharts-TS-da-header-container #remove_panel:hover {
+    color: grey
+}
+
+.comcharts-TS-sidebar-content.dimensional-analysis {
+    position: relative;
+}
+
+.comcharts-TS-sidebar-content.dimensional-analysis .comcharts-TS-help {
+    position: absolute;
+    bottom: 0;
+    margin-left: -10px;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+}
+
+.comcharts-TS-DA-modal-container .comcharts-TS-help {
+    padding: 10px 0px;
+    margin: 0px 15px;
+    /*background-color: #F6F6F6;*/
+    font-size: 12px;
+    /*margin: 0;*/
+    color: #777;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+#dimensionalAnalysis .suggestions_div {
+    border: 1px dashed lightgray;
+    padding: 20px;
+    /*text-align: center;*/
+    height: 800px;
+    cursor: pointer;
+    margin: auto;
+}
+
+/*------ help-text ------*/
+.comcharts-TS-help {
+    /*font-style: italic;*/
+    font-size: 11px;
+    font-weight: normal;
+    color: #adadad;
+    margin-left: 10px;
+    /*margin-top: 5px;*/
+}
+
+.comcharts-TS-dashboards-dropdown {
+    max-width: 100%;
+}
+
+.comcharts-TS-drop-down-arrow {
+    width: 0;
+    height: 0;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-top: 5px solid #000;
+    margin-top: 10px;
+    float: right;
+    cursor: pointer;
+    margin-left: 3px;
+}
+
+.comcharts-TS-drop-up-arrow {
+    width: 0;
+    height: 0;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-bottom: 5px solid #000;
+    margin-top: 10px;
+    float: right;
+    cursor: pointer;
+    margin-left: 3px;
+}
+
+/* ======= Trend Searcher ======= */
+.comcharts-TS-sub-category-trend-searcher {
+   margin-top: 10px !important;
+   padding: 0 5% !important;
+}
+
+.comcharts-TS-sub-category-trend-searcher input{
+   width: 80%;
+   margin-left: 10%;
+   border-radius: 5px;
+   border: 1px solid #FFF;
+   /* height: 25px; */
+   box-shadow: 1px 1px 2px lightgrey;
+   margin-top: 5px;
+   font-size: 16px;
+   border-radius: 0px;
+   padding: 5px;
+}
+
+#chart1_TSC_modal_dashboard_list {
+    margin-left: 10%;
+}
+
+.comcharts-TS-sub-category-trend-searcher #chart2_TSC_modal_chart_title {
+   margin-bottom: 20px;
+}
+
+.comcharts-TS-sub-category-trend-searcher #chart2_TSC_modal_chart_sub_title {
+   margin-bottom: 10px;
+}
+
+.comcharts-TS-sub-category-trend-searcher .comcharts-TS-da-tab select{
+   width: 80%;
+   font-size: 16px;
+   margin-top: 5px;
+}
+
+.comcharts-TS-button-trend-searcher {
+   margin-right: 172px;
+   margin-top: 10px;
+}
+
+.comcharts-TS-input-label {
+   color: #777;
+   font-weight: 300;
+   font-size: 14px;
+   margin-top: 15px;
+   margin-left: 10%;
+}
+
+.comcharts-TS-trend-search-save-button {
+    margin-left: 70px;
+}
+
+.comcharts-TS-counter {
+   float: right;
+   background-color:
+}
+.comcharts-TS-tsc-tab .time-searcher-modal-div {
+    width: 99%;
+}
+
+.comcharts-TS-tsc-main-div {
+    width: 80%;
+    margin-left: 10%;
+    float: left;
+}
+.comcharts-TS-tsc-saved-results {
+    width: 100%;
+    float: left;
+    /*border: 1px dashed lightgrey;*/
+    /*padding: 80px 15px;*/
+    padding-left: 15px;
+    padding-right: 15px;
+    font-weight: 400;
+    margin-left: 0px;
+}
+
+
+.comcharts-TS-saved-clone-chart-description {
+    float: left;
+    width: 50%;
+    margin-left: 10px;
+    margin-top: 15px;
+}
+
+.comcharts-TS-saved-clone-chart-holder {
+    float: left;
+}
+
+.comcharts-TS-save-btn-trend-searcher {
+    display: inline-block;
+    float: right;
+}
+
+.comcharts-TS-trend-searcher-data-table-container {
+    height: 250px; /** hard-coded right now, needs to be changed later to calculate the height **/
+    margin-top: 20px;
+    overflow: auto;
+    /*margin-left: 10px;*/
+    /*margin-right: 10px;*/
+    box-shadow: 2px 2px 5px lightgrey;
+    border: 1px solid #e7e7e7;
+}
+
+.comcharts-TS-tsc-remove-brush {
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    position: absolute;
+    z-index: 1000;
+    color: #787878;
+    cursor: pointer;
+    display: none;
+}
+
+.comcharts-TS-tsc-result-link {
+    color: blue;
+    cursor: pointer;
+}
+
+.comcharts-TS-tsc-edit-link {
+    color: blue;
+    margin-right: 10px;
+    padding-right: 10px;
+    border-right: 1px solid lightgrey;
+    cursor: pointer;
+}
+
+.comcharts-TS-sidebar-content.trend-searcher {
+    position: relative;
+}
+
+.comcharts-TS-sidebar-content.trend-searcher .comcharts-TS-help {
+    position: absolute;
+    bottom: 0;
+    margin-left: -10px;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+}
+
+.comcharts-TS-trend-searcher-tab {
+    border-right: 1px solid transparent;
+    border-top: 1px solid transparent;
+    border-left: 1px solid transparent;
+    border-bottom: 1px solid #b5b5b5;
+    background: #E8E8E8;
+    margin-bottom: -1px;
+    float: left;
+    padding: 10px 30px;
+    /*margin-left: -1px;*/
+    cursor: pointer;
+    font-size: 11px;
+    margin-top: 5px;
+    color: #999;
+    text-align: center;
+}
+
+.comcharts-TS-trend-searcher-tab-active {
+    border-right: 1px solid #b5b5b5;
+    border-top: 1px solid #b5b5b5;
+    border-left: 1px solid #b5b5b5;
+    border-bottom: 1px solid #f6f6f6;
+    background: #f6f6f6;
+    border-radius: 4px 4px 0px 0px;
+    color: #777;
+}
+/*
+#trend_search_tabs {
+    border-bottom: 1px solid #b5b5b5;
+    margin-bottom: 20px;
+}
+*/
+.comcharts-TS-trend-search-tabs {
+    border-bottom: 1px solid #b5b5b5;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.comcharts-TS-trend-searcher-tab-show {
+    display: block;
+}
+
+.comcharts-TS-trend-searcher-tab-hide {
+    display: none;
+}
+
+.comchats-TS-trend-searcher-tab-clickable {
+    cursor: pointer;
+}
+
+#trend_searcher_filter_holder {
+    float: left;
+}
+
+.comcharts-TS-tsc-series-selection-description {
+    text-align: center;
+}
+
+/*.comcharts-TS-tsc-saved-chart-overlay {
+    width: 100%;
+    background: linear-gradient(-45deg, rgba(76, 76, 76, 0.3), rgba(255, 254, 255, 0));*/
+    /*background: linear-gradient(-45deg, rgba(0,0,0,0.05), rgba(255, 255, 255, 0) 27%,rgba(255, 255, 255, 0.71) 44%, rgba(0,0,0,0.05) 42%);*/
+    /*background: linear-gradient(-52deg, rgba(1,0,0,0.05), rgba(255, 255, 255, 0) 27%,rgba(255, 255, 255, 0.71) 54%, rgba(0,0,0,0.05) 0);*/
+/*    height: 100%;
+    z-index: 100;
+    position: absolute;
+}*/
+
+.comcharts-TS-tsc-saved-chart-overlay {
+    width: 100%;
+    box-shadow: inset 2px 2px 10px #C5C5C5;
+    background: linear-gradient(-45deg, rgba(255, 255, 255, 0.24), rgba(0, 0, 0, 0.05));
+    height: 100%;
+    z-index: 100;
+    position: absolute;
+    cursor: -webkit-grab;
+}
+
+.comcharts-TS-tsc-delete-saved-chart-link {
+    cursor: pointer;
+    float: right;
+    color: white;
+    font-size: 13px;
+    font-weight: 400;
+    border-radius: 50%;
+    background: #b9b9b9;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+}
+
+.comcharts-TS-tsc-saved-chart-links-container {
+    bottom: 0;
+    position: absolute;
+}
+
+
+/* ====== Lead Lag Analysis ===== */
+.comcharts-TS-sidebar-content.lead-lag-analysis #timeshift_container {
+    margin-bottom: 30px;
+}
+
+.comcharts-TS-sidebar-content.lead-lag-analysis {
+    position: relative;
+}
+
+.comcharts-TS-sidebar-content.lead-lag-analysis .comcharts-TS-help {
+    position: absolute;
+    bottom: 0;
+    margin-left: -10px;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+}
+
+/* ====== Card Effect ====== */
+.comcharts-TS-card-effect {
+    /*box-shadow: 2px 2px 5px lightgrey;*/
+    background-color: white;
+}
+
+/* ====== Growth Views Modal ====== */
+#growthViews_tab_content .comcharts-TS-series-indicator-holder {
+    margin-top: 11px;
+}
+
+#growthViews_tab_content .comcharts-TS-da-tab select {
+    margin-top: 0px;
+    float: right;
+}
+
+#growthViews_tab_content .comcharts-TS-content-sub-heading-modal {
+    padding-top: 20px !important;
+    padding-left: 15px;
+    margin: 0px !important;
+}
+
+#growthViews_tab_content hr {
+    margin: 0px !important;
+}
+
+#growthViews_tab_content .comcharts-TS-modal-non-chartarea {
+    margin-top: 22px;
+}
+
+.comcharts-TS-slide-in-hide {
+    height: 0px;
+    overflow: hidden;
+}
+
+.comcharts-TS-slide-in-show.growth-chart {
+    height: 80px;
+}
+
+.comcharts-TS-slide-in-show.growth-data-points {
+    height: 120px;
+}
+
+.growth-views-selection-div-transition {
+    -webkit-transition: 0.5s ease-in;  /* Chrome 1-25, Safari 3.2+ */
+    -moz-transition: 0.5s ease-in;   /*Firefox 4-15 */
+    -o-transition: 0.5s ease-in;  /* Opera 10.50–12.00 */
+    transition: 0.5s ease-in;  /* Chrome 26, Firefox 16+, IE 10+, Opera     12.50+ */
+}
+
+.comcharts-TS-tsc-chart-title {
+    /*background-color: white;*/
+    border: none;
+    border-bottom: 1px solid #f1f1f1;
+    padding: 5px 0px;
+    /*box-shadow: 1px 1px 2px #E4E4E4;*/
+    width: 100%;
+}
+
+.comcharts-TS-tsc-chart-sub-title {
+    /*background-color: white;*/
+    border:none;
+    border-bottom: 1px solid #f1f1f1;
+    padding: 5px 0px;
+    /*box-shadow: 1px 1px 2px #E4E4E4;*/
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.comcharts-TS-tsc-saved-trend-view {
+    color: red;
+    font-size: 12px;
+    font-weight: 400;
+    float: left;
+    padding-top: 10px;
+    padding-bottom: 12px;
+    padding-left: 5px;
+    border-left: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+}
+
+.comcharts-TS-tsc-preview-text {
+    font-size: 22px;
+    height: 200px;
+    text-align: center;
+    /*margin-left: 15px;*/
+    padding-top: 80px;
+    color: lightgray;
+    font-weight: 200;
+    border: 1px solid #e7e7e7;
+}
+
+.comcharts-TS-tsc-title-and-filter-holder {
+    background: white;
+    box-shadow: 2px 2px 5px lightgrey;
+    height: 145px;
+    margin-top: 10px;
+    padding: 10px 15px;
+}
+/* ====== Data Sets ====== */
+.globaldataset_data_chart * {
+    pointer-events: none !important;
+}
+
+.filters-div-title {
+    margin-left: 10px;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 0px;
+    border-bottom: 1px solid gainsboro;
+}
+
+.comcharts-TS-modal-filters-dropdown-title {
+    border: 0;
+    margin-bottom: 0;
+}
+
+#comcharts_TS_DA_modal_dashboard_selection, #comcharts_TS_DA_modal_chart_selection {
+    border-right: 0;
+    padding-bottom: 0px;
+}
+
+#comcharts_TS_TS_modal_dashboard_selection, #comcharts_TS_TS_modal_chart_selection {
+    border-right: 0;
+    padding-bottom: 0px;
+}
+
+.comcharts-TS-sidebar-dropdown {
+    background: transparent;
+    border: 1px solid lightgrey;
+    padding: 10px 10px;
+    font-size: 12px;
+    width: 94%;
+    height: 35px;
+}

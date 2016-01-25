@@ -1,0 +1,1081 @@
+.rf-buttons:hover {
+    box-shadow: 2px 2px 5px lightgrey;
+}
+.rf-buttons {
+    border: 0px !important;
+    width: 50px;
+    height: 20px;
+    text-align: center;
+    position: relative;
+    border-radius: 4px;
+    font-size: 0.8em;
+    background-color: #08B99D;
+    color: white;
+    transition: box-shadow 0.2s ease-in;
+    cursor: pointer;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.axis text {
+    /* font: 12px "Helvetica Neue",Helvetica,Arial,sans-serif;*/
+    font-weight: normal;
+    stroke: none;
+    /*z-index: 10;*/
+}
+.axis path, .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+.grid line {
+    stroke: #000;
+    shape-rendering: crispEdges;
+    opacity: 0.2;
+}
+
+.line {
+    fill: none;
+}
+
+.overlay {
+    fill: none;
+    stroke: none;
+    pointer-events: all;
+}
+
+.comcharts-TS-crosshairLine {
+    fill: none;
+    stroke: #1d1d1d;
+    stroke-width: 0.8px;
+    box-shadow: 1px 1px 5px lightgrey;
+}
+
+.comcharts-TS-tooltip_div {
+    height: auto;
+    width: auto;
+    padding: 10px 10px;
+    color: #4F4F4F;
+    text-decoration: none;
+    position: absolute;
+    border-radius: 3px;
+    border: 1px solid #CCCCCC;
+    font-size: 12px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    min-width: 30px;
+    opacity: 1;
+    z-index: 10;
+    display: none;
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    pointer-events: none;
+}
+
+.comcharts-TS-range-selector-span {
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+}
+.comcharts-TS-range-selector-span:not(:first-of-type) {
+    border-left: 1px solid #525252;
+    /*border-color: white;*/
+    /*border-style: solid;*/
+    /*border-radius: 5px;*/
+    /*border-width: thin;*/
+}
+
+.comcharts-TS-range-selector {
+    height: auto;
+    width: auto;
+    padding: 7px 7px;
+    position: absolute;
+    border-radius: 5px;
+    /*border: 1px solid #CCCCCC;*/
+    font-size: 12px;
+    min-width: 30px;
+    /*opacity: 0.92;*/
+    z-index: 1002;
+    box-shadow: 1px 1px 5px grey;
+}
+
+.slider_axis {
+    font: 10px sans-serif;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.slider_axis .domain {
+    fill: #f0f;
+    stroke: #fff;
+    stroke-opacity: 0.3;
+    stroke-width: 5px;
+    stroke-linecap: round;
+}
+
+.slider_axis .halo {
+    fill: #f0f;
+    stroke: #ddd;
+    /*stroke-width: 9px;*/
+    stroke-linecap: round;
+}
+
+.slider .handle {
+    fill: white;
+    stroke: #08B99D;
+    /*stroke-opacity: .5;*/
+    /*stroke-width: 5px;*/
+    cursor: pointer;
+    border: 1px solid grey;
+}
+
+.small-icon {
+    width: 26px;
+    height: 26px;
+    float: left;
+    text-align: center;
+    padding: 2px;
+    /*position: absolute;*/
+    -webkit-user-select: none !important;
+    -khtml-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    -o-user-select: none !important;
+    user-select: none !important;
+    -webkit-touch-callout: none !important;
+    -khtml-touch-callout: none !important;
+    -moz-touch-callout: none !important;
+    -ms-touch-callout: none !important;
+    -o-touch-callout: none !important;
+    touch-callout: none !important;
+}
+
+.small-icon-div {
+    float: left;
+    width: 24px;
+    margin: 0px 7px;
+    height: 24px;
+    position: relative;
+}
+
+.large-icon {
+    width: 24px;
+    height: 24px;
+    text-align: center;
+}
+
+.large-icon-div {
+    float: left;
+    width: 60px;
+    position: relative;
+    font-size: 0.8em;
+    text-align: center;
+    margin-right: 17px;
+}
+
+.menu-bar {
+    width: 100%;
+    background-color: #f3f3f3;
+    /*position: fixed;*/
+    box-sizing:border-box;
+    z-index: 999;
+}
+
+.icon-holder {
+    position: relative;
+    padding: 10px 10px 5px 10px;
+    box-shadow: 2px 2px 5px lightgrey;
+    -moz-box-shadow: 2px 2px 5px lightgrey;
+    -webkit-box-shadow: 2px 2px 5px lightgrey;
+    background-color: #fbfbfb;
+}
+
+.menu-hint {
+    width: 100%;
+    float: left;
+    color: grey;
+    font-size: 0.67em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    background-color: "#f4f4f4";
+}
+
+/*==========lead-lag-analysis==========*/
+
+.comcharts-TS-timeshift-remove-clone {
+    color: #5388ee;
+    cursor: pointer;
+    margin-top: 6px;
+    font-size: 10px;
+}
+
+.comcharts-TS-timeshift-remove-icon {
+    margin-right: 10px;
+    float: right;
+    margin-top: -2px;
+    font-size: 11px;
+    margin-left: 11px;
+    font-weight: 300;
+}
+
+.comcharts-TS-timeshift-slider-rect {
+    fill: white;
+/*    stroke: grey;*/
+}
+
+.comcharts-TS-timeshift-slider-handle {
+/*    stroke: white;*/
+    stroke-width: 1.5px;
+    fill: none;
+    pointer-events: none;
+}
+.comcharts-TS-timeshift-remove-clone-deactive {
+    pointer-events: none;
+    cursor: none;
+    color: lightgray;
+}
+
+.comcharts-TS-timeshift-slider {
+    padding: 8px;
+    border: 1px solid #f6f6f6;
+    transition: box-shadow 0.2s ease-in;
+    margin-bottom: 5px;
+}
+
+/*.comcharts-TS-timeshift-slider:hover {
+    box-shadow: 2px 2px 5px lightgrey;
+    border: 1px solid #e6e6e6;
+}
+*/
+.comcharts-TS-timeshift-container {
+    padding: 0px;
+}
+
+.comcharts-TS-timeshift-time-nav-desc {
+    text-align: left;
+    margin-left: 30px;
+    padding-top: 5px;
+}
+
+.comcharts-TS-timeshift-analyze-series {
+    border: 1px dashed lightgray;
+    padding-top: 20px;
+    text-align: center;
+    height: 70px;
+    cursor: pointer;
+    margin: auto;
+}
+
+.comcharts-TS-timeshift-series-selection {
+    padding: 0px;
+    margin: 0px;
+    font-weight: normal;
+    font-size: 13px;
+    cursor: inherit;
+}
+
+.comcharts-TS-timeshift-slider-holder {
+    /*max-height: 250px;*/
+/*    overflow-y: "auto" !important;
+    overflow-x: "hidden" !important;
+*/}
+
+/*==========menu-bar==========*/
+
+.comcharts-TS-group-name{
+    font-size: 10px;
+    color: #7b7b7b;
+    letter-spacing: 0.5px;
+    margin-top: 10px;
+    background-color: #e8e8e8;
+}
+
+.menu-bar .icon-holder .group_div{
+    float: left;
+    text-align: center;
+}
+
+.help {
+    float: right;
+    /*height: 100%;*/
+    font-size: 17px;
+    cursor: pointer;
+    /*padding-right: 20px;
+    padding-top: 4px;
+    padding-bottom: 7px;
+    padding-left: 20px;*/
+    position: relative;
+    color: #4D4D4D;
+    font-weight: 500;
+    /*margin: -10px -15px;
+    padding: 13px 19px;*/
+}
+
+#droppable_overlay_help.droppable-overlay {
+    /*margin-left: -20px;*/
+    /*border: solid 1px;*/
+    /*margin-top: -6px;*/
+    height: 100%;
+    width: 70px;
+    top: -10px;
+    right: -15px;
+    /*background-color:yellow;*/
+    opacity: 0.2;
+    visibility: hidden;
+    position: absolute;
+    padding: 10px 0px;
+}
+
+.help-margin {
+    width: 120%;
+    height: 100%;
+    /*position:absolute;*/
+    /*border:solid 1px;*/
+    right: 10px;
+    /*margin-top: -10px;*/
+}
+
+.cogwheelContainer {
+    position: absolute;
+    /*padding-top:2px;*/
+    right:3px;
+    top: 3px;
+    opacity: 1;
+    height: 13px;
+    width: 13px;
+    cursor: pointer;
+}
+
+/*.impactSwitchContainer{
+    position: absolute;
+    padding-top:2px;
+    right:20px;
+    opacity: 0;
+    height: 20px;
+    width:20px;
+    cursor: pointer;
+}
+*/
+.reset-icon{
+    /*right:0px;*/
+    float: right;
+    cursor: pointer;
+}
+
+.droppable-overlay {
+    margin-left: 0px;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    /*display: inline;*/
+    position: absolute;
+    opacity: 0.2;
+    text-align: center;
+}
+
+.chart-impact-overlay {
+    margin-left: 0px;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+}
+
+.overlay-text {
+    position: absolute;
+    opacity: 1;
+    width: 100%;
+    /*height: 100%;*/
+    top: 50%;
+    /*left: 50%;*/
+}
+
+
+
+.chart-menu-div {
+    position: absolute;
+    width: 30px;
+    right:0px;
+    visibility: hidden;
+    top: 20px;
+    overflow: auto;
+    background-color: #F0F0F0;
+}
+
+.chart-menu-icons {
+    position: relative;
+    height: 24px;
+    width: 24px;
+    margin: 3px;
+    float: left;
+}
+
+.marker {
+    width: 7px;
+}
+
+.series-selection-label{
+    margin-left: 8px;
+    margin-right: 20px;
+    margin-top: 11px;
+}
+
+.series-selection-group{
+    padding-bottom: 30px;
+    margin-top: 10px;
+}
+
+
+.datepicker{
+    border:0;
+    /*border-bottom: 1px dashed grey;*/
+    margin-right: 10px;
+}
+
+.datepicker:focus{
+    outline: 0;
+}
+
+.vc-hint, .ts-hint {
+    /*width: 100%;*/
+    float: left;
+    /*color: #ED7000;*/
+    font-size: 1em;
+    padding: 10px;
+    background-color: "#f4f4f4";
+}
+
+/*Loader*/
+
+#preloader_1{
+    position:relative;
+    left: 35%;
+}
+#preloader_1 span{
+    display:block;
+    bottom:0px;
+    width: 9px;
+    height: 5px;
+    background:white;
+    position:absolute;
+    animation: preloader_1 1.5s  infinite ease-in-out;
+}
+
+#preloader_1 span:nth-child(2){
+    left:11px;
+    animation-delay: .2s;
+}
+
+#preloader_1 span:nth-child(3){
+    left:22px;
+    animation-delay: .4s;
+}
+
+#preloader_1 span:nth-child(4){
+    left:33px;
+    animation-delay: .6s;
+}
+
+#preloader_1 span:nth-child(5){
+    left:44px;
+    animation-delay: .8s;
+}
+
+@keyframes preloader_1 {
+    0% {height:5px;transform:translateY(0px);background:white;}
+    25% {height:30px;transform:translateY(15px);background:white;}
+    50% {height:5px;transform:translateY(0px);background:white;}
+    100% {height:5px;transform:translateY(0px);background:white;}
+}
+
+.when-loading{
+    top:0px;
+    left:0px;
+    position: fixed;
+    text-align: center;
+    /*padding:40px;*/
+    background-color: rgba(0,0,0,0.9);
+    z-index: 99;
+    color: white;
+    font-size: 0.9em;
+    opacity: 0;
+}
+
+.loader-div{
+    position: relative;
+    top:50%;
+    width:150px;
+    margin:auto;
+    text-align: center;
+}
+
+.dropdowns{
+    /*margin-right: 10px;*/
+    background-color: transparent;
+    /*height: 30px;*/
+    border: none;
+    border-bottom: 1px dashed grey;
+    border-radius: 0px !important;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.dropdowns:focus{
+    outline: none;
+}
+
+
+.brand {
+    font-size: 11px;
+    color: grey;
+    float: right;
+}
+
+.brand a {
+    text-decoration: none;
+}
+
+.background-color-span {
+    width: 16px;
+    height: 15px;
+    float: left;
+    position: absolute;
+    border-radius: 3px;
+    z-index: -1;
+    margin-top: 10px;
+    /*margin-left: 2px;*/
+    text-align: center;
+    /*padding-left: 1px;*/
+    /*padding-right: 1px;*/
+    /*padding-bottom: 18px;*/
+    box-sizing:initial;
+}
+
+.background-color-span-rb {
+    width: 16px;
+    height: 16px;
+    float: left;
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    margin-left: 2px;
+    box-sizing:initial;
+}
+
+/*Mobile menu*/
+.perspective-container{
+    background: rgba(0,0,0,0.95);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 12;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    overflow: scroll;
+    padding-top:0%;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.perspective-div{
+    padding: 1%;
+    left: 10%;
+    width: 80%;
+    /*height: 50%;*/
+    position: absolute;
+    border: 0.07em solid rgba(0, 0, 0, 0.6);
+    background-color: #fff;
+    -webkit-transform: perspective( 600px ) rotateX( -35deg );
+    -moz-transform: perspective( 600px ) rotateX( -35deg );
+    transform: perspective( 600px ) rotateX( -35deg );
+    z-index: 38;
+    margin-top:15%;
+    /*left:center;*/
+    text-align: center;
+    /*-webkit-box-shadow : 0px 0px 0px 5px  rgba(173,168,173,1);
+    -moz-box-shadow: 0px 0px 0px 5px  rgba(173,168,173,1);
+    box-shadow : 0px 10px 10px 0px  rgba(173,168,173,1);*/
+}
+
+.perspective-div:hover{
+    border: #fff solid 1px;
+    /*background-color: red;*/
+    /*top: -10%;
+    width: 100%;*/
+    opacity: 0.8;
+    -webkit-transition: opacity 200ms ease-in;
+    -moz-transition: opacity 200ms ease-in;
+    transition: opacity 200ms ease-in;
+    -webkit-box-shadow : 3px 5px 5px 5px  rgba(173,168,173,1);
+    -moz-box-shadow: 3px 5px 5px 5px  rgba(173,168,173,1);
+    box-shadow : 3px 5px 5px 5px  rgba(173,168,173,1);
+}
+
+.perspective-overlay{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 21px;
+    letter-spacing: 0.5px;
+    margin-right: 15px;
+    font-size: 14px;
+    margin-left: 10px;
+    font-weight: 500;
+}
+
+input[type=radio] {
+    display: none;
+}
+
+label:before {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    position: absolute;
+    left: 0;
+    /*bottom: 1px;*/
+    background-color: rgba(255,255,255,0);
+    /*background-color: #08B99D;*/
+    content: "\2022";
+    color: rgba(255,255,255,0);
+    /*color: #08B99D;*/
+    font-size: 30px;
+    text-align: center;
+    line-height: 16px;
+    /*box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);*/
+}
+
+.radio label:before {
+    border-radius: 8px;
+}
+
+.checkbox label:before {
+    border-radius: 3px;
+}
+
+.radio-inner-circle {
+    margin-left:3px;
+    margin-top:3px;
+    border-radius:50%;
+    width:10px;
+    height:10px;
+}
+
+select{
+     /*-webkit-appearance: none;*/
+     padding-left: 10px;
+     padding-right: 10px;
+}
+
+.longpress {
+    -webkit-animation: 1s longpress;
+            animation: 1s longpress;
+}
+
+.legends-item-box {
+    -webkit-touch-callout:none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.help-heading {
+    font-weight: bold;
+    font-size: 15px;
+    padding-bottom: 5px;
+}
+
+.time-navigator-area #range_filter_inside_tn {
+    padding: 0px 13px 0px 20px;
+}
+
+#range_filter_inside_tn .arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-top: 5px solid #fff;
+    display: inline-block;
+    margin-left: -15px;
+    margin-top: -3px;
+    cursor: pointer;
+}
+
+.comcharts-TS-range-filter-div {
+    font-size: 0.67em;
+}
+
+.smoothing-slider-value {
+    height: 29px;
+    width: 60px;
+    padding: 5px;
+    margin-top: 6px;
+    border-radius: 3px;
+    /* box-shadow: inset 0px 0px 0px transparent; */
+    border: 1px solid #ADA8AD;
+    box-sizing: border-box;
+}
+
+.comcharts-TS-icon-divider {
+    position: relative;
+    float: left;
+    background: #e0e0e0;
+    width: 1px;
+    height: 45px;
+    margin-top: -2px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.comcharts-TS-tabs {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    background: white;
+}
+.comcharts-TS-tabs ul {
+    list-style: none;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid #ddd;
+}
+.comcharts-TS-tabs li a {
+    /*width:10%;*/
+    color: #444444;
+    display: block;
+    float: left;
+    /*font-weight:bold;*/
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    border:none;
+    border-left:1px solid #d9d9d9;
+    border-right: 1px solid #d3d3d3;
+}
+.comcharts-TS-tabs li a:hover {
+    color: #7d7d7d;
+    background:#FFFFFF;
+}
+.comcharts-TS-tabs li:first-child a {
+    border-left:none;
+}
+.comcharts-TS-tabs li a.active {
+    background:#d5e8Fd;
+    border:none;
+    color: #5388ee;
+    border-left:1px solid #d9d9d9;
+    border-right: 1px solid #d3d3d3;
+    /*border-bottom:1px solid #FFFFFF;*/
+}
+.comcharts-TS-tabs li:first-child a.active {
+    border:none;
+    border-right: 1px solid #d3d3d3;
+    /*border-bottom:1px solid #FFFFFF;*/
+}
+.comcharts-TS-tabs li:last-child a.active {
+    border:none;
+    border-left:1px solid #d9d9d9;
+    border-right: 1px solid #d3d3d3;
+    /*border-bottom:1px solid #FFFFFF;*/
+}
+
+.comcharts-TS-pressed {
+    border: 1px solid lightgrey;
+    padding: 2px;
+    border-radius: 2px;
+    box-shadow: inset 2px 2px 4px #e8e8e8;
+    background: -webkit-linear-gradient(white, #e8e8e8); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(white, #e8e8e8); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(white, #e8e8e8); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(white, #e8e8e8);
+}
+
+.comcharts-TS-drop-down-arrow {
+    width: 0;
+    height: 0;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-top: 5px solid #000;
+    margin-top: 10px;
+    float: right;
+    cursor: pointer;
+    margin-left: 3px;
+}
+
+.xdsoft_datetimepicker {
+    z-index: 1001;
+}
+
+
+/*Media Query*/
+@media only screen and
+(max-device-width : 550px) and (orientation : portrait),
+(max-device-width : 800px) and (orientation : landscape) {
+    .cogwheelContainer{
+        height: 30px;
+        width: 30px;
+    }
+
+    .impactSwitchContainer{
+        height: 30px;
+        width: 30px;
+    }
+
+    .help {
+        position: absolute;
+        right: 0;
+        font-size: 2em;
+        padding: 12px;
+        z-index: 9999;
+        background-color: #fbfbfb;
+    }
+
+    #droppable_overlay_help.droppable-overlay {
+        z-index: 9999;
+        width: 100px;
+    }
+
+    .menu-hint {
+        font-size: 1.3em;
+    }
+
+    .large-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .small-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .small-icon-div {
+        width: 60px;
+        height: 60px;
+    }
+
+    .other-buttons {
+        font-size: 30px;
+    }
+
+
+    label {
+        margin-right: 15px;
+        font-size: 30px;
+        padding-left: 50px;
+    }
+
+    label:before {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    input[type=radio]:checked + label:before {
+        font-size: 75px;
+        line-height: 45px;
+    }
+
+    .radio-inner-circle {
+        margin-left:8px;
+        margin-top:8px;
+        width:20px;
+        height:20px;
+    }
+
+    .background-color-span {
+        width: 40px;
+        height: 40px;
+    }
+
+    .background-color-span-rb {
+        width: 40px;
+        height: 40px;
+    }
+
+    .slider_axis {
+        font: 20px sans-serif;
+    }
+
+    .series-selection-group{
+        padding-bottom: 80px;
+        padding-top: 5px;
+    }
+
+    .vc-hint {
+        font-size: 20px;
+    }
+
+    .comcharts-TS-range-filter-div {
+        font-size: 25px;
+    }
+
+    .dimension-filter-div {
+        font-size: 25px;
+    }
+
+    .dropdowns{
+        font-size: 25px;
+    }
+
+    .datepicker {
+        font-size: 25px;
+    }
+
+    .help-heading {
+        max-height: 999999px;
+        font-size: 32px;
+    }
+
+    .brand {
+        max-height: 999999px;
+        font-size: 25px;
+    }
+
+    .comcharts-TS-icon-divider {
+        height: 60px;
+    }
+}
+
+/* Dimension analysis styles */
+   /* .da-container{
+        margin-bottom: 20px;
+        width: 960px;
+        min-height: 650px;
+        background-color: white;
+        padding: 15px 10px;
+        box-sizing: content-box;
+    }*/
+
+.comcharts-TS-da-single-chart-da{
+    width: 710px;
+    float: left;
+}
+
+/* .more-chart-da{
+    width: 240px;
+    float: left;
+}*/
+
+.comcharts-TS-da-chart-name{
+    font-weight: 500;
+    font-size: 11px;
+}
+
+.comcharts-TS-da-add-chart-area{
+    bo:rder-left: 1px solid lightgrey;
+    float: right;
+    width: 224px;
+    padding-left: 15px;
+    height: 600px;
+}
+
+.comcharts-TS-da-tab {
+    /*border-right: 1px solid #ececec;*/
+}
+
+.comcharts-TS-da-tab select{
+    border: 0px;
+    background-color: transparent;
+    font-weight: bold;
+    padding: 0px;
+    border-bottom: 1px dashed grey;
+    color: black;
+    margin-left: 0px;
+    border-radius: 0px;
+    font-size: 13px;
+    margin-top: 5px;
+    -webkit-appearance: menulist;
+}
+
+.comcharts-TS-da-drop-down-title{
+    color:#a9a9a9;
+    margin-left: 7px;
+    margin-bottom: 5px;
+}
+
+.comcharts-TS-da-series-label-heading {
+    margin-top:0px;
+    font-size: 16px;
+    font-weight: bold;
+    /*margin-top: 10px;*/
+}
+
+.comcharts-TS-da-chart-label-heading {
+    font-size: 14px;
+    color: gray;
+    padding-bottom:5px;
+}
+
+.comcharts-TS-da-dashboard-box, .comcharts-TS-da-chart-box {
+    border-bottom: 0px !important;
+    font-weight: 400 !important;
+    color:grey !important;
+    width:100% !important;
+    font-size: 11px !important;
+}
+
+.comcharts-TS-ts-dashboard-box {
+    border-bottom: 0px !important;
+    font-weight: 400 !important;
+    color:grey !important;
+    font-size: 11px !important;
+}
+
+.comcharts-TS-da-series-box  {
+    border-bottom: 0px !important;
+    font-size: 16px !important;
+    width:100% !important;
+    font-weight: bold;
+    color: #5388ee;
+    cursor: pointer;
+    text-decoration: underline;
+    /*margin-top: 10px !important;*/
+}
+
+.comcharts-TS-da-series-box  option {
+    font-size: 13px;
+}
+
+.comcharts-TS-da-series-box:focus {
+    outline: none;
+}
+
+.comcharts-TS-da-chart-box:focus {
+    outline: none;
+}
+
+.comcharts-TS-da-header-container {
+    width: 100%;
+    border-bottom: 1px solid #ececec;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.comcharts-background-white-tsc {
+    background: white;
+}
+/*.comcharts-TS-tsc-main-div {
+    width: 60%;
+   float: left;
+}
+.comcharts-TS-tsc-saved-results {
+    width: 40%;
+    float: left;
+}*/
