@@ -397,6 +397,15 @@ TimeSeries.dimensionalAnalysis = (function(){
         console.time("metric+dimnsion");
         var series =  {},
             query = TimeSeries.Query,
+            table,
+            da_year_query,
+            da_month_query,
+            da_day_query,
+            da_hour_query,
+            da_weekday_query,
+            da_week_query,
+            da_quarter_query,
+            data,
             date_column_name = options.dateColumnName;
 
         if(series_attributes.metric) {
@@ -405,7 +414,36 @@ TimeSeries.dimensionalAnalysis = (function(){
             var metric = options.metricsColumnName[options.newMetricsColumn.indexOf(selected_series)];
             series[metric] = aggregation_fun;
         }
+
         query.init(options.selector+"_DA",data);
+
+        table = ActiveQuery.createTable(options.selector+"_DA", "InBrowser", data);
+        da_year_query = ActiveQuery.createQuery("da_year_query");
+        da_month_query = ActiveQuery.createQuery("da_month_query");
+        da_day_query = ActiveQuery.createQuery("da_day_query");
+        da_hour_query = ActiveQuery.createQuery("da_hour_query");
+        da_weekday_query = ActiveQuery.createQuery("da_weekday_query");
+        da_week_query = ActiveQuery.createQuery("da_week_query");
+        da_quarter_query = ActiveQuery.createQuery("da_quarter_query");
+
+        da_year_query.Select({'year': ActiveQueryHelpers.DateTimeHelpers.field(date_column_name).year}, series).From(options.selector+"_DA").Group();
+        da_month_query.Select({'month': ActiveQueryHelpers.DateTimeHelpers.field(date_column_name).month}, series).From(options.selector+"_DA").Group();
+        da_day_query.Select({'day': ActiveQueryHelpers.DateTimeHelpers.field(date_column_name).day}, series).From(options.selector+"_DA").Group();
+        da_hour_query.Select({'hour': ActiveQueryHelpers.DateTimeHelpers.field(date_column_name).hour}, series).From(options.selector+"_DA").Group();
+        da_weekday_query.Select({'weekday': ActiveQueryHelpers.DateTimeHelpers.field(date_column_name).weekday}, series).From(options.selector+"_DA").Group();
+        da_week_query.Select({'week': ActiveQueryHelpers.DateTimeHelpers.field(date_column_name).week}, series).From(options.selector+"_DA").Group();
+        da_quarter_query.Select({'quarter': ActiveQueryHelpers.DateTimeHelpers.field(date_column_name).quarter}, series).From(options.selector+"_DA").Group();
+
+        var output = {};
+        output.year = da_year_query.Exec();
+        output.month = da_month_query.Exec();
+        output.day = da_day_query.Exec();
+        output.hour = da_hour_query.Exec();
+        output.weekday = da_weekday_query.Exec();
+        output.week = da_week_query.Exec();
+        output.quarter = da_quarter_query.Exec();
+        console.log("output",output);
+
         // if(typeof selected_series != 'object') {
             query.setQuery(options.selector+"_DA","DA_year",{"dimension":[{'year':function(d){
                 // return +d3.time.format('%Y')(new Date(d[date_column_name]));
@@ -453,7 +491,7 @@ TimeSeries.dimensionalAnalysis = (function(){
 
             console.timeEnd("metric+dimnsion");
             console.time("metric");
-            // console.log(series)
+             //console.log(series)
             query.createMetric(options.selector+"_DA","DA_year",{"metric":[series]});
             query.createMetric(options.selector+"_DA","DA_month",{"metric":[series]});
             query.createMetric(options.selector+"_DA","DA_day",{"metric":[series]});
@@ -463,6 +501,7 @@ TimeSeries.dimensionalAnalysis = (function(){
             query.createMetric(options.selector+"_DA","DA_quarter",{"metric":[series]});
             console.timeEnd("metric");
             getGroupData(options,"kokok", selected_series, series_attributes);
+            console.log("after grouping:", granular_data);
         // } else {
 
         // }
