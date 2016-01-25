@@ -70,7 +70,6 @@ TimeSeries.dimensionalAnalysis = (function(){
                 switch(prop) {
                     case'year':
                         expression = function(d) {
-                            // return d3.time.format('%Y')(new Date(d)) == value;
                             return new Date(d).getFullYear() == value;
                         };
                     break;
@@ -150,6 +149,7 @@ TimeSeries.dimensionalAnalysis = (function(){
 
     // var init = function(options,metricsColumnName,aggregation_fun) {
     var init = function(chart_selector, target_selector, ds_list) {
+        console.log(chart_selector, target_selector, ds_list);
         var chart_options = TimeSeries.chart_options[chart_selector],
             chart_configs = TimeSeries.chart_configs[chart_selector],
             modal_div = document.createElement("div"),
@@ -229,8 +229,6 @@ TimeSeries.dimensionalAnalysis = (function(){
         });
 
         daOnDrop(target_selector);
-
-
 
         $('#dAnalysis a').click(function (e) {
             e.preventDefault();
@@ -405,6 +403,7 @@ TimeSeries.dimensionalAnalysis = (function(){
             var metric = options.metricsColumnName[options.newMetricsColumn.indexOf(selected_series)];
             series[metric] = aggregation_fun;
         }
+        console.log(series);
         query.init(options.selector+"_DA",data);
         // if(typeof selected_series != 'object') {
             query.setQuery(options.selector+"_DA","DA_year",{"dimension":[{'year':function(d){
@@ -1493,20 +1492,6 @@ TimeSeries.dimensionalAnalysis = (function(){
         rest_of_options.innerHTML = "All";
         dashboards_list.appendChild(rest_of_options);
 
-        chart_option = document.createElement("option");
-        chart_option.className = 'comcharts-TS-sidebar-ul comcharts-TS-sidebar-dropdown';
-        chart_option.innerHTML = "chart";
-        chart_list.appendChild(chart_option);
-
-        chart_option = document.createElement("option");
-        chart_option.className = 'comcharts-TS-sub-category-feature-modal active';
-        chart_option.dataset.value = "All";
-        chart_option.dataset.displayvalue = "All";
-        chart_option.dataset.dashboard = "All";
-        chart_option.dataset.displaydashboard = "All";
-        chart_option.innerHTML = 'All';
-        chart_list.appendChild(chart_option);
-
         for (var i=0,len_i=all_dashboards.length ; i<len_i ; i++) {
             rest_of_options = document.createElement('option');
             rest_of_options.className = 'comcharts-TS-sub-category-feature-modal';
@@ -1550,7 +1535,6 @@ TimeSeries.dimensionalAnalysis = (function(){
                         series_options.innerHTML = display_metrics[k]; //metric_columns[k].metric+' - '+metric_columns[k].seriesName;
                     } else {
                         series_options.dataset.value = new_metrics[k];
-                        // series_options.innerHTML = metric_columns[k];
                         series_options.innerHTML = display_metrics[k];
                     }
 
@@ -1566,14 +1550,14 @@ TimeSeries.dimensionalAnalysis = (function(){
         // div.appendChild(dashboards_list);
         dashboard_div.className = "comcharts-TS-DA-modal-dropdown";
         dashboard_div.id = "comcharts_TS_DA_modal_dashboard_selection";
-        dashboard_div.appendChild(dashboard_span);
-        dashboard_div.appendChild(dashboards_list);
+        // dashboard_div.appendChild(dashboard_span);
+        // dashboard_div.appendChild(dashboards_list);
 
         chart_span.className = 'suggestions-div-title comcharts-TS-modal-filters-dropdown-title';
         span = document.createElement("span");
         span.className = 'comcharts-TS-content-sub-heading comcharts-TS-suggestions-div-select-dashboard';
         span.innerHTML = "Charts";
-        chart_span.appendChild(span);
+        // chart_span.appendChild(span);
 
         chart_list.id = "panel_DA_chart_"+ count + "_select_box";
         chart_list.className = 'comcharts-TS-sidebar-ul comcharts-TS-sidebar-dropdown';
@@ -1582,12 +1566,12 @@ TimeSeries.dimensionalAnalysis = (function(){
         //mimicking the behaviour of a drop down.......
         chart_list.onfocus = function() { this.options[0].style.display = "none";};
         chart_list.onblur = function () { this.options[0].style.display = "block";};
-        filters_div.appendChild(chart_list);
+        // filters_div.appendChild(chart_list);
 
         chart_div.className = "comcharts-TS-DA-modal-dropdown";
         chart_div.id = "comcharts_TS_DA_modal_chart_selection";
-        chart_div.appendChild(chart_span);
-        chart_div.appendChild(chart_list);
+        // chart_div.appendChild(chart_span);
+        // chart_div.appendChild(chart_list);
 
         series_span.className = 'suggestions-div-title';
         span = document.createElement("span");
@@ -1608,62 +1592,9 @@ TimeSeries.dimensionalAnalysis = (function(){
         // div.appendChild(series_list);
         series_div.className = "comcharts-TS-DA-modal-selection-list-box thick comcharts-background-lightgray";
         series_div.id = "comcharts_TS_DA_modal_series_selection";
+        series_div.style.width = "100%";
         series_div.appendChild(series_span);
         series_div.appendChild(series_list);
-
-        dashboards_list.addEventListener("change", function(e) {
-            var current_selected_dashboard = this.options[this.selectedIndex],
-                current_dashboard_id = current_selected_dashboard.getAttribute('data-value');
-
-            d3.selectAll('.comcharts-TS-DA-modal-selection-list-box li').classed('active', false);
-            d3.selectAll(".comcharts-TS-DA-modal-selection-list-box li").style("display", "block");
-
-            d3.selectAll("#panel_DA_series_"+count+"_select_box li").style({
-                "display": "block"
-            });
-            d3.selectAll("#panel_DA_chart_"+count+"_select_box option").style({
-                "display": "block"
-            });
-            if (current_dashboard_id !== "All") {
-                d3.selectAll("#panel_DA_chart_"+count+"_select_box option")
-                    .filter(function () {
-                        return this.dataset.dashboard !== current_dashboard_id && this.dataset.dashboard !== "All";
-                    })
-                    .style("display", "none");
-                d3.selectAll("#panel_DA_series_"+count+"_select_box li")
-                    .filter(function () {
-                        return this.dataset.dashboard !== current_dashboard_id;
-                    })
-                    .style("display", "none");
-            }
-            document.querySelector("#panel_DA_chart_"+count+"_select_box").value = "All";
-        });
-
-        chart_list.addEventListener("change", function (event) {
-
-            d3.selectAll("#panel_DA_chart_"+count+"_select_box option").classed('active', false);
-            d3.select('#panel_DA_chart_'+count+'_select_box option[data-value="'+this.value+'"]').classed('active', true);
-            d3.selectAll("#panel_DA_series_"+count+"_select_box li").style("display", "block");
-
-            var dashboard_id = document.querySelector('#panel_DA_dashboard_' + count + '_select_box option.active').getAttribute('data-value'),
-                chart_id = document.querySelector('#panel_DA_chart_' + count + '_select_box option.active').getAttribute('data-value');
-            d3.selectAll("#panel_DA_series_"+count+"_select_box li")
-                .filter(function () {
-                    if (dashboard_id === "All") {
-                        if (chart_id === "All") {
-                            return false;
-                        }
-                        return this.dataset.chart !== chart_id;
-                    } else if (chart_id === "All") {
-                        if (dashboard_id === "All") {
-                            return false;
-                        }
-                        return this.dataset.dashboard !== dashboard_id;
-                    }
-                    return this.dataset.dashboard !== dashboard_id || this.dataset.chart !== chart_id;
-                })
-                .style("display", "none");
-        });
 
         series_list.addEventListener("click",function () {
             var current_highlight = document.querySelector(".dimension_filter"),
@@ -1689,12 +1620,12 @@ TimeSeries.dimensionalAnalysis = (function(){
             }
         });
 
-        filters_div.appendChild(filters_span);
-        filters_div.appendChild(dashboard_div);
-        filters_div.appendChild(chart_div);
+        // filters_div.appendChild(filters_span);
+        // filters_div.appendChild(dashboard_div);
+        // filters_div.appendChild(chart_div);
 
         modal_container.appendChild(series_div);
-        modal_container.appendChild(filters_div);
+        // modal_container.appendChild(filters_div);
 
         panel_body.appendChild(modal_container);
         return panel_body;

@@ -623,7 +623,7 @@ TimeSeries.lineChartFunctions = (function() {
 
         chart_configs.all_data_length = data.length;
 
-        TimeSeries.mediator.publish("lineChart", options, feature, data_array, raw_data);
+        // TimeSeries.mediator.publish("lineChart", options, feature, data_array, raw_data);
 
         overlay = d3.select("#" + options.selector + "_overlay");
 
@@ -634,33 +634,9 @@ TimeSeries.lineChartFunctions = (function() {
             TimeSeries.mediator.publish("executeOnComplete",selector,"chart");
         }
 
-        TimeSeries.mediator.publish("onWindowResize",options, d3.select("#" + options.selector + "_svg"));
+        // TimeSeries.mediator.publish("onWindowResize",options, d3.select("#" + options.selector + "_svg"));
     };
 
-    var redrawChart = function (line,options) {
-        var selector = options.selector,
-            chart_configs = TimeSeries.chart_configs[selector],
-            xGroup = d3.select("#" + selector + "_svg_group #xaxis"),
-            yGroup = d3.select("#" + selector + "_svg_group #yaxis"),
-            plot_group = d3.select("#" + selector + "_plot_group"),
-            domain = chart_configs.xScale.domain().map(function(d) {
-                return +d;
-            }),
-            data;
-
-        xGroup.call(chart_configs.xAxis);
-        //yGroup.call(chart_configs.yAxis);
-        TimeSeries.xAxisFunctions.setCSSConfigs(options);
-        TimeSeries.mediator.publish("updateAnomalyPoints",selector);
-        plot_group.selectAll('.line').attr('d', line);
-        if(chart_configs.impact_by_range_filter) {
-            TimeSeries.mediator.publish("filterRangeFilter", TimeSeries.chart_options[chart_configs.impact_by_range_filter], domain);
-        } else if(chart_configs.impact_by_navigator){
-            console.time("updateAnomalyPoints");
-            TimeSeries.mediator.publish("updateTimeNavigatorBrush", chart_configs.impact_by_navigator, domain);
-            console.timeEnd("updateAnomalyPoints");
-        }
-    };
 
     var createOverlay = function(group, width, height, options) {
         if(!document.querySelector("#" + options.selector + "_overlay")) {

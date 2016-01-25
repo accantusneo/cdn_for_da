@@ -53,6 +53,7 @@ TimeSeries.sideBar = (function () {
         switch (selected) {
             case 'dimensional-analysis':
                 d3.select(".comcharts-TS-sidebar-content.dimensional-analysis #dimensionalAnalysis").remove();
+
                 TimeSeries.mediator.publish('initDimensionalAnalysis','chart1', selected_query, all_dashboards);
                 break;
 
@@ -78,86 +79,6 @@ TimeSeries.sideBar = (function () {
             case 'trend-searcher':
                 d3.select(".comcharts-TS-sidebar-content.trend-searcher #timeSearcher").remove();
                 TimeSeries.mediator.publish('initTSCOnLoad', selected_query, all_dashboards, "normal");
-
-                // var analyse_a_chart = document.createElement("span"),
-                //         analyse_container = document.createElement('div'),
-                //         save_series = document.createElement('div');//comcharts-TS-DA-analyze-series
-
-                // analyse_a_chart.innerHTML = "<br><br><br>Trend search a chart";
-                // analyse_a_chart.id = "trend_searcher_analyse_click";
-                // analyse_a_chart.className = "comcharts-TS-DA-analyze-series";
-                // analyse_a_chart.style.marginLeft = "";
-
-                // save_series.className = "comcharts-TS-tsc-saved-results comcharts-TS-preview-text";
-                // save_series.innerHTML = "No saved series";
-                // save_series.id = "trend_searcher_analyse_series_saved";
-
-                // analyse_container.id = 'trend_searcher_analyse_container';
-                // analyse_container.className = "comcharts-TS-tsc-main-div";
-
-                // analyse_a_chart.addEventListener('click', function () {
-                //     var modal_elements = TimeSeries.mediator.publish("onTabClickModalElements", all_dashboards);
-
-                //     TimeSeries.mediator.publish("initModal",{
-                //         content: modal_elements,
-                //         modal_title: 'Select a series to "Search for Trend"',
-                //         close_text: "x",
-                //         close_id: "DA_close_select_series",
-                //         modal_type: "custom",
-                //         selected_tab: "DA_panel_" + 1
-                //     });
-                //     d3.selectAll(".comcharts-TS-DA-modal-selection-list-box").style("height", document.querySelector(".scotch-modal").offsetHeight + "px");
-                //     d3.select(".scotch-modal").style({
-                //         'min-width':"30%",
-                //         'left': "35%"
-                //     });
-                // });
-                // analyse_container.appendChild(analyse_a_chart);
-                // if (!document.getElementById('trend_searcher_analyse_click')) {
-                //     // console.log(document.querySelector(".comcharts-TS-sidebar-content.trend-searcher"),"kkkkkkkkkkkkkkkkkkkllllllllll");
-                //     document.querySelector(".comcharts-TS-sidebar-content.trend-searcher").appendChild(analyse_container);
-                //     document.querySelector(".comcharts-TS-sidebar-content.trend-searcher").appendChild(save_series);
-                //     if ((TimeSeries.trendSearcherSavedCharts) && (TimeSeries.trendSearcherSavedCharts.savedNewCharts.length > 0)) {
-                //         save_series.className = "comcharts-TS-tsc-saved-results";
-                //         var saved_chart = TimeSeries.trendSearcherSavedCharts.savedNewCharts;
-                //         TimeSeries.mediator.publish("TSCCloneCharts","",saved_chart,save_series);
-                //     }
-                // }
-
-                // var helptext_div = document.createElement('div');
-                // helptext_div.id = "trend_save_help_text";
-                // helptext_div.className = 'comcharts-TS-help';
-                // helptext_div.innerHTML = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.';
-                // if(!document.getElementById('trend_save_help_text')) {
-                //     document.querySelector('.comcharts-TS-sidebar-content.trend-searcher').appendChild(helptext_div);
-                // }
-                // var modal_elements = TimeSeries.mediator.publish("onTabClickModalElements", all_dashboards);
-
-                // TimeSeries.mediator.publish("initModal",{
-                //     content: modal_elements,
-                //     modal_title: 'Select a series to "Search for Trend"',
-                //     close_text: "x",
-                //     close_id: "DA_close_select_series",
-                //     modal_type: "custom",
-                //     selected_tab: "DA_panel_" + 1
-                // });
-                // d3.selectAll(".comcharts-TS-DA-modal-selection-list-box").style("height", document.querySelector(".scotch-modal").offsetHeight + "px");
-                /*d3.select(".scotch-modal").style({
-                    'min-width':"30%",
-                    'left': "35%"
-                });*/
-
-
-                // debugger;
-                // document.querySelector(".comcharts-TS-sidebar-content.trend-searcher #timeSearcher").appendChild(analyse_a_chart);
-
-                // console.log(d3.select(".comcharts-TS-sidebar-content.trend-searcher #timeSearcher"));
-
-                // debugger;
-                // document.getElementById('#panel_DA_dashboard_1_select_box').childNodes[0].className = "comcharts-TS-sub-category active";
-                // document.querySelector("#panel_DA_dashboard_1_select_box .comcharts-TS-sub-category").className = "comcharts-TS-sub-category active";
-                // console.log(document.querySelector("#panel_TSC_dashboard_1_select_box .comcharts-TS-sub-category"));
-                // TimeSeries.mediator.publish('initTimeSearcher', 'chart2', selected_query, all_dashboards);
                 break;
         }
         setDashboardHeight();
