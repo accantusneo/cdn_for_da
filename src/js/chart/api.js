@@ -116,45 +116,17 @@ var createChart = function (options) {
 
             if (TimeSeries.data_load_status[options.data].status !== "completed") {
                 on_complete_length = TimeSeries.data_load_status[options.data].onComplete.length;
-                switch(options.chartType) {
-                    case "line":
-                        TimeSeries.data_load_status[options.data].onComplete.splice((on_complete_length-1), 0, {
-                            function_name:"initializeLineChart",
-                            attribute:[options]
-                        });
-                        //TimeSeries.mediator.publish("initializeLineChart",options);
-                    break;
-                    case "column":
-                        TimeSeries.data_load_status[options.data].onComplete.splice((on_complete_length-1), 0, {
-                            function_name:"initializeColumnChart",
-                            attribute:[options]
-                        });
-                        //TimeSeries.mediator.publish("initializeColumnChart",options);
-                    break;
-                }
+                TimeSeries.data_load_status[options.data].onComplete.splice((on_complete_length-1), 0, {
+                    function_name:"configureDimensionalAnalysis",
+                    attribute:[options]
+                });
             }
             return;
         } else {
             if (TimeSeries.data_load_status[options.data].status !== "completed") {
-                switch(options.chartType) {
-                    case "line":
-                        TimeSeries.data_load_status[options.data].onComplete.push({function_name:"initializeLineChart",attribute:[options]});
-                    break;
-                    case "column":
-                        TimeSeries.data_load_status[options.data].onComplete.push({function_name:"initializeColumnChart",attribute:[options]});
-                    break;
-                }
+                TimeSeries.data_load_status[options.data].onComplete.push({function_name:"configureDimensionalAnalysis",attribute:[options]});
                 return;
             }
         }
-    }
-
-    switch(options.chartType) {
-        case "line":
-            TimeSeries.mediator.publish("initializeLineChart",options);
-            break;
-        case "column":
-            TimeSeries.mediator.publish("initializeColumnChart",options);
-            break;
     }
 };
