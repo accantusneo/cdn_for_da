@@ -97,7 +97,7 @@ var createChart = function (options) {
     };
 
     TimeSeries.status_for_menu_bar.on_load_count += 1;
-    TimeSeries.chart_status[selector].onComplete.push({function_name:"updateStatus", attribute:["menuBar"]});
+//    TimeSeries.chart_status[selector].onComplete.push({function_name:"updateStatus", attribute:["menuBar"]});
 
     //All chart mapping.
     TimeSeries.allCharts.push(options.selector);
