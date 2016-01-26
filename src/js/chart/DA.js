@@ -853,6 +853,11 @@ TimeSeries.dimensionalAnalysis = (function(){
                                         // TimeSeries.mediator.publish("setDashboardHeight");
                                     });
                                     span.appendChild(desc_span);
+                                    if(document.getElementById(span.id)){
+                                        while (compare_suggestions.firstChild) {
+                                            compare_suggestions.removeChild(compare_suggestions.firstChild);
+                                        }
+                                    }
                                     compare_suggestions.appendChild(span);
                                 } else {
                                     document.querySelector("#DA_panel_" + next_empty_panel + " #" + dashboard_name.replace(/ /g,"_") + "_" + chart_name.replace(/ /g,"_") + "_" + series_name.replace(/ /g,"_") + "_suggestion #suggestion_desc").innerHTML = "Do you want to compare how <b>" + series_name + "</b> of <b>" + chart_name + "</b> in <b>" + capitalizeFirstLetter(clicked_object_granularity) + " " + original_key + "</b> performing against another <b>" + capitalizeFirstLetter(clicked_object_granularity) + "</b>?";
