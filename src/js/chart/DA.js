@@ -812,9 +812,9 @@ TimeSeries.dimensionalAnalysis = (function(){
                                     x_selected.text(' [' + original_key + ']');
                                 }
 
-                                if (!document.querySelector("#DA_panel_" + next_empty_panel + " #" + /*dashboard_name.replace(/ /g,"_") + "_" + */chart_name.replace(/ /g,"_") + "_" + series_name.replace(/ /g,"_") + "_suggestion")) {
+                                if (!document.querySelector("#DA_panel_" + next_empty_panel + " #" + chart_name.replace(/ /g,"_") + "_" + series_name.replace(/ /g,"_") + "_suggestion")) {
                                     if (previous_click_granularity) {
-                                        var previous_span = document.querySelector("#DA_panel_" + next_empty_panel + " #" + /*dashboard_name.replace(/ /g,"_") + "_" + */chart_name.replace(/ /g,"_") + "_" + series_name.replace(/ /g,"_") + "_suggestion");
+                                        var previous_span = document.querySelector("#DA_panel_" + next_empty_panel + " #" + chart_name.replace(/ /g,"_") + "_" + series_name.replace(/ /g,"_") + "_suggestion");
                                         if (previous_span) {
                                             previous_span.remove();
                                         }
@@ -823,7 +823,7 @@ TimeSeries.dimensionalAnalysis = (function(){
                                         desc_span = document.createElement("span");
 
                                     desc_span.id = "suggestion_desc";
-                                    span.id =  /*dashboard_name.replace(/ /g,"_") + "_" + chart_name.replace(/ /g,"_") + "_" +*/ series_name.replace(/ /g,"_") + "_suggestion";
+                                    span.id = series_name.replace(/ /g,"_") + "_suggestion";
                                     span.className = 'suggestion_div';
                                     or_span = document.createElement("span");
                                     or_span.className = 'or_span';
@@ -859,7 +859,7 @@ TimeSeries.dimensionalAnalysis = (function(){
                                     }
                                     compare_suggestions.appendChild(span);
                                 } else {
-                                    document.querySelector("#DA_panel_" + next_empty_panel + " #" + dashboard_name.replace(/ /g,"_") + "_" + chart_name.replace(/ /g,"_") + "_" + series_name.replace(/ /g,"_") + "_suggestion #suggestion_desc").innerHTML = "Do you want to compare how <b>" + series_name + "</b> of <b>" + chart_name + "</b> in <b>" + capitalizeFirstLetter(clicked_object_granularity) + " " + original_key + "</b> performing against another <b>" + capitalizeFirstLetter(clicked_object_granularity) + "</b>?";
+                                    document.querySelector("#DA_panel_" + next_empty_panel + " #" + chart_name.replace(/ /g,"_") + "_" + series_name.replace(/ /g,"_") + "_suggestion #suggestion_desc").innerHTML = "Do you want to compare how <b>" + series_name + "</b> of <b>" + chart_name + "</b> in <b>" + capitalizeFirstLetter(clicked_object_granularity) + " " + original_key + "</b> performing against another <b>" + capitalizeFirstLetter(clicked_object_granularity) + "</b>?";
                                 }
                             }
                         })
