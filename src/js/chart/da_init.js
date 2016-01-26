@@ -13,7 +13,6 @@ TimeSeries.lineChartFunctions = (function() {
     var initializeLineChart = function (options, callbacks, feature) {
         var i,
             length,
-            global_data_sets = TimeSeries.global_data_sets,
             chart_to_dataset = TimeSeries.gChart_to_data_set_mapping[options.selector],
             chart_to_dataset_length = chart_to_dataset.length,
             dataset_load_status,
@@ -85,16 +84,13 @@ TimeSeries.lineChartFunctions = (function() {
         var selector = parameters.options.selector,
             table_name = selector + "_cfr",
             options = parameters.options,
-            group,
             date_field_name,
             chart_configs = TimeSeries.chart_configs[selector],
-            overlay,
             load_status = TimeSeries.chart_status[selector].status,
             dimension_metrics_validation,
             raw_data,
             data_array;
 
-        group = d3.select("#" + options.selector + "_svg_group");
         data = data || TimeSeries.Query.getData(table_name,"query_cfr");
         dimension_metrics_validation = validateDimensionMetrics(options, data[0]);
         if(!dimension_metrics_validation) {
@@ -122,16 +118,11 @@ TimeSeries.lineChartFunctions = (function() {
 
             queryInitializer(options, feature);
             raw_data = TimeSeries.Query.getData(table_name,"query_cfr");
-            if (options.enableLiveData) {
-                TimeSeries.mediator.publish("setBucketOutputLength", options, table_name, "query_cfr", chart_configs.data_processed.min_max_granularity[0]+'s');
-            }
         }
 
         console.timeEnd(options.selector+"lineChartCallBack");
 
         chart_configs.all_data_length = data.length;
-        overlay = d3.select("#" + options.selector + "_overlay");
-
         TimeSeries.mediator.publishToAll(callbacks);
 
         if(load_status === "inprogress") {
