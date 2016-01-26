@@ -55,7 +55,6 @@ TimeSeries.lineChartFunctions = (function() {
             date_field,
             date_format;
 
-        console.log(chart_to_dataset, "chart_to_dataset");
         for (i = 0; i < chart_to_dataset_length; i++) {
             if (TimeSeries.data_load_status[chart_to_dataset[i]].status !== "complete") {
                 return;
