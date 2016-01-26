@@ -186,7 +186,7 @@
         enableZoom: true,
         "processMissingDataPoint": false,
         "dateColumnName": "Date",
-        "metricsColumnName": [/*"Surface Pressure",*/"Page 2"],
+        "metricsColumnName": ["Surface Pressure","Page 2"],
         enableAnomalyDetection: false,
         anomalyPointCircleRadius: 3,
         anomalyPointOnHoverColor: "#FF0000",
@@ -205,6 +205,7 @@
         showLegends: false,
       };
       createChart(options);
+
 
       document.getElementById("dashboard-1").appendChild(document.getElementById("navigator"));
       document.getElementById("live-dashboard").appendChild(document.getElementById("live-navigator"));

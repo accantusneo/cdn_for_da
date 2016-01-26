@@ -15,28 +15,6 @@ TimeSeries.lineChartFunctions = (function() {
         TimeSeries.chartToFeatureMapping[chart_selector] = [];
     };
     /**
-    *   @function: updateFeatureToChartMapping
-    *   @param {Object} options - Object which contains all the chart configuration parameters passed by the user.
-    *   @description: Update the JSON object to maintain feature to chart mapping
-    */
-    var applyFeature = function (data, feature, column, current_feature, options, line_chart_callbacks) {
-        switch (current_feature) {
-            case "smoothing" :
-                var chart_configs = TimeSeries.chart_configs[options.selector];
-                if (feature && feature.name === "smoothing") {
-                    data = TimeSeries.mediator.publish("removeNoise", data, feature.index, feature.method);
-                } else if (options.enableSmoothing) {
-                    data = TimeSeries.mediator.publish("removeNoise", data, chart_configs.smoothingIndex !== undefined ? chart_configs.smoothingIndex : chart_configs.smoothingSliderIndex !== undefined ? chart_configs.smoothingSliderIndex : options.smoothingIndex, options.smoothingMethod);
-                }
-            break;
-            case "anomalyDetection" :
-                d3.selectAll("#" + options.selector + "_svg .anomaly").remove();
-                line_chart_callbacks.push({function_name:"applyAnomalyDetection",attribute:[options.selector, [column],"nelsonRules"]});
-            break;
-        }
-        return data;
-    };
-    /**
     *   @function: initializeLineChart
     *   @param {Object} options - Object which contains all the chart configuration parameters passed by the user.
     *   @description: It is a user facing API to create line chart. It validates all the configurations and then calls the line chart core function to render the chart.
@@ -100,7 +78,6 @@ TimeSeries.lineChartFunctions = (function() {
         options.chartColor = validateArrayOfColor(options, "chartColor");
         updateFeatureToChartMapping(options);
 
-        TimeSeries.mediator.publish("addChartOverlay",options.selector);
         TimeSeries.chart_options[options.selector] = {};
         TimeSeries.chart_options[options.selector] = options;
         TimeSeries.chart_status[options.selector] = TimeSeries.chart_status[options.selector] || {status:false, onComplete:[] };
@@ -109,12 +86,6 @@ TimeSeries.lineChartFunctions = (function() {
         featuresApplied = TimeSeries.chart_configs[options.selector].featuresApplied = {};
 
         //darpan code
-        options.metricsColumnName = createMetricForChart(options.metricsColumnName,options.globalData);
-        if (options.chartColor.length < options.metricsColumnName.length) {
-            for (i = options.chartColor.length; i < options.metricsColumnName.length; i++) {
-                options.chartColor.push(getRandomColor());
-            }
-        }
         series = options.metricsColumnName;
         series_length = series.length;
         for (i = 0; i < series_length ;i++) {
@@ -122,12 +93,6 @@ TimeSeries.lineChartFunctions = (function() {
                 featuresApplied[series[i].metric.replace(/[\(\)\!\@\#\$\%\^\&\*\+\=\[\]\{\}\;\'\:\"\|, \.]*/gi,"") + "_" + series[i].seriesName.replace(/[\(\)\!\@\#\$\%\^\&\*\+\=\[\]\{\}\;\'\:\"\|, \.]*/gi,"")] = [];
             } else {
                 featuresApplied[series[i].replace(/[\(\)\!\@\#\$\%\^\&\*\+\=\[\]\{\}\;\'\:\"\|, \.]*/gi,"")] = [];
-            }
-            if (options.applySmoothingOnLoad) {
-                featuresApplied[series[i]].unshift("smoothing");
-                TimeSeries.mediator.publish("updateFeaturesAppliedObject",options.selector,series,"smoothing");
-                TimeSeries.mediator.publish("addFeatureApplied",options.selector,"smoothing");
-                TimeSeries.chart_configs[options.selector].smoothingCheckboxState.push(true);
             }
         }
 
@@ -144,39 +109,6 @@ TimeSeries.lineChartFunctions = (function() {
             options.globalData = null;
         }
     };
-
-    var createMetricForChart = function(series,dataset) {
-        var return_series = [],
-            series_length = series.length,
-            dataset_length = dataset.length,
-            j,
-            i,
-            column_name,
-            obj,
-            unique_series_to_be_created;
-        for(j = 0; j < series_length; j++) {
-            if(typeof series[j] == 'object' && !series[j].seriesName) {
-                column_name = series[j].seriesColumnName;
-                unique_series_to_be_created = [];
-                for(i = 0; i < dataset_length; i++) {
-                    if(unique_series_to_be_created.indexOf(dataset[i][column_name]) == -1 && series[j].exclude.indexOf(dataset[i][column_name]) === -1) {
-                        unique_series_to_be_created.push(dataset[i][column_name]);
-                        obj = {};
-                        obj.metric = series[j].metric;
-                        obj.seriesColumnName = column_name;
-                        obj.seriesName = dataset[i][column_name];
-                        return_series.push(obj);
-                    }
-                }
-            } else {
-                return_series.push(series[j]);
-            }
-        }
-        // console.log(return_series,typeof return_series[return_series.length - 1]);
-        return return_series;
-        // console.log(unique_series_to_be_created,return_series);
-    };
-
 
     var lineChartCallBack = function (parameters, data, callbacks, feature) {
         var selector = parameters.options.selector,
