@@ -121,9 +121,6 @@ TimeSeries.lineChartFunctions = (function() {
             date_field_name,
             chart_configs = TimeSeries.chart_configs[selector],
             overlay,
-            metricObj,
-            dataImpactObj,
-            features_list = ["dimensionFilter"],
             load_status = TimeSeries.chart_status[selector].status,
             dimension_metrics_validation,
             raw_data,
@@ -204,6 +201,7 @@ TimeSeries.lineChartFunctions = (function() {
             i,
             column_name,
             newMetricsColumn = options.newMetricsColumn;
+
         for (i = 0; i < len; i++) {
             column_name = metricsColumnName[i];
             if (typeof column_name === "object") {
@@ -212,41 +210,33 @@ TimeSeries.lineChartFunctions = (function() {
                 TimeSeries.Query.deleteQuery(selector, newMetricsColumn[i]);
             }
         }
-        if (feature && feature.name === 'dimensionFilter') {
-            for (i = 0; i < len; i++) {
-                column_name = metricsColumnName[i];
-                dataImpactObj = {};
-                dataImpactObj[table_name] = "query_cfr";
-                TimeSeries.Query.deleteQuery(selector,column_name);
-                TimeSeries.dimensionFilter.getGroupData(options,column_name);
-            }
-        } else {
-            for (i = 0; i < len; i++) {
-                column_name = metricsColumnName[i];
-                metricObj = {};
-                dataImpactObj = {};
-                dataImpactObj[table_name] = "query_cfr";
-                if (typeof column_name === "object") {
-                    var temp_column_name = JSON.parse(JSON.stringify(column_name));
-                    metricObj[temp_column_name.metric] = "sum";
-                    if (!TimeSeries.query_data[selector][temp_column_name.seriesColumnName]) {
-                        TimeSeries.Query.setQuery(selector, temp_column_name.seriesColumnName, {
-                        "dimension":[{date_field_name:function(d){
-                            return d[date_field_name]+"||"+d[temp_column_name.seriesColumnName]; }}],
-                        "metric":[metricObj],
-                        "data_impacted_by": [dataImpactObj]
-                        });
-                    }
-                } else {
-                    metricObj[column_name] = "sum";
-                    TimeSeries.Query.setQuery(selector, newMetricsColumn[i], {
-                        "metric":[metricObj],
-                        "dimension":[date_field_name],
-                        "data_impacted_by": [dataImpactObj]
+
+        for (i = 0; i < len; i++) {
+            column_name = metricsColumnName[i];
+            metricObj = {};
+            dataImpactObj = {};
+            dataImpactObj[table_name] = "query_cfr";
+            if (typeof column_name === "object") {
+                var temp_column_name = JSON.parse(JSON.stringify(column_name));
+                metricObj[temp_column_name.metric] = "sum";
+                if (!TimeSeries.query_data[selector][temp_column_name.seriesColumnName]) {
+                    TimeSeries.Query.setQuery(selector, temp_column_name.seriesColumnName, {
+                    "dimension":[{date_field_name:function(d){
+                        return d[date_field_name]+"||"+d[temp_column_name.seriesColumnName]; }}],
+                    "metric":[metricObj],
+                    "data_impacted_by": [dataImpactObj]
                     });
                 }
+            } else {
+                metricObj[column_name] = "sum";
+                TimeSeries.Query.setQuery(selector, newMetricsColumn[i], {
+                    "metric":[metricObj],
+                    "dimension":[date_field_name],
+                    "data_impacted_by": [dataImpactObj]
+                });
             }
         }
+
     };
 
     var executeOnComplete = function (selector,of_what, data) {
