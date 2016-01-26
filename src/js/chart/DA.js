@@ -147,8 +147,9 @@ TimeSeries.dimensionalAnalysis = (function(){
     };
 
     // var init = function(options,metricsColumnName,aggregation_fun) {
-    var init = function(chart_selector, target_selector) {
-        var /*chart_selector = options.selector,*/
+    var init = function(options, target_selector) {
+        // console.log(options.selector, TimeSeries.chart_options[options.selector], target_selector);
+        var chart_selector = options.selector,
             chart_options = TimeSeries.chart_options[chart_selector],
             chart_configs = TimeSeries.chart_configs[chart_selector],
             modal_div = document.createElement("div"),
@@ -849,7 +850,7 @@ TimeSeries.dimensionalAnalysis = (function(){
                                             }
                                         }
                                         createDimensionCharts(chart_id, series_id, chart_id, next_empty_panel, series_attributes);
-                                        TimeSeries.mediator.publish("setDashboardHeight");
+                                        // TimeSeries.mediator.publish("setDashboardHeight");
                                     });
                                     span.appendChild(desc_span);
                                     compare_suggestions.appendChild(span);
@@ -1440,7 +1441,7 @@ TimeSeries.dimensionalAnalysis = (function(){
             d3.select(event.srcElement).classed('active', true);
             createDimensionCharts(chart_id, series_id, chart_id, count, series_attributes);
             TimeSeries.mediator.publish("closeModal");
-            TimeSeries.mediator.publish("setDashboardHeight");
+            // TimeSeries.mediator.publish("setDashboardHeight");
             if(current_highlight_value !== "none") {
                 returnFilterValue(current_highlight_value,options, "DA_panel_" + this.getAttribute("panel-id"));
             }
@@ -1473,14 +1474,14 @@ TimeSeries.dimensionalAnalysis = (function(){
         main_DA_container.appendChild(panel_1);
         main_DA_container.appendChild(clearfix);
 
-        document.querySelector(target_selector).appendChild(main_DA_container);
+        document.querySelector("#" + target_selector).appendChild(main_DA_container);
         var helptext_div = document.createElement('div');
         helptext_div.className = 'comcharts-TS-help';
         helptext_div.id = "roll_up_help_text";
         helptext_div.innerHTML = "Roll-up by time gives you histograms by various units of time e.g. year, quarter, month, week number, day of the week, etc. These pre-built visual histograms allow you to explore interesting insights about each series, visually determine contributions and compare each series against another.";
 
         if(!document.getElementById('roll_up_help_text')) {
-            document.querySelector(target_selector).appendChild(helptext_div);
+            document.querySelector("#" + target_selector).appendChild(helptext_div);
         }
 
 

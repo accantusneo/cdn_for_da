@@ -57,6 +57,7 @@ TimeSeries.lineChartFunctions = (function() {
         TimeSeries.chart_configs[options.selector].feature_status = {};
 
         chart_configs = TimeSeries.chart_configs[options.selector];
+        console.log("lineChartFunctions");
         chart_configs.isWidthInPercent = TimeSeries.mediator.publish("checkIfDimensionInPecentage", options, "width");
         chart_configs.isHeightInPercent = TimeSeries.mediator.publish("checkIfDimensionInPecentage", options, "height");
 
@@ -71,6 +72,7 @@ TimeSeries.lineChartFunctions = (function() {
         options.width = chart_configs.isWidthInPercent ? TimeSeries.mediator.publish("calculateSVGDimensions",options,"width") : options.width;
         options.height = chart_configs.isHeightInPercent ? TimeSeries.mediator.publish("calculateSVGDimensions",options,"height") : options.height;
 
+        console.log(options.width, options.height);
         if(!options.height) {
             return;
         }
@@ -80,6 +82,7 @@ TimeSeries.lineChartFunctions = (function() {
 
         TimeSeries.chart_options[options.selector] = {};
         TimeSeries.chart_options[options.selector] = options;
+        console.log(options.width, options.height);
         TimeSeries.chart_status[options.selector] = TimeSeries.chart_status[options.selector] || {status:false, onComplete:[] };
 
         //Done for managing features applied on a series.

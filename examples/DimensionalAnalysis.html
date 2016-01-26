@@ -33,19 +33,9 @@
     <link rel="stylesheet" type="text/css" href="../src/css/style-guide-v3.css">
 </head>
 <body>
-    <div id="home">
-      <!-- <div id = "chart1"></div> -->
-      <!-- <div id = "chart2"></div> -->
-      <div id="navigator"></div>
-    </div>
-
-    <div id="home-1">
-      <!-- <div id = "live-chart1"></div> -->
-      <!-- <div id = "live-chart2"></div> -->
-      <div id="live-navigator"></div>
-    </div>
+    <div id="chart1" style="width:100%;"></div>
+    <div id="side-bar-menu" style="width:100%;"></div>
     <button id="dimensional_analysis_button">Dimensional Analysis</button>
-    <div id="side-bar-menu"></div>
 
     <script type="text/javascript" src="../lib/js/d3.min.js"></script>
     <script type="text/javascript" src="../lib/js/crossfilter.js"></script>
@@ -102,64 +92,12 @@
         }
       });
 
-      var configurations = {
-        'container_id':'dashboard-1',
-        'parent_id':'home',
-        'cell_size':45 ,
-        'inter_cell_spacing':10,
-        'width':0.8 * 0.8 * screen.width,
-        'height':900
-      };
-      TimeSeries.viewContainerFunctions.createContainer(configurations);
-
-      var configurations_1 = {
-        'container_id':'live-dashboard',
-        'parent_id':'home-1',
-        'cell_size':45 ,
-        'inter_cell_spacing':10,
-        'width':0.8 * 0.8 * screen.width,
-        'height':900
-      };
-      TimeSeries.viewContainerFunctions.createContainer(configurations_1);
-
-      /*** Side-bar ***/
-      createMenuBar({
-        menubarLocation: "side",
-        selector: 'side-bar-menu',
-        enableTimeSearcher: true,
-        enableTimeShift: true,
-        enableDimensionalAnalysis: true,
-
-        dashboards: [{
-          categoryDisplayText: "Dashboards",
-          className: 'dashboards',
-          list: {
-            "dashboard-1": {
-              className: 'home',
-              subCategoryText: 'Content',
-              heading: 'Top Content',
-              subHeading: 'Which content is performing well?',
-              secondaryHeading: '45,000',
-              secondarySubHeading: 'Views this month'
-            },
-            "live-dashboard": {
-              className: 'live-data',
-              subCategoryText: 'Demographics',
-              // heading: 'ABC2-heading',
-              // subHeading: 'ABC2-subheading',
-              // secondaryHeading: 'XYZ2-heading',
-              // secondarySubHeading: 'XYZ2-subheading'
-            }
-          }
-        }]
-      });
-
       /*** Dashboard-1 ***/
       /*** Mean Monthly Surface Pressure ***/
       var options = {
-        parent: "dashboard-1",
-        width: 8,
-        height: 4,
+        // parent: "dashboard-1",
+        width: 400,
+        height: 500,
         // data: "../data/weather.csv",
         // dataFormat: "csv",
         //   dataSource: "",
@@ -204,12 +142,12 @@
         showLegends: false,
       };
       createChart(options);
+
       document.getElementById("dimensional_analysis_button").onclick = function() {
+        seeDimensionalAnalysis(options, "side-bar-menu");
         console.log("clicked");
       };
 
-      document.getElementById("dashboard-1").appendChild(document.getElementById("navigator"));
-      document.getElementById("live-dashboard").appendChild(document.getElementById("live-navigator"));
     </script>
 </body>
 </html>
