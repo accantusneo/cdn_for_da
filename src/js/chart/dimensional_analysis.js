@@ -333,7 +333,7 @@ TimeSeries.dimensionalAnalysis = (function(){
 
         query.init(options.selector+"_DA",data);
 
-        table = ActiveQuery.createTable(options.selector+"_DA", "InBrowser", data);
+/*        table = ActiveQuery.createTable(options.selector+"_DA", "InBrowser", data);
         da_year_query = ActiveQuery.createQuery("da_year_query");
         da_month_query = ActiveQuery.createQuery("da_month_query");
         da_day_query = ActiveQuery.createQuery("da_day_query");
@@ -358,7 +358,7 @@ TimeSeries.dimensionalAnalysis = (function(){
         output.weekday = da_weekday_query.Exec();
         output.week = da_week_query.Exec();
         output.quarter = da_quarter_query.Exec();
-
+*/
         // if(typeof selected_series != 'object') {
             query.setQuery(options.selector+"_DA","DA_year",{"dimension":[{'year':function(d){
                 // return +d3.time.format('%Y')(new Date(d[date_column_name]));
