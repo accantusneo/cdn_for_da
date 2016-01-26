@@ -13,7 +13,6 @@ TimeSeries.lineChartFunctions = (function() {
     var initializeLineChart = function (options, callbacks, feature) {
         var i,
             length,
-            global_data_sets = TimeSeries.global_data_sets,
             chart_to_dataset = TimeSeries.gChart_to_data_set_mapping[options.selector],
             chart_to_dataset_length = chart_to_dataset.length,
             dataset_load_status,
@@ -227,23 +226,11 @@ TimeSeries.lineChartFunctions = (function() {
         console.timeEnd("onComplete");
     };
 
-    var updateStatus = function (of_what, selector) {
-        switch(of_what) {
-            case "menuBar" :
-                TimeSeries.status_for_menu_bar.on_complete_count += 1;
-                if (TimeSeries.status_for_menu_bar.on_complete_count === TimeSeries.status_for_menu_bar.on_load_count) {
-                    TimeSeries.mediator.publishToAll(TimeSeries.status_for_menu_bar.onComplete);
-                }
-                break;
-        }
-    };
-
     TimeSeries.mediator.subscribe("initializeLineChart",initializeLineChart);
     TimeSeries.mediator.subscribe("lineChartCallBack",lineChartCallBack);
     TimeSeries.mediator.subscribe("createOverlay",createOverlay);
     TimeSeries.mediator.subscribe("queryInitializer",queryInitializer);
     TimeSeries.mediator.subscribe("executeOnComplete",executeOnComplete);
-    TimeSeries.mediator.subscribe("updateStatus",updateStatus);
 
     return {
         initializeLineChart: initializeLineChart,
