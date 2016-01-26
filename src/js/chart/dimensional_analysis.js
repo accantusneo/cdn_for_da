@@ -236,8 +236,7 @@ TimeSeries.dimensionalAnalysis = (function(){
         series_list.setAttribute("panel-id", count);
         series_list.innerHTML = display_metrics[new_metrics.indexOf(series_id)];
         series_list.addEventListener("click", function () {
-            console.log(chart_selector, "heloooooooooooooo");
-            panel_body = modalElements(chart_selector);
+            panel_body = modalElements(chart_selector, chart_id);
             TimeSeries.mediator.publish("initModal",{
                 content: panel_body,
                 modal_title: 'Select a series to "Roll-up by time"',

@@ -148,7 +148,6 @@ TimeSeries.dimensionalAnalysis = (function(){
 
     // var init = function(options,metricsColumnName,aggregation_fun) {
     var init = function(options, target_selector) {
-        // console.log(options.selector, TimeSeries.chart_options[options.selector], target_selector);
         var chart_selector = options.selector,
             chart_options = TimeSeries.chart_options[chart_selector],
             chart_configs = TimeSeries.chart_configs[chart_selector],

@@ -6,15 +6,6 @@
 
 TimeSeries.lineChartFunctions = (function() {
     /**
-    *   @function: updateFeatureToChartMapping
-    *   @param {Object} options - Object which contains all the chart configuration parameters passed by the user.
-    *   @description: Update the JSON object to maintain feature to chart mapping
-    */
-    var  updateFeatureToChartMapping = function (options) {
-        var chart_selector = options.selector;
-        TimeSeries.chartToFeatureMapping[chart_selector] = [];
-    };
-    /**
     *   @function: initializeLineChart
     *   @param {Object} options - Object which contains all the chart configuration parameters passed by the user.
     *   @description: It is a user facing API to create line chart. It validates all the configurations and then calls the line chart core function to render the chart.
@@ -47,9 +38,7 @@ TimeSeries.lineChartFunctions = (function() {
             featuresApplied,
             dimension_metrics_validation,
             chart_configs,
-            chart_div,
-            cogwheel,
-            impact_switch;
+            chart_div;
 
         callbacks = callbacks || [];
 
@@ -57,10 +46,6 @@ TimeSeries.lineChartFunctions = (function() {
         TimeSeries.chart_configs[options.selector].feature_status = {};
 
         chart_configs = TimeSeries.chart_configs[options.selector];
-        console.log("lineChartFunctions");
-        chart_configs.isWidthInPercent = TimeSeries.mediator.publish("checkIfDimensionInPecentage", options, "width");
-        chart_configs.isHeightInPercent = TimeSeries.mediator.publish("checkIfDimensionInPecentage", options, "height");
-
         options = TimeSeries.mediator.publish("validate", options, TimeSeries.default.mandatory_configs);
         if(!options) {
             return;
@@ -68,21 +53,8 @@ TimeSeries.lineChartFunctions = (function() {
         d3.select("#" + options.selector)[0][0].className += " chart-div";
         options = TimeSeries.mediator.publish("validate", options, TimeSeries.default.chart_features);
         options = TimeSeries.mediator.publish("validate", options, TimeSeries.default.chart_options);
-
-        options.width = chart_configs.isWidthInPercent ? TimeSeries.mediator.publish("calculateSVGDimensions",options,"width") : options.width;
-        options.height = chart_configs.isHeightInPercent ? TimeSeries.mediator.publish("calculateSVGDimensions",options,"height") : options.height;
-
-        console.log(options.width, options.height);
-        if(!options.height) {
-            return;
-        }
-
-        options.chartColor = validateArrayOfColor(options, "chartColor");
-        updateFeatureToChartMapping(options);
-
         TimeSeries.chart_options[options.selector] = {};
         TimeSeries.chart_options[options.selector] = options;
-        console.log(options.width, options.height);
         TimeSeries.chart_status[options.selector] = TimeSeries.chart_status[options.selector] || {status:false, onComplete:[] };
 
         //Done for managing features applied on a series.
@@ -92,11 +64,7 @@ TimeSeries.lineChartFunctions = (function() {
         series = options.metricsColumnName;
         series_length = series.length;
         for (i = 0; i < series_length ;i++) {
-            if (typeof series[i] === "object") {
-                featuresApplied[series[i].metric.replace(/[\(\)\!\@\#\$\%\^\&\*\+\=\[\]\{\}\;\'\:\"\|, \.]*/gi,"") + "_" + series[i].seriesName.replace(/[\(\)\!\@\#\$\%\^\&\*\+\=\[\]\{\}\;\'\:\"\|, \.]*/gi,"")] = [];
-            } else {
-                featuresApplied[series[i].replace(/[\(\)\!\@\#\$\%\^\&\*\+\=\[\]\{\}\;\'\:\"\|, \.]*/gi,"")] = [];
-            }
+            featuresApplied[series[i].replace(/[\(\)\!\@\#\$\%\^\&\*\+\=\[\]\{\}\;\'\:\"\|, \.]*/gi,"")] = [];
         }
 
         parameters.options = options;

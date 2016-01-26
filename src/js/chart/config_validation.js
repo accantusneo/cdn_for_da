@@ -79,16 +79,6 @@ TimeSeries.default.chart_options = {
     "tooltipFooterFontWeight": {value:"normal", validateIf:["showTooltip",true], validate_for:"specificValues", specific_values:["normal","bold"]},
     "tooltipFooterFontColor": {value:"#1D1D1D", validateIf:["showTooltip",true], validate_for:"string"},
 
-    "crosshairBorderWidth": {value:1, validateIf:["showCrosshair",true], validate_for:"number"},
-    "crosshairBorderRadius": {value:3, validateIf:["showCrosshair",true], validate_for:"number"},
-    "crosshairBorderStyle": {value:"solid", validateIf:["showCrosshair",true], validate_for:"string"},
-    "crosshairBorderColor": {value:"#CCCCCC", validateIf:["showCrosshair",true], validate_for:"string"},
-    "crosshairBgColor": {value:"#4c4c4c", validateIf:["showCrosshair",true], validate_for:"string"},
-    "crosshairBgOpacity": {value:100, validateIf:["showCrosshair",true], validate_for:"number"},
-    "crosshairFontSize":{value:12, validateIf:["showToolTip",true], validate_for:"number"},
-    "crosshairFontFamily": {value:"'roboto', sans-serif", validateIf:["showCrosshair",true], validate_for:"string"},
-    "crosshairFontColor": {value:"white", validateIf:["showCrosshair",true], validate_for:"string"},
-    "crosshairFontWeight": {value:"bold", validateIf:["showCrosshair",true], validate_for:"specificValues", specific_values:["normal","bold"]},
 
     //X-Axis Properties....
     "xAxisPosition": {value:"bottom", validateIf:["showXAxis",true], validate_for:"specificValues", specific_values:["top","bottom"]},
@@ -182,14 +172,6 @@ TimeSeries.default.chart_options = {
     "minimumTimeStepGranularity": {value: "day",  validateIf:true, validate_for: "specificValues", specific_values: ["year, month, day, hour, minute, second"]},
     "processingMethod": {value: {"disable": "all"},  validateIf:true, validate_for: "specificValues", specific_values: ["disable", "enable", "hide"]}, // specific value, array of values, range, 'regular missing points', 'irregular missing points', 'all'
 
-
-    // Anomaly detection
-    "anomalyPointCircleColor": {value: "#FF0000", validateIf:["enableAnomalyDetection",true], validate_for:"string"},
-    "anomalyPointCircleRadius": {value: 4, validateIf:["enableAnomalyDetection",true], validate_for:"number"},
-    "anomalyPointFillColor": {value: "smartDefault", validateIf:["enableAnomalyDetection",true], validate_for:"string"},
-    "anomalyPointStrokeWidth": {value: 2, validateIf:["enableAnomalyDetection",true], validate_for:"number"},
-    "anomalyPointStrokeOpacity": {value: 70, validateIf:["enableAnomalyDetection",true], validate_for:"number"},
-
     // Data
     "isDataSorted": {value: true,  validateIf:true, validate_for:"boolean"},
     "dataFormat": {value: "smartDefault", validateIf:true, validate_for:"specificValues", specific_values:["json","csv"]},
@@ -198,84 +180,16 @@ TimeSeries.default.chart_options = {
     "startDate": {value: "", validateIf:["dataSource",true], validate_for: "string"},
     "endDate": {value: "", validateIf:["dataSource",true], validate_for: "string"},
     "accessToken": {value: "", validateIf:["dataSource",true], validate_for: "string"},
-    //Live data
-
-    "refreshFrequency": {value: 10, validateIf:["enableLiveData",true], validate_for: "number"},
-    "showLiveDataSeparately": {value: false, validateIf:["enableLiveData",true], validate_for: "boolean"},
-    "inputDataRange": {value: "Only new data", validateIf:["enableLiveData",true], validate_for: "specificValues", specific_values: ["Only new data", "New and old data", "Fixed length data", "All data with null for future"]},
-    "dataBucketSize": {value: "fixed", validateIf:["enableLiveData",true], validate_for: "specificValues", specific_values: ["fixed", "variable"]},
-    "bucketOutputLength": {value: -1, validateIf:["enableLiveData",true], validate_for: "number"},
-    "outputDataRange": {value: "all", validateIf:["enableLiveData",true], validate_for: "specificValues", specific_values: ["all", "fixed"]},
-    "chartTimeSpan": {value: 24, validateIf:["enableLiveData",true], validate_for: "number"},
-    "chartTimeSpanGranularity": {value: "smartDefault", validateIf:["enableLiveData",true], validate_for:"specificValues", specific_values:["second","minute","hour","day","month","year"]},
-    "fixedBrushLengthOnRefresh": {value: false , validateIf:["enableLiveData",true], validate_for: "boolean"},
-    "liveDataOnResume": {value: "goToRecent", validateIf:["enableLiveData",true], validate_for:"specificValues", specific_values:["resume","goToRecent"]},
-    "liveDataStatusFontFamily": {value:"'roboto', sans-serif", validateIf:["showYAxis",true], validate_for:"string"},
-    "liveDataStatusFontSize": {value:10, validateIf:["enableLiveData",true], validate_for:"number"},
-    "liveDataStatusFontColor": {value:"#FF0000", validateIf:["enableLiveData",true], validate_for:"string"},
-    "liveDataStatusFontWeight": {value:"bold", validateIf:["enableLiveData",true], validate_for:"specificValues",specific_values:["bold","normal"]},
-    "liveDataStatusOpacity": {value:80, validateIf:["enableLiveData",true], validate_for:"number"},
 
     "numberprefix": {value: "",  validateIf:true, validate_for: "string"},
     "numbersuffix": {value: "",  validateIf:true, validate_for: "string"},
 
-    //Visual Comparison
-    "enableVisualComparison": {value: true,  validateIf:true, validate_for: "boolean"},
-
-    //Time Shift
-    "enableTimeShift": {value: true,  validateIf:true, validate_for: "boolean"},
-
-    //Time Searcher
-    "enableTimeSearcher": {value: true,  validateIf:true, validate_for: "boolean"},
-
-    //Growth Views
-    "enableGrowthViews": {value: true,  validateIf:true, validate_for: "boolean"},
-
-    //Data Point Growth
-    "enableDataPointGrowth": {value: true,  validateIf:true, validate_for: "boolean"},
-
     // Simplify Dataset
     "simplifyDataset": {value: true,  validate_for:"boolean", validateIf:true},
-
-    // Smoothing
-    "applySmoothingOnLoad": {value: false,  validate_for:"boolean", validateIf:true},
-    "smoothingMethod": {value: "Moving average", validateIf:["enableSmoothing",true], validate_for:"specificValues", specific_values:["Moving average"]},
-    // "smoothingSliderWidth": {value: 100, validateIf:["enableSmoothing",true], validate_for: "number"},
-    // "smoothingSliderHeight": {value: 10, validateIf:["enableSmoothing",true], validate_for: "number"},
-    "smoothingSliderTicks": {value: 3, validateIf:["enableSmoothing",true], validate_for: "number"},
-    "smoothingIndex": {value: 0, validateIf:["enableSmoothing",true], validate_for: "betweenValues", between_values: {"number":true,"between":[0,1],"decimalPlaces":2}},
-    //"smoothingSliderPosition": {value:"top",validate_for: "string", specific_values:["top","bottom"]},
-
-    // Legends
-    "legendPosition": {value: "bottom", validateIf:["showLegends",true], validate_for: "specificValues", specific_values: ["bottom", "right"]},
-    "legendItemFontWeight": {value:"normal", validateIf:["showLegends",true], validate_for:"specificValues", specific_values:["normal","bold"]},
-    "legendItemFontFamily": {value: "Arial", validateIf:["showLegends",true], validate_for: "string"},
-    "legendItemFontSize": {value: 11, validateIf:["showLegends",true], validate_for: "number"},
-    "legendItemFontColor": {value: "#1D1D1D", validateIf:["showLegends",true], validate_for: "string"},
-    "legendItemHoverFontColor": {value: "#000000", validateIf:["showLegends",true], validate_for: "string"},
-    "legendItemHiddenColor": {value: "#CCC", validateIf:["showLegends",true], validate_for: "string"},
-    "legendBorderThickness" : {value: 0, validateIf:["showLegends",true], validate_for: "number"},
-    "legendBorderColor" : {value: "transparent", validateIf:["showLegends",true], validate_for: "string"},
-    "legendBorderOpacity" : {value: 1, validateIf:["showLegends",true], validate_for: "number"},
-    "legendBgColor" : {value: "transparent", validateIf:["showLegends",true], validate_for: "string"},
-    "legendBgOpacity" : {value: 1, validateIf:["showLegends",true], validate_for: "number"},
 
     // Data points per pixel
     "dataPointsPerPixel": {value: 0.1, validateIf:true, validate_for: "number"},
 
-    // Range Selector
-    "rangeSelectorBgColor": {value: "rgba(199, 209, 212, 0.97)", validateIf:["showRangeSelector",true], validate_for: "string"},
-    "rangeSelectorLabelColor": {value: "#777", validateIf:["showRangeSelector",true], validate_for: "string"},
-    "rangeSelectorLabelThickness": {value:"normal", validateIf:["showRangeSelector",true], validate_for:"specificValues", specific_values:["normal","bold"]},
-    "rangeSelectorLabelSize":  {value: 10, validateIf:["showRangeSelector",true], validate_for: "number"},
-    "brushColor": {value: "#A59F9F", validateIf:["showRangeSelector",true], validate_for: "string"},
-    "rangeSelectorHighlightColor": {value: "transparent", validateIf:["showRangeSelector",true], validate_for: "string"},
-    "rangeSelectorHighlightLabelColor": {value: "#4e4e4e", validateIf:["showRangeSelector",true], validate_for: "string"},
-
-    //Navigator
-    //"navigatorMode":{value:"line", validateIf:["isNavigator",true], validate_for:"specificValues", specific_values:["bar","line"]},
-    "impacts":{value:[], validateIf:["isNavigator",true], validate_for:"array"},
-    "numberOfBrush":{value:1, validateIf:["isNavigator",true], validate_for:"number"},
     "outputDateFormat":  {value: "%a %b %e %Y", validateIf:true, validate_for: "string"},
     "outputNumberFormat": {value: ".2f",  validateIf:true, validate_for: "string"},
 
@@ -302,21 +216,7 @@ TimeSeries.default.chart_features = {
     "showTooltip": {value:true,  validateIf:true, validate_for:"boolean"},
     "showCrosshair": {value:true, validateIf:true, validate_for:"boolean"},
 
-    "showLegends": {value: true,  validateIf:true, validate_for:"boolean"},
     "showChartBorder":{value: true,  validateIf:true, validate_for:"boolean"},
-
-    "showRangeSelector": {value: true, validateIf:true, validate_for:"boolean"},
-
-        //Zoom
-    "enableZoom": {value:true,  validateIf:true, validate_for:"boolean"},
-        // Range Filter
-    // "rangeFilter": {value: false,  validateIf:true, validate_for:"boolean"},
-
-    // Dimension Filter
-    // "dimensionFilter": {value: false,  validateIf:true, validate_for:"boolean"}
-    "enableAnomalyDetection": {value: true,  validateIf:true, validate_for:"boolean"},
-    "enableLiveData": {value: false,  validateIf:true, validate_for: "boolean"},
-    "enableSmoothing": {value: true,  validateIf:true, validate_for:"boolean"},
     "enableDimensionalAnalysis": {value: true,  validateIf:true, validate_for:"boolean"}
 };
 
