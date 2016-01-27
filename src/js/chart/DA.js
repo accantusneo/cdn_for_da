@@ -214,7 +214,7 @@ TimeSeries.dimensionalAnalysis = (function(){
             TimeSeries.chart_options[options.selector].globalData = null;
             options.globalData = null;
         }
-    }
+    };
 
     var dimensionalAnalysisConfigCallback = function (parameters, data, callbacks, feature) {
         var selector = parameters.options.selector,
