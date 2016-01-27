@@ -516,14 +516,14 @@ TimeSeries.dimensionalAnalysis = (function(){
         console.time("metric+dimnsion");
         var series =  {},
             query = TimeSeries.Query,
-            table,
+/*            table,
             da_year_query,
             da_month_query,
             da_day_query,
             da_hour_query,
             da_weekday_query,
             da_week_query,
-            da_quarter_query,
+            da_quarter_query,*/
             date_column_name = options.dateColumnName;
 
         if(series_attributes.metric) {
@@ -535,7 +535,7 @@ TimeSeries.dimensionalAnalysis = (function(){
 
         query.init(options.selector+"_DA",data);
 
-        table = ActiveQuery.createTable(options.selector+"_DA", "InBrowser", data);
+/*        table = ActiveQuery.createTable(options.selector+"_DA", "InBrowser", data);
         da_year_query = ActiveQuery.createQuery("da_year_query");
         da_month_query = ActiveQuery.createQuery("da_month_query");
         da_day_query = ActiveQuery.createQuery("da_day_query");
@@ -559,7 +559,7 @@ TimeSeries.dimensionalAnalysis = (function(){
         output.hour = da_hour_query.Exec();
         output.weekday = da_weekday_query.Exec();
         output.week = da_week_query.Exec();
-        output.quarter = da_quarter_query.Exec();
+        output.quarter = da_quarter_query.Exec();*/
 
         // if(typeof selected_series != 'object') {
             query.setQuery(options.selector+"_DA","DA_year",{"dimension":[{'year':function(d){
@@ -1054,11 +1054,11 @@ TimeSeries.dimensionalAnalysis = (function(){
                                         // TimeSeries.mediator.publish("setDashboardHeight");
                                     });
                                     span.appendChild(desc_span);
-                                    if(document.getElementById(span.id)){
-                                        while (compare_suggestions.firstChild) {
-                                            compare_suggestions.removeChild(compare_suggestions.firstChild);
-                                        }
+
+                                    while (compare_suggestions.firstChild) {
+                                        compare_suggestions.removeChild(compare_suggestions.firstChild);
                                     }
+
                                     compare_suggestions.appendChild(span);
                                 } else {
                                     document.querySelector("#DA_panel_" + next_empty_panel + " #" + chart_name.replace(/ /g,"_") + "_" + series_name.replace(/ /g,"_") + "_suggestion #suggestion_desc").innerHTML = "Do you want to compare how <b>" + series_name + "</b> of <b>" + chart_name + "</b> in <b>" + capitalizeFirstLetter(clicked_object_granularity) + " " + original_key + "</b> performing against another <b>" + capitalizeFirstLetter(clicked_object_granularity) + "</b>?";
