@@ -17,8 +17,12 @@ TimeSeries.isMobileOrTablet = check;
 console.log("isMobileOrTablet", TimeSeries.isMobileOrTablet);
 
 var seeDimensionalAnalysis = function (options, parent_id) {
-    // createChart(options);
-    TimeSeries.mediator.publish("initDimensionalAnalysis",options, parent_id);
+    var callbacks = [];
+    // TimeSeries.mediator.publish("createChart", options);
+    // callbacks.push({function_name:"createChart", attribute:[options]});
+    callbacks.push({function_name:"initDimensionalAnalysis",attribute:[options, parent_id]});
+    TimeSeries.mediator.publishToAll(callbacks);
+    // TimeSeries.mediator.publish("initDimensionalAnalysis",options, parent_id);
 };
 
 var updateDimensionalAnalysis = function (chart_selector,series) {
@@ -97,11 +101,11 @@ var createChart = function (options) {
         TimeSeries.gData_set_to_chart_mapping[options.data].push(selector);
 
         if (TimeSeries.data_load_status[options.data].status !== "completed") {
+            console.log("inside");
             TimeSeries.data_load_status[options.data].onComplete.push({function_name:"configureDimensionalAnalysis",attribute:[options]});
             return;
         }
-    } else if(options.data){
-        TimeSeries.mediator.publish("configureDimensionalAnalysis", options);
-        // TimeSeries.data_load_status[options.data].onComplete.push({function_name:"configureDimensionalAnalysis",attribute:[options]});
     }
 };
+
+TimeSeries.mediator.subscribe("createChart", createChart);

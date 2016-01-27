@@ -147,6 +147,8 @@ TimeSeries.dimensionalAnalysis = (function(){
     };
 
     var initConfig = function(options, callbacks, feature) {
+        console.log("indexOf");
+         console.log("validate");
         var i,
             length,
             chart_to_dataset,
@@ -159,6 +161,7 @@ TimeSeries.dimensionalAnalysis = (function(){
             date_field,
             date_format;
 
+        console.log("validate");
         if(options.isGlobalData) {
             chart_to_dataset = TimeSeries.gChart_to_data_set_mapping[options.selector];
             chart_to_dataset_length = chart_to_dataset.length;
@@ -169,6 +172,7 @@ TimeSeries.dimensionalAnalysis = (function(){
             }
             length = chart_to_dataset.length;
         }
+
 
         var parameters = {},
             series_length,
@@ -191,6 +195,7 @@ TimeSeries.dimensionalAnalysis = (function(){
         d3.select("#" + options.selector)[0][0].className += " chart-div";
         options = TimeSeries.mediator.publish("validate", options, TimeSeries.default.chart_features);
         options = TimeSeries.mediator.publish("validate", options, TimeSeries.default.chart_options);
+        console.log("validate");
         TimeSeries.chart_options[options.selector] = {};
         TimeSeries.chart_options[options.selector] = options;
         TimeSeries.chart_status[options.selector] = TimeSeries.chart_status[options.selector] || {status:false, onComplete:[] };
@@ -350,6 +355,7 @@ TimeSeries.dimensionalAnalysis = (function(){
 
     // var init = function(options,metricsColumnName,aggregation_fun) {
     var init = function(options, target_selector) {
+        console.log("qqqqqqqqqqqqqqqqqqq");
         var chart_selector = options.selector,
             chart_options = TimeSeries.chart_options[chart_selector],
             chart_configs = TimeSeries.chart_configs[chart_selector],
