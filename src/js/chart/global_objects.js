@@ -20,7 +20,7 @@ TimeSeries.default.chart_config={};
 TimeSeries.errors = {};
 TimeSeries.allCharts = [];
 
-TimeSeries.featureGroups = {"group1": [], "group2": [], "group3": [], "group4": []};
+// TimeSeries.featureGroups = {"group1": [], "group2": [], "group3": [], "group4": []};
 TimeSeries.featureToChartMapping = {};
 TimeSeries.chartToFeatureMapping = {};
 

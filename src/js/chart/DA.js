@@ -147,7 +147,6 @@ TimeSeries.dimensionalAnalysis = (function(){
     };
 
     var initConfig = function(options, callbacks, feature) {
-
         var i,
             length,
             chart_to_dataset = TimeSeries.gChart_to_data_set_mapping[options.selector],
