@@ -73,19 +73,6 @@ var loadData = function (datasets) {
 };
 
 var createChart = function (options) {
-    if(options.parent) {
-        TimeSeries.viewDivFunctions.createDiv({
-                'container_id':options.parent,
-                'div_id':options.selector,
-                'height':options.height ,
-                'width':options.width,
-                'is_deletable':false,
-                'delete_html':''
-            });
-        options.width = "100%";//(parseInt(document.getElementById(options.selector).getBoundingClientRect().width) / TimeSeries.view.container_obj[options.parent].width * 100) + "%";
-        options.height = "100%";//(parseInt(document.getElementById(options.selector).getBoundingClientRect().height) / TimeSeries.view.container_obj[options.parent].height * 100) + "%";
-    }
-
     var selector = options.selector,
         on_complete_length;
 
@@ -108,25 +95,9 @@ var createChart = function (options) {
         TimeSeries.gData_set_to_chart_mapping[options.data] = TimeSeries.gData_set_to_chart_mapping[options.data] || [];
         TimeSeries.gData_set_to_chart_mapping[options.data].push(selector);
 
-        if (TimeSeries.chart_options[selector].enableLiveData) {
-            options.enableLiveData = true;
-            options.refreshFrequency = TimeSeries.chart_options[selector].refreshFrequency;
-            options.inputDataRange = TimeSeries.chart_options[selector].inputDataRange;
-            options.dataBucketSize = TimeSeries.chart_options[selector].dataBucketSize;
-
-            if (TimeSeries.data_load_status[options.data].status !== "completed") {
-                on_complete_length = TimeSeries.data_load_status[options.data].onComplete.length;
-                TimeSeries.data_load_status[options.data].onComplete.splice((on_complete_length-1), 0, {
-                    function_name:"configureDimensionalAnalysis",
-                    attribute:[options]
-                });
-            }
+        if (TimeSeries.data_load_status[options.data].status !== "completed") {
+            TimeSeries.data_load_status[options.data].onComplete.push({function_name:"configureDimensionalAnalysis",attribute:[options]});
             return;
-        } else {
-            if (TimeSeries.data_load_status[options.data].status !== "completed") {
-                TimeSeries.data_load_status[options.data].onComplete.push({function_name:"configureDimensionalAnalysis",attribute:[options]});
-                return;
-            }
         }
     }
 };
