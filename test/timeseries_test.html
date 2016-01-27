@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title>Testing</title>
+
+        <link rel="stylesheet" href="../lib/css/qunit-1.18.0.css">
+        <script type="text/javascript" src="../lib/js/qunit-1.18.0.js"></script>
+        <link rel="stylesheet" href="../src/css/timeseries.css">
+        <!--
+            Include libraries  that are needed in the application (Code or Test)
+            Eg: jquery, d3, Underscore, etc.
+        -->
+        <script type="text/javascript" src="../lib/js/d3.min.js"></script>
+        <script type="text/javascript" src="../lib/js/crossfilter.js"></script>
+        <script type="text/javascript" src="../lib/js/jquery.js"></script>
+        <script type="text/javascript" src="../lib/js/jquery.datetimepicker.js"></script>
+        <script type="text/javascript" src="../lib/js/moment.min.js"></script>
+
+
+        <!-- Include code js files -->
+        <script type="text/javascript" src="../src/js/global_objects.js"></script>
+        <script type="text/javascript" src="../src/js/mediator.js"></script>
+        <script type="text/javascript" src="../src/js/utility.js"></script>
+        <script type="text/javascript" src="../src/js/errors.js"></script>
+
+        <script type="text/javascript" src="../src/js/data/dataquery.js"></script>
+        <script type="text/javascript" src="../src/js/data/data_manipulation.js"></script>
+        <script type="text/javascript" src="../src/js/data/get_data.js"></script>
+        <script type="text/javascript" src="../src/js/data/number_format.js"></script>
+
+        <script type="text/javascript" src="../src/js/date/date_format.js"></script>
+
+        <script type="text/javascript" src="../src/js/chart/config_validation.js"></script>
+        <script type="text/javascript" src="../src/js/chart/caption_subCaption.js"></script>
+        <script type="text/javascript" src="../src/js/chart/svg.js"></script>
+        <script type="text/javascript" src="../src/js/chart/x_axis.js"></script>
+        <script type="text/javascript" src="../src/js/chart/y_axis.js"></script>
+        <script type="text/javascript" src="../src/js/chart/legends.js"></script>
+        <script type="text/javascript" src="../src/js/chart/crosshair.js"></script>
+        <script type="text/javascript" src="../src/js/chart/column_chart.js"></script>
+        <script type="text/javascript" src="../src/js/chart/line_chart.js"></script>
+        <script type="text/javascript" src="../src/js/chart/time_navigator.js"></script>
+        <script type="text/javascript" src="../src/js/dimensional_analysis.js"></script>
+
+
+        <!-- Include test js files -->
+        <script type="text/javascript" src="unit/x_axis_test.js"></script>
+        <script type="text/javascript" src="unit/y_axis_test.js"></script>
+        <script type="text/javascript" src="unit/config_validation_test.js"></script>
+        <script type="text/javascript" src="unit/date_format_test.js"></script>
+        <script type="text/javascript" src="unit/get_data_test.js"></script>
+        <script type="text/javascript" src="unit/data_manipulation_test.js"></script>
+        <!-- <script type="text/javascript" src="unit/anomaly_detection_test.js"></script> -->
+        <script type="text/javascript" src="unit/anomaly_detection_test.js"></script>
+        <script type="text/javascript" src="unit/number_format_test.js"></script>
+        <script type="text/javascript" src="unit/smoothing_test.js"></script>
+
+    </head>
+    <body>
+        <div id="qunit"></div>
+        <div id="qunit-fixture"></div>
+        <div id="chart"></div>
+        <div id="chart_test"></div>
+
+        <div id="TestingConfiguration"></div>
+        <script>
+            console.log("\n====TEST===");
+        </script>
+    </body>
+</html>

@@ -1,0 +1,133 @@
+<html>
+    <head>
+        <title>Testing</title>
+
+        <link rel="stylesheet" href="../lib/css/qunit-1.18.0.css">
+        <link rel="stylesheet" href="../src/css/timeseries.css">
+        <script type="text/javascript" src="../lib/js/qunit-1.18.0.js"></script>
+
+        <!--
+            Include libraries  that are needed in the application (Code or Test)
+            Eg: jquery, d3, Underscore, etc.
+        -->
+        <script type="text/javascript" src="../lib/js/crossfilter.js"></script>
+        <script type="text/javascript" src="../lib/d3/d3.min.js"></script>
+        <script type="text/javascript" src="../lib/js/jquery.js"></script>
+        <script type="text/javascript" src="../lib/js/jquery.datetimepicker.js"></script>
+
+
+        <!-- Include code js files -->
+        <script type="text/javascript" src="../src/js/core/utility/global_objects.js"></script>
+        <script type="text/javascript" src="../src/js/mediator/mediator.js"></script>
+        <script type="text/javascript" src="../src/js/core/utility/utility.js"></script>
+        <script type="text/javascript" src="../src/js/core/utility/errors.js"></script>
+
+        <script type="text/javascript" src="../src/js/core/data/dataquery.js"></script>
+        <script type="text/javascript" src="../src/js/core/data/data_manipulation.js"></script>
+        <script type="text/javascript" src="../src/js/core/data/get_data.js"></script>
+        <script type="text/javascript" src="../src/js/core/data/livedata.js"></script>
+        <script type="text/javascript" src="../src/js/core/data/smoothing.js"></script>
+        <script type="text/javascript" src="../src/js/core/data/number_format.js"></script>
+
+        <script type="text/javascript" src="../src/js/api/api.js"></script>
+
+        <script type="text/javascript" src="../src/js/core/date/date_format.js"></script>
+
+        <script type="text/javascript" src="../src/js/core/chart/config_validation.js"></script>
+        <script type="text/javascript" src="../src/js/core/chart/caption_subCaption.js"></script>
+        <script type="text/javascript" src="../src/js/core/chart/svg.js"></script>
+        <script type="text/javascript" src="../src/js/core/chart/x_axis.js"></script>
+        <script type="text/javascript" src="../src/js/core/chart/y_axis.js"></script>
+        <script type="text/javascript" src="../src/js/core/chart/legends.js"></script>
+        <script type="text/javascript" src="../src/js/core/chart/crosshair.js"></script>
+        <script type="text/javascript" src="../src/js/core/chart/column_chart.js"></script>
+        <script type="text/javascript" src="../src/js/core/chart/line_chart.js"></script>
+        <script type="text/javascript" src="../src/js/core/chart/time_navigator.js"></script>
+
+        <script type="text/javascript" src="../src/js/core/view/menu_bar.js"></script>
+
+        <script type="text/javascript" src="../src/js/core/features/anomaly_detection.js"></script>
+        <script type="text/javascript" src="../src/js/core/features/dimension_filter.js"></script>
+        <script type="text/javascript" src="../src/js/core/features/dimensional_analysis.js"></script>
+        <script type="text/javascript" src="../src/js/core/features/range_filter.js"></script>
+        <script type="text/javascript" src="../src/js/core/features/range_selector.js"></script>
+        <script type="text/javascript" src="../src/js/core/features/smoothing.js"></script>
+        <script type="text/javascript" src="../src/js/core/features/visual_comparison.js"></script>
+
+        <!-- Include test js files -->
+        <script type="text/javascript" src="unit/dimensional_analysis_test.js"></script>
+
+    </head>
+    <body>
+        <div id="qunit"></div>
+        <div id="qunit-fixture"></div>
+        <div id="chart"></div>
+        <div id="chart_dimension_analysis"></div>
+
+        <script type="text/javascript">
+            var options = {
+                width: 500,
+                height: 350,
+                showCaption: true,
+                showSubCaption: true,
+                caption: "SAMPLE",
+                subCaption: "Chart",
+                data: "../examples/data/weather.csv",
+                selector: "chart",
+                chartType: "line",
+                marginLeft: 50,
+                marginTop: 20,
+                marginRight: 30,
+                marginBottom: 50,
+                chartColor: ["blue"],
+                xAxisTickInterval: 0,
+                lineOnHoverHighlight: true,
+                lineThickness: 1.5,
+                lineDashed: false,
+                lineDashLen: 3,
+                lineDashGap: 5,
+                lineOpacity: 100,
+                enableZoom: true,
+                "processMissingDataPoint": false,
+                "dateColumnName": "Date",
+                "metricsColumnName": ["Precipitation"],
+                anomalyDetection: true,
+                anomalyPointCircleRadius: 5,
+                anomalyPointOnHoverColor: "#FF0000",
+                toolTipBgOpacity: 95,
+                numberprefix: "$",
+                liveData: false,
+                refreshFrequency: 5,
+                inputDataRange: "New and old data", // "Only new data" / "New and old data" / "Fixed length data" / "All data with null for future"
+                outputDataRange: "fixed", // "variable"
+                outputDataLength: 4,
+                outputDateFormat: "%a %b %e %Y",
+                dataBucketSize: "fixed", // "variable"
+                outputDataRange: "all", // "all" / "limited"
+                outputDataLength: [2,1],
+                rangeFilter: false,
+
+                showCaption:true,
+                showLegends:true,
+                showSubCaption:true,
+                showYAxis: true,
+                showXAxis: true,
+                showYAxisGridLine: "yes",
+                showXAxisGridLine: "yes",
+                showToolTip: true,
+                showCrosshair: true,
+                caption: "Caption",
+                subCaption: "subCaption",
+                dataFileFormat: "csv",
+                subCaptionFontColor: "blue",
+                captionFontColor: "red",
+                subCaptionFontFamily: "times new roman"
+            };
+
+            TimeSeries.lineChartFunctions.initializeLineChart(options);
+        </script>
+        <script>
+            console.log("\n====TEST===");
+        </script>
+    </body>
+</html>
