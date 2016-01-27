@@ -17,6 +17,7 @@ TimeSeries.isMobileOrTablet = check;
 console.log("isMobileOrTablet", TimeSeries.isMobileOrTablet);
 
 var seeDimensionalAnalysis = function (options, parent_id) {
+    // createChart(options);
     TimeSeries.mediator.publish("initDimensionalAnalysis",options, parent_id);
 };
 
