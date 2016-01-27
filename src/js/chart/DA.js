@@ -1541,7 +1541,6 @@ TimeSeries.dimensionalAnalysis = (function(){
             suggestions_div.className = 'suggestions_div';
             suggestions_div.appendChild(span);
             // document.getElementById(chart_id).appendChild(panel_body);
-            console.log(chart_id, chart, "renderDA");
             panel_body = modalElements(chart_id, chart);
 
             span.style.cursor = "pointer";

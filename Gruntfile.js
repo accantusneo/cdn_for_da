@@ -58,29 +58,31 @@ module.exports = function (grunt) {
             "js":{
                 "src":[
                     '<%= js_src_path %>/com.charts.js',
-                    '<%= js_src_path %>/global_objects.js',
-                    '<%= js_src_path %>/mediator.js',
-                    '<%= js_src_path %>/utility.js',
-                    '<%= js_src_path %>/errors.js',
-                    '<%= js_src_path %>/api/api.js',
-
+                    '<%= js_src_path %>/chart/global_objects.js',
                     '<%= js_src_path %>/data/dataquery.js',
+                    '<%= js_src_path %>/chart/mediator.js',
+                    '<%= js_src_path %>/chart/utility.js',
+                    '<%= js_src_path %>/chart/errors.js',
+
+
                     '<%= js_src_path %>/data/data_manipulation.js',
                     '<%= js_src_path %>/data/get_data.js',
-                    '<%= js_src_path %>/data/livedata.js',
-                    '<%= js_src_path %>/data/smoothing.js',
                     '<%= js_src_path %>/data/number_format.js',
-                    '<%= js_src_path %>/date/date_format.js',
+                    '<%= js_src_path %>/chart/date_format.js',
 
-                    '<%= js_src_path %>/config_validation.js',
-                    '<%= js_src_path %>/caption_subCaption.js',
-                    '<%= js_src_path %>/svg.js',
-                    '<%= js_src_path %>/x_axis.js',
-                    '<%= js_src_path %>/y_axis.js',
-                    '<%= js_src_path %>/crosshair.js',
-                    '<%= js_src_path %>/line_chart.js',
+                    '<%= js_src_path %>/chart/config_validation.js',
+                    '<%= js_src_path %>/chart/caption_subCaption.js',
+                    '<%= js_src_path %>/chart/svg.js',
+                    '<%= js_src_path %>/chart/x_axis.js',
+                    '<%= js_src_path %>/chart/y_axis.js',
+                    '<%= js_src_path %>/chart/legends.js',
+                    '<%= js_src_path %>/chart/crosshair.js',
+                    '<%= js_src_path %>/chart/column_chart_ordinal.js',
+
                     '<%= js_src_path %>/view/modal.js',
-                    '<%= js_src_path %>dimensional_analysis.js',
+                    '<%= js_src_path %>/chart/DA.js',
+                    '<%= js_src_path %>/chart/api.js',
+
                     '<%= js_src_path %>/com.charts_end.js'
                 ],
                 "dest": '<%= js_distro_path_js %>/<%= pkg.name %>.<%= pkg.version %>.js'

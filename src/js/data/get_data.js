@@ -130,7 +130,6 @@ TimeSeries.getData = (function(){
          var obj = TimeSeries.global_data_sets[dataset];
             format = getDataFormat(data, obj);
 
-        console.log(data,callBack,dataset);
         if(TimeSeries.data_load_status[dataset].status === false) {
             TimeSeries.data_load_status[dataset].status = "inprogress";
         }
