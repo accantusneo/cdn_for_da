@@ -17,12 +17,7 @@ TimeSeries.isMobileOrTablet = check;
 console.log("isMobileOrTablet", TimeSeries.isMobileOrTablet);
 
 var seeDimensionalAnalysis = function (options, parent_id) {
-    var callbacks = [];
-    // TimeSeries.mediator.publish("createChart", options);
-    // callbacks.push({function_name:"createChart", attribute:[options]});
-    callbacks.push({function_name:"initDimensionalAnalysis",attribute:[options, parent_id]});
-    TimeSeries.mediator.publishToAll(callbacks);
-    // TimeSeries.mediator.publish("initDimensionalAnalysis",options, parent_id);
+    TimeSeries.mediator.publish("createChart", options, parent_id);
 };
 
 var updateDimensionalAnalysis = function (chart_selector,series) {
@@ -77,7 +72,34 @@ var loadData = function (datasets) {
     }
 };
 
-var createChart = function (options) {
+var createChart = function (options, parent_id) {
+    var i = 0,
+        data_for,
+        data_for_length,// = data_for.length,
+        id = 1,
+        datasets = {
+            "1": {
+                data: options.data,
+                dataFormat: options.dataFormat,
+                dataSource: options.dataSource,
+                dataFor: [options.selector],
+                dataName: options.dataName,
+                dataDescription: options.dataDescription
+            }
+        };
+
+    TimeSeries.global_data_sets = datasets;
+    TimeSeries.data_load_status[id] = {status:false, onComplete:[] };
+    data_for = datasets[id].dataFor;
+    data_for_length = data_for.length;
+    TimeSeries.chart_options[data_for[i]] = {};
+    TimeSeries.chart_options[data_for[i]].data = id;
+    TimeSeries.gChart_to_data_set_mapping[data_for[i]] = TimeSeries.gChart_to_data_set_mapping[data_for[i]] || [];
+    TimeSeries.gChart_to_data_set_mapping[data_for[i]].push(id);
+
+    TimeSeries.data_aliases[data_for[i]] = TimeSeries.data_aliases[data_for[i]] || {"alias": {}};
+    TimeSeries.data_aliases[data_for[i]].alias = TimeSeries.mediator.publish("extendDefaults", TimeSeries.data_aliases[data_for[i]].alias, TimeSeries.global_data_sets[id].alias);
+
     var selector = options.selector,
         on_complete_length;
 
@@ -93,16 +115,17 @@ var createChart = function (options) {
     //All chart mapping.
     TimeSeries.allCharts.push(options.selector);
 
-    if (!options.data && TimeSeries.chart_options[selector]) {
+    if (/*!options.data && */TimeSeries.chart_options[selector]) {
         options.data = TimeSeries.chart_options[selector].data;
         options.isGlobalData = true;
 
         TimeSeries.gData_set_to_chart_mapping[options.data] = TimeSeries.gData_set_to_chart_mapping[options.data] || [];
         TimeSeries.gData_set_to_chart_mapping[options.data].push(selector);
-
         if (TimeSeries.data_load_status[options.data].status !== "completed") {
-            console.log("inside");
             TimeSeries.data_load_status[options.data].onComplete.push({function_name:"configureDimensionalAnalysis",attribute:[options]});
+            TimeSeries.data_load_status[options.data].onComplete.push({function_name:"initDimensionalAnalysis",attribute:[options, parent_id]});
+            TimeSeries.mediator.publish("parseGlobalData", datasets[id].data, "executeOnComplete", id);
+
             return;
         }
     }

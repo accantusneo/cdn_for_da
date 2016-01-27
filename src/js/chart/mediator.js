@@ -11,7 +11,6 @@ TimeSeries.mediator = (function(){
     };
 
     var publish = function(channel){
-        console.log(TimeSeries.mediator.channels[channel], channel);
         if (!TimeSeries.mediator.channels[channel]) {
             return false;
         }
@@ -19,8 +18,6 @@ TimeSeries.mediator = (function(){
         // console.log(arguments,">>>>>>>>>>>>>>>> MEDIATOR");
         var args = Array.prototype.slice.call(arguments, 1),
             subscription = TimeSeries.mediator.channels[channel];
-
-        console.log(subscription.context, args);
 
         return subscription.callback.apply(subscription.context, args);
     };
@@ -40,9 +37,7 @@ TimeSeries.mediator = (function(){
                 actual_function = TimeSeries.mediator.channels[function_name].callback;
                 function_context = TimeSeries.mediator.channels[function_name].context;
                 attribute_array = callbacks[i].attribute;
-                console.log(callbacks[i].callback, callbacks[i], callbacks[i].attribute);
                 actual_function.apply(function_context,attribute_array);
-                console.log("helooooooooooo");
             }
         }
     };

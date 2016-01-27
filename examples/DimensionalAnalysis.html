@@ -34,7 +34,7 @@
 </head>
 <body>
     <div id="chart1" style="width:100%;"></div>
-    <div id="side-bar-menu" style="width:100%;"></div>
+  <!--  <div id="side-bar-menu" style="width:100%;"></div>-->
     <button id="dimensional_analysis_button">Dimensional Analysis</button>
 
     <script type="text/javascript" src="../lib/js/d3.min.js"></script>
@@ -73,41 +73,24 @@
     <script type="text/javascript" src="../src/js/view/timeseries-dom.js"></script>
 
     <script type="text/javascript">
-      loadData({
-        1: {
-          data: "../data/weather.csv",
-          dataFormat: "csv",
-          dataSource: "",
-          dataFor: ["chart1"],
-          dataName: "Weather.csv",
-          dataDescription: "This file contains weather data with Surface Pressure, Precipitation, Humidity, Ozone and Temperature"
-        }
-      });
-
-      /*** Dashboard-1 ***/
-      /*** Mean Monthly Surface Pressure ***/
       var options = {
         width: 400,
         height: 500,
-        // data: "../data/weather.csv",
-        // dataFormat: "csv",
-        //   dataSource: "",
-        // dataName: "Weather.csv",
-        // dataDescription: "T\his file contains weather data with Surface Pressure, Precipitation, Humidity, Ozone and Temperature",
+        data: "../data/weather.csv",
+        dataFormat: "csv",
+        dataSource: "",
+        dataName: "Weather.csv",
+        dataDescription: "This file contains weather data with Surface Pressure, Precipitation, Humidity, Ozone and Temperature",
         selector: "chart1",
         showCaption: true,
         caption: "Views across time",
-        "processMissingDataPoint": false,
         "dateColumnName": "Date",
         "metricsColumnName": ["Surface Pressure","Page 2"]
       };
-      createChart(options);
 
       document.getElementById("dimensional_analysis_button").onclick = function() {
-        seeDimensionalAnalysis(options, "side-bar-menu");
-        console.log("clicked");
+        seeDimensionalAnalysis(options);
       };
-
     </script>
 </body>
 </html>

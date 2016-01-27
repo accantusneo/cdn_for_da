@@ -147,8 +147,6 @@ TimeSeries.dimensionalAnalysis = (function(){
     };
 
     var initConfig = function(options, callbacks, feature) {
-        console.log("indexOf");
-         console.log("validate");
         var i,
             length,
             chart_to_dataset,
@@ -161,7 +159,6 @@ TimeSeries.dimensionalAnalysis = (function(){
             date_field,
             date_format;
 
-        console.log("validate");
         if(options.isGlobalData) {
             chart_to_dataset = TimeSeries.gChart_to_data_set_mapping[options.selector];
             chart_to_dataset_length = chart_to_dataset.length;
@@ -195,7 +192,6 @@ TimeSeries.dimensionalAnalysis = (function(){
         d3.select("#" + options.selector)[0][0].className += " chart-div";
         options = TimeSeries.mediator.publish("validate", options, TimeSeries.default.chart_features);
         options = TimeSeries.mediator.publish("validate", options, TimeSeries.default.chart_options);
-        console.log("validate");
         TimeSeries.chart_options[options.selector] = {};
         TimeSeries.chart_options[options.selector] = options;
         TimeSeries.chart_status[options.selector] = TimeSeries.chart_status[options.selector] || {status:false, onComplete:[] };
@@ -354,9 +350,9 @@ TimeSeries.dimensionalAnalysis = (function(){
     };
 
     // var init = function(options,metricsColumnName,aggregation_fun) {
-    var init = function(options, target_selector) {
-        console.log("qqqqqqqqqqqqqqqqqqq");
+    var init = function(options) {
         var chart_selector = options.selector,
+            target_selector = options.selector,
             chart_options = TimeSeries.chart_options[chart_selector],
             chart_configs = TimeSeries.chart_configs[chart_selector],
             modal_div = document.createElement("div"),
@@ -444,7 +440,6 @@ TimeSeries.dimensionalAnalysis = (function(){
         series_list.setAttribute("panel-id", count);
         series_list.innerHTML = display_metrics[new_metrics.indexOf(series_id)];
         series_list.addEventListener("click", function () {
-            console.log(chart_selector, "heloooooooooooooo");
             panel_body = modalElements(chart_selector);
             TimeSeries.mediator.publish("initModal",{
                 content: panel_body,
@@ -484,7 +479,6 @@ TimeSeries.dimensionalAnalysis = (function(){
             main_DA_container,
             reset_all_button;
 
-        console.log(chart_selector, "chart_selector");
         if(user_div && !document.getElementById(div_id + "_dimensional_analysis_holder")) {
             chart_holder = document.createElement("div");
             chart_holder.id = div_id + "_" + chart_selector + "_dimensional_analysis_holder";
@@ -908,7 +902,7 @@ TimeSeries.dimensionalAnalysis = (function(){
                         })
                         .style("cursor", "pointer")
                         .on("click", function(d, i) {
-                            console.log("nkdsjfsdkfdsnjdsfnjk", d, i);
+                            // console.log("nkdsjfsdkfdsnjdsfnjk", d, i);
                             var no_of_resets_active = 0,
                                 panel_id = this.parentNode.id.split("_")[2],
                                 k,
