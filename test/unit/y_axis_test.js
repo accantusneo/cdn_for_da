@@ -27,12 +27,12 @@ test('Y axis group creation', function(){
     x_translate = 20;
     y_translate = 300;
     yAxisFunction.createAxisGroup(options,svg,x_translate,y_translate);
-    axis_group = document.querySelector("#chart_line #yaxis");
+    axis_group = document.querySelector("#chart #yaxis");
 
     ok(axis_group,"group to place y-axis has been created");
     equal(parseFloat(axis_group.getAttribute("transform").substring(10,12)),20,"The y axis group created has been translated by 20px from the left");
     equal(parseFloat(axis_group.getAttribute("transform").substring(13,16)),300,"The y axis group created has been translated by 300px from the top");
-    element = document.getElementById("chart_line");
+    element = document.getElementById("chart_svg");
     element.parentNode.removeChild(element);
 });
 
@@ -77,11 +77,13 @@ test("Should set the CSS of the y axis", function() {
         config = TimeSeries.chartConfigValidation.validate(config, TimeSeries.default.chart_features);
         config = TimeSeries.chartConfigValidation.validate(config, TimeSeries.default.chart_options);
 
-        svg = TimeSeries.svgRendererFunctions.createSVG(config),
-        yScale = TimeSeries.yAxisFunctions.scale([0,60],[0,500]),
-        yAxis = TimeSeries.yAxisFunctions.axis(config, yScale),
-        chart_group = TimeSeries.svgRendererFunctions.createGroup(config, svg, 0, 0, (config.selector + "_svg_group"));
-        yGroup = TimeSeries.yAxisFunctions.createAxisGroup(config,chart_group,20,20);
+    TimeSeries.chart_configs[config.selector] = config;
+
+    svg = TimeSeries.svgRendererFunctions.createSVG(config),
+    yScale = TimeSeries.yAxisFunctions.scale([0,60],[0,500]),
+    yAxis = TimeSeries.yAxisFunctions.axis(config, yScale),
+    chart_group = TimeSeries.svgRendererFunctions.createGroup(config, svg, 0, 0, (config.selector + "_svg_group"));
+    yGroup = TimeSeries.yAxisFunctions.createAxisGroup(config,chart_group,20,20);
     yGroup.call(yAxis);
 
     var options = {
@@ -95,7 +97,9 @@ test("Should set the CSS of the y axis", function() {
             yAxisLineThickness: 3,
             yAxisLineColor: "yellow"
         };
+    TimeSeries.chart_configs[options.selector] = options;
     TimeSeries.yAxisFunctions.setCSSConfigs(options);
+
     var font_color = (document.querySelector(".y.axis text").style.fill === "#0000ff") || (document.querySelector(".y.axis text").style.fill === "rgb(0, 0, 255)"),
         line_color = (document.querySelector(".y.axis path").style.stroke === "#ffff00") || (document.querySelector(".y.axis path").style.stroke === "rgb(255, 255, 0)"),
         ticks_color = (document.querySelector(".y.axis line").style.stroke === "#ff0000") || (document.querySelector(".y.axis line").style.stroke === "rgb(255, 0, 0)");
@@ -108,6 +112,7 @@ test("Should set the CSS of the y axis", function() {
     equal(document.querySelector(".y.axis path").style["stroke-width"], "3px", "The width of the y axis line is 3px");
     //ok(ticks_color, "The color of the y axis ticks is rgb(255, 0, 0)");
     element.parentNode.removeChild(element);
+    TimeSeries.chart_configs = [];
 });
 
 
@@ -124,13 +129,22 @@ test('should return the array excluding non numeric values from the input array'
 
 module('Y-Axis TickValue Testing');
 test('should return the tick value array inserted durng the call ([10,20,30,40,50,60])', function() {
+    var config = {
+        "yAxisTickValues":[10,20,30,40,50,60],
+        "selector":"test"
+    };
+    TimeSeries.chart_configs[config.selector] = config;
     var scale = TimeSeries.yAxisFunctions.scale([0,100],[0,100]),
-        y_axis = TimeSeries.yAxisFunctions.axis({"yAxisTickValues":[10,20,30,40,50,60]},scale);
+        y_axis = TimeSeries.yAxisFunctions.axis(config,scale);
 
     deepEqual(y_axis.tickValues(), [10,20,30,40,50,60], 'proper tickValues set i.e. [10,20,30,40,50,60]');
-
-    y_axis = TimeSeries.yAxisFunctions.axis({"yAxisTickValues":"smartDefault"},scale);
+    config = {
+        "yAxisTickValues":"smartDefault"
+    };
+    TimeSeries.chart_configs[config.selector] = config;
+    y_axis = TimeSeries.yAxisFunctions.axis(config,scale);
     deepEqual(y_axis.tickValues(), null, 'proper tickValues set i.e. null');
+    TimeSeries.chart_configs = [];
 });
 
 module('y-grid');
@@ -180,7 +194,6 @@ test("Should set the CSS of the y-grid", function() {
         grid_group,
         gridCss,
         group;
-
         TimeSeries.chart_options["chart_container3"] = config;
         TimeSeries.chart_configs["chart_container3"] = config;
         svg = TimeSeries.svgRendererFunctions.createSVG(config);
@@ -191,7 +204,7 @@ test("Should set the CSS of the y-grid", function() {
 
     gridGroup.call(grid);
     TimeSeries.yAxisFunctions.setGridCSS(config);
-    equal(document.querySelector(".y.grid line").style["opacity"], "0.5", "The opacity of the y-grid lines is 0.5");
+    equal(document.querySelector(".y.grid line").style["opacity"], "0.005", "The opacity of the y-grid lines is 0.005");
     ok(document.querySelector(".y.grid line").style.stroke, "The color of the y-grid lines is rgb(255, 0, 0)");
     element.parentNode.removeChild(element);
 });

@@ -34,6 +34,7 @@ TimeSeries.xAxisFunctions = (function() {
         var tickValues = validateTickValues(options.selector,options.xAxisTickValues),
             tickIntervalGranularity = intervalGranularity(options.xAxisTickIntervalGranularity),
             tickFormat = TimeSeries.dateFormatFunctions.dateFormatter,
+            numberFormatter = TimeSeries.numberFormatFunctions.numberFormatter,
             configXAxisTickValuesFormat = TimeSeries.chart_configs[options.selector].xAxisTickValuesFormat,
             axisFunc = d3.svg.axis()
                 .scale(scale)

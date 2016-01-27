@@ -38,15 +38,14 @@ test('X axis group creation', function(){
     x_translate = 20;
     y_translate = 10;
     xAxisFunction.createAxisGroup(options,svg,x_translate,y_translate);
-    axis_group = document.querySelector("#chart_line #xaxis");
-
+    axis_group = document.querySelector("#chart #xaxis");
     //IE 10 takes only non zero values as ie translate(20) if y_translate = 0.
 
     ok(axis_group,"group to place x-axis has been created");
     equal(parseFloat(axis_group.getAttribute("transform").substring(10,12)),20,"The x axis group created has been translated by 20px from the left");
     equal(parseFloat(axis_group.getAttribute("transform").substring(13,15)),10,"The x axis group created has been translated by 300px from the top");
 
-    element = document.getElementById("chart_line");
+    element = document.getElementById("chart_svg");
     element.parentNode.removeChild(element);
 });
 
@@ -83,6 +82,8 @@ test("Should set the CSS of the x axis", function() {
     config = TimeSeries.chartConfigValidation.validate(config, TimeSeries.default.chart_features);
     config = TimeSeries.chartConfigValidation.validate(config, TimeSeries.default.chart_options);
 
+    TimeSeries.chart_configs[config.selector] = config;
+
     svg = TimeSeries.svgRendererFunctions.createSVG(config);
     Group = TimeSeries.svgRendererFunctions.createGroup(config,svg,20,20,(config.selector + "_svg_group"));
     xGroup = TimeSeries.xAxisFunctions.createAxisGroup(config,Group,20,20);
@@ -104,6 +105,7 @@ test("Should set the CSS of the x axis", function() {
     equal(document.querySelector(".x.axis path").style["stroke-width"], "3px", "The width of the x axis line is 3px");
     //ok(ticks_color, "The color of the x axis ticks is rgb(255, 0, 0)");
    element.parentNode.removeChild(element);
+   TimeSeries.chart_configs = [];
 });
 
 module("X Axis Tick value validation");
@@ -119,21 +121,28 @@ test('should return the array excluding invalid date values from the input array
 
 module('X-Axis TickValue Testing');
 test('should return the tick value array inserted durng the call (["2015-03-25","2015-03-26","2015-03-27","2015-03-28","2015-03-29"])', function() {
-    var scale = xAxisFunction.scale([0,100],[0,100]),
-        x_axis = xAxisFunction.axis({
-            "xAxisTickValues":["2015-03-25","2015-03-26","2015-03-27","2015-03-28","2015-03-29"],
-            "xAxisTickInterval":1,
-            "xAxisTickIntervalGranularity":"hour"
-        },scale);
+    var config = {
+        "xAxisTickValues":["2015-03-25","2015-03-26","2015-03-27","2015-03-28","2015-03-29"],
+        "xAxisTickInterval":1,
+        "xAxisTickIntervalGranularity":"hour",
+        "selector":"test"
+    }
+    TimeSeries.chart_configs[config.selector] = config;
 
+    var scale = xAxisFunction.scale([0,100],[0,100]),
+        x_axis = xAxisFunction.axis(config,scale);
     deepEqual(x_axis.tickValues(), ["2015-03-25","2015-03-26","2015-03-27","2015-03-28","2015-03-29"], 'proper tickValues set i.e. ["2015-03-25","2015-03-26","2015-03-27","2015-03-28","2015-03-29"]');
 
-    x_axis = xAxisFunction.axis({
+    config = {
         "xAxisTickValues":"smartDefault",
         "xAxisTickInterval":1,
-        "xAxisTickIntervalGranularity":"second"
-    },scale);
+        "xAxisTickIntervalGranularity":"second",
+        "selector":"test2"
+    };
+    TimeSeries.chart_configs[config.selector] = config;
+    x_axis = xAxisFunction.axis(config,scale);
     deepEqual(x_axis.tickValues(), null, "proper tickValues set i.e. 'smartDefault'");
+    TimeSeries.chart_configs = [];
 });
 
 module('x-grid');
@@ -219,13 +228,18 @@ test('should return an appropriate d3.time based on chart config', function() {
 
 module('X-Axis ticks testing');
 test('should return an array with a function and numeric value', function() {
+    var config = {
+        "xAxisTickValues":"smartDefault",
+        "xAxisTickInterval":1,
+        "xAxisTickIntervalGranularity":"hour",
+        "selector":"test"
+    };
+    TimeSeries.chart_configs[config.selector] = config;
+
     var scale = xAxisFunction.scale([0,100],[0,100]),
-        tick = xAxisFunction.axis({
-            "xAxisTickValues":"smartDefault",
-            "xAxisTickInterval":1,
-            "xAxisTickIntervalGranularity":"hour"
-        },scale);
+        tick = xAxisFunction.axis(config,scale);
 
     ok(TimeSeries.validation.dataTypes(tick.ticks()[0],"function"), 'the first element is a function.');
     equal(tick.ticks()[1], 1, "the second element is interval '1'.");
+    TimeSeries.chart_configs = [];
 });
