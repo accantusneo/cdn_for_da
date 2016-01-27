@@ -80,12 +80,16 @@ module.exports = function (grunt) {
                     '<%= js_src_path %>/chart/column_chart_ordinal.js',
 
                     '<%= js_src_path %>/view/modal.js',
-                    '<%= js_src_path %>/chart/DA.js',
+                    '<%= js_src_path %>/chart/dimensional_analysis.js',
                     '<%= js_src_path %>/chart/api.js',
 
                     '<%= js_src_path %>/com.charts_end.js'
                 ],
                 "dest": '<%= js_distro_path_js %>/<%= pkg.name %>.<%= pkg.version %>.js'
+            },
+            'css': {
+                'src': ['<%= css_src_path %>/*.css'],
+                'dest': '<%= css_distro_path %>/<%= pkg.name %>.<%= pkg.version %>.css'
             }
             //,
             // "test":{
