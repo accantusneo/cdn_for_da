@@ -31,7 +31,7 @@ test("Mapping function should return the correct object as per the granularity "
 });
 
 test("DOM and Interaction testing ", function () {
-    seeDimensionalAnalysis("chart","chart_dimension_analysis","Precipitation");
+    seeDimensionalAnalysis(options, "chart");
     var mouseOver = new Event("mouseover"),
         element = document.querySelectorAll("#chart_dimension_month_plot_group .column")[6],
         chart_configs = TimeSeries.chart_configs["chart"],
