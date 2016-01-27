@@ -6,9 +6,6 @@ TimeSeries.default.mandatory_configs = {
 };
 
 TimeSeries.default.chart_options = {
-    // Data file properties
-    // "seriesList": {value: {}, validate_for: "object", validateIf:true},
-
     //Chart properties....
     "width": {value: 100, validate_for: "number", validateIf:true},
     "height": {value: 100, validate_for: "number", validateIf:true},
@@ -46,14 +43,6 @@ TimeSeries.default.chart_options = {
     //Grid Properties....
     "gridColor": {value:"#e7e7e7", validateIf: true, validate_for:"string"},
     "gridOpacity":{value:100, validateIf: true, validate_for:"number"},
-
-    //Configs sepcific to line chart....
-    "lineThickness": {value:1.5, validateIf:["chartType","line"], validate_for:"number"},
-    "lineOnHoverHighlight":{value:false, validateIf:["chartType","line"], validate_for:"boolean"},
-    "lineDashed": {value:false, validateIf:["chartType","line"], validate_for:"boolean"},
-    "lineDashGap":{value:3, validateIf:["chartType","line"], validate_for:"number"},
-    "lineDashLen":{value:3, validateIf:["chartType","line"], validate_for:"number"},
-    "lineOpacity": {value:100, validateIf:["chartType","line"], validate_for:"number"},
 
    //Configs sepcific to crosshair and tooltip....
     "tooltipBorderBodyWidth": {value:1, validateIf:["showTooltip",true], validate_for:"number"},
@@ -222,13 +211,10 @@ TimeSeries.default.chart_features = {
 
 
 TimeSeries.default.mandatory_filter_configs = {
-    "selector": {validate_for: "existsOnDOM", "mandatory": true, validateIf:true},
-    "impacts": {validate_for:"array", mandatory: true, validateIf: true}
+    "selector": {validate_for: "existsOnDOM", "mandatory": true, validateIf:true}
 };
 
-TimeSeries.default.filter_configs = {
-
-};
+TimeSeries.default.filter_configs = {};
 
 TimeSeries.chartConfigValidation = (function(){
     /**

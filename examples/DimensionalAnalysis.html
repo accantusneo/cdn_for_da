@@ -51,9 +51,7 @@
     <script type="text/javascript" src="../src/js/chart/mediator.js"></script>
     <script type="text/javascript" src="../src/js/chart/utility.js"></script>
     <script type="text/javascript" src="../src/js/chart/errors.js"></script>
-
     <script type="text/javascript" src="../src/js/chart/api.js"></script>
-
     <script type="text/javascript" src="../src/js/data/dataquery.js"></script>
     <script type="text/javascript" src="../src/js/data/data_manipulation.js"></script>
     <script type="text/javascript" src="../src/js/data/get_data.js"></script>
@@ -73,7 +71,6 @@
     <script type="text/javascript" src="../src/js/view/timeseries-dom.js"></script>
 
     <script type="text/javascript">
-
       loadData({
         1: {
           data: "../data/weather.csv",
@@ -88,7 +85,6 @@
       /*** Dashboard-1 ***/
       /*** Mean Monthly Surface Pressure ***/
       var options = {
-        // parent: "dashboard-1",
         width: 400,
         height: 500,
         // data: "../data/weather.csv",
@@ -97,13 +93,8 @@
         // dataName: "Weather.csv",
         // dataDescription: "This file contains weather data with Surface Pressure, Precipitation, Humidity, Ozone and Temperature",
         selector: "chart1",
-        marginLeft: 60,
-        marginTop: 20,
-        marginRight: 30,
-        marginBottom: 80,
         showCaption: true,
         caption: "Views across time",
-        "processMissingDataPoint": false,
         "dateColumnName": "Date",
         "metricsColumnName": ["Surface Pressure","Page 2"]
       };

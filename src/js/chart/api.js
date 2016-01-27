@@ -99,5 +99,8 @@ var createChart = function (options) {
             TimeSeries.data_load_status[options.data].onComplete.push({function_name:"configureDimensionalAnalysis",attribute:[options]});
             return;
         }
+    } else if(options.data){
+        TimeSeries.mediator.publish("configureDimensionalAnalysis", options);
+        // TimeSeries.data_load_status[options.data].onComplete.push({function_name:"configureDimensionalAnalysis",attribute:[options]});
     }
 };

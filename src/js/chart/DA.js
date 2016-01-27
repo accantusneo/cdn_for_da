@@ -149,8 +149,8 @@ TimeSeries.dimensionalAnalysis = (function(){
     var initConfig = function(options, callbacks, feature) {
         var i,
             length,
-            chart_to_dataset = TimeSeries.gChart_to_data_set_mapping[options.selector],
-            chart_to_dataset_length = chart_to_dataset.length,
+            chart_to_dataset,
+            chart_to_dataset_length,
             dataset_load_status,
             datasets_array = [],
             temp_object,
@@ -159,13 +159,16 @@ TimeSeries.dimensionalAnalysis = (function(){
             date_field,
             date_format;
 
-        for (i = 0; i < chart_to_dataset_length; i++) {
-            if (TimeSeries.data_load_status[chart_to_dataset[i]].status !== "complete") {
-                return;
+        if(options.isGlobalData) {
+            chart_to_dataset = TimeSeries.gChart_to_data_set_mapping[options.selector];
+            chart_to_dataset_length = chart_to_dataset.length;
+            for (i = 0; i < chart_to_dataset_length; i++) {
+                if (TimeSeries.data_load_status[chart_to_dataset[i]].status !== "complete") {
+                    return;
+                }
             }
+            length = chart_to_dataset.length;
         }
-
-        length = chart_to_dataset.length;
 
         var parameters = {},
             series_length,
@@ -347,7 +350,6 @@ TimeSeries.dimensionalAnalysis = (function(){
 
     // var init = function(options,metricsColumnName,aggregation_fun) {
     var init = function(options, target_selector) {
-
         var chart_selector = options.selector,
             chart_options = TimeSeries.chart_options[chart_selector],
             chart_configs = TimeSeries.chart_configs[chart_selector],
@@ -356,7 +358,7 @@ TimeSeries.dimensionalAnalysis = (function(){
             chart_holder = document.createElement("div"),
             radio_button,
             label,
-            chart_colors = chart_options.chartColor,
+            // chart_colors = chart_options.chartColor,
             span,
             radio_button_holder,
             metrics = chart_options.metricsColumnName,
