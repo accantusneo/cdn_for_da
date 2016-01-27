@@ -1,12 +1,3 @@
-body {
-    font-family: 'Roboto', sans-serif;
-    padding: 10px;
-    background-color: #3B3B3B;
-    font-size: 12px;
-    line-height: 1.43;
-    color: #333;
-}
-
 :focus {
     outline: none;
 }
