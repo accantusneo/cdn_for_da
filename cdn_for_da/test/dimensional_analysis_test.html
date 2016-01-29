@@ -1,0 +1,137 @@
+<html>
+    <head>
+        <title>Testing</title>
+
+        <link rel="stylesheet" href="../lib/css/qunit-1.18.0.css">
+        <script type="text/javascript" src="../lib/js/qunit-1.18.0.js"></script>
+        <link rel="stylesheet" href="../src/css/timeseries.css">
+        <!--
+            Include libraries  that are needed in the application (Code or Test)
+            Eg: jquery, d3, Underscore, etc.
+        -->
+        <script type="text/javascript" src="../lib/js/d3.min.js"></script>
+        <script type="text/javascript" src="../lib/js/crossfilter.js"></script>
+        <script type="text/javascript" src="../lib/js/jquery.js"></script>
+        <script type="text/javascript" src="../lib/js/moment.min.js"></script>
+
+
+        <!-- Include code js files -->
+        <script type="text/javascript" src="../lib/js/papaparser.js"></script>
+        <script type="text/javascript" src="../src/js/chart/global_objects.js"></script>
+        <script type="text/javascript" src="../src/js/chart/mediator.js"></script>
+        <script type="text/javascript" src="../src/js/chart/utility.js"></script>
+        <script type="text/javascript" src="../src/js/chart/errors.js"></script>
+
+        <script type="text/javascript" src="../src/js/data/dataquery.js"></script>
+        <script type="text/javascript" src="../src/js/chart/api.js"></script>
+        <script type="text/javascript" src="../src/js/data/data_manipulation.js"></script>
+        <script type="text/javascript" src="../src/js/data/get_data.js"></script>
+        <script type="text/javascript" src="../src/js/data/number_format.js"></script>
+
+        <script type="text/javascript" src="../src/js/chart/date_format.js"></script>
+
+        <script type="text/javascript" src="../src/js/chart/config_validation.js"></script>
+        <script type="text/javascript" src="../src/js/chart/caption_subCaption.js"></script>
+        <script type="text/javascript" src="../src/js/chart/svg.js"></script>
+        <script type="text/javascript" src="../src/js/chart/x_axis.js"></script>
+        <script type="text/javascript" src="../src/js/chart/y_axis.js"></script>
+        <script type="text/javascript" src="../src/js/chart/crosshair.js"></script>
+        <script type="text/javascript" src="../src/js/chart/column_chart_ordinal.js"></script>
+        <script type="text/javascript" src="../src/js/chart/dimensional_analysis.js"></script>
+
+
+        <!-- Include test js files -->
+        <script type="text/javascript" src="unit/x_axis_test.js"></script>
+        <script type="text/javascript" src="unit/y_axis_test.js"></script>
+        <script type="text/javascript" src="unit/config_validation_test.js"></script>
+        <script type="text/javascript" src="unit/date_format_test.js"></script>
+        <script type="text/javascript" src="unit/get_data_test.js"></script>
+        <script type="text/javascript" src="unit/data_manipulation_test.js"></script>
+        <script type="text/javascript" src="unit/number_format_test.js"></script>
+        <script type="text/javascript" src="unit/dimensional_analysis_test.js"></script>
+
+    </head>
+    <body>
+        <div id="qunit"></div>
+        <div id="qunit-fixture"></div>
+        <div id="chart"></div>
+        <div id="chart_dimension_analysis"></div>
+
+        <script type="text/javascript">
+            loadData({
+                1: {
+                  data: "../data/weather.csv",
+                  dataFormat: "csv",
+                  dataSource: "",
+                  dataFor: ["chart1"],
+                  dataName: "Weather.csv",
+                  dataDescription: "This file contains weather data with Surface Pressure, Precipitation, Humidity, Ozone and Temperature"
+                }
+            });
+
+            var options = {
+                width: 500,
+                height: 350,
+                showCaption: true,
+                showSubCaption: true,
+                caption: "SAMPLE",
+                subCaption: "Chart",
+                // data: "../examples/data/weather.csv",
+                selector: "chart",
+                chartType: "line",
+                marginLeft: 50,
+                marginTop: 20,
+                marginRight: 30,
+                marginBottom: 50,
+                chartColor: ["blue"],
+                xAxisTickInterval: 0,
+                lineOnHoverHighlight: true,
+                lineThickness: 1.5,
+                lineDashed: false,
+                lineDashLen: 3,
+                lineDashGap: 5,
+                lineOpacity: 100,
+                enableZoom: true,
+                "processMissingDataPoint": false,
+                "dateColumnName": "Date",
+                "metricsColumnName": ["Precipitation"],
+                anomalyDetection: true,
+                anomalyPointCircleRadius: 5,
+                anomalyPointOnHoverColor: "#FF0000",
+                toolTipBgOpacity: 95,
+                numberprefix: "$",
+                liveData: false,
+                refreshFrequency: 5,
+                inputDataRange: "New and old data", // "Only new data" / "New and old data" / "Fixed length data" / "All data with null for future"
+                outputDataRange: "fixed", // "variable"
+                outputDataLength: 4,
+                outputDateFormat: "%a %b %e %Y",
+                dataBucketSize: "fixed", // "variable"
+                outputDataRange: "all", // "all" / "limited"
+                outputDataLength: [2,1],
+                rangeFilter: false,
+
+                showCaption:true,
+                showLegends:true,
+                showSubCaption:true,
+                showYAxis: true,
+                showXAxis: true,
+                showYAxisGridLine: "yes",
+                showXAxisGridLine: "yes",
+                showToolTip: true,
+                showCrosshair: true,
+                caption: "Caption",
+                subCaption: "subCaption",
+                dataFileFormat: "csv",
+                subCaptionFontColor: "blue",
+                captionFontColor: "red",
+                subCaptionFontFamily: "times new roman"
+            };
+
+            createChart(options);
+        </script>
+        <script>
+            console.log("\n====TEST===");
+        </script>
+    </body>
+</html>

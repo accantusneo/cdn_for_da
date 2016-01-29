@@ -1,0 +1,451 @@
+date,country,language,pagePath,userType,keywords,sourceMedium,pageviewsPerSession,bounceRate,sessions,searchDuration
+2015-11-04,Netherlands,en-us,/portal/search.html,Returning Visitor,delta-portal.de.a9sapp.eu / referral,paris,1.0,49.668874172185426,151,4831.0
+2015-11-03,Netherlands,en-us,/portal/search.html,Returning Visitor,delta-portal.de.a9sapp.eu / referral,*:*,2.013333333333333,50.66666666666667,75,28234.0
+2015-11-03,Spain,ca,/portal/record/9200365/BibliographicResource_1000055506093.html,Returning Visitor,google / organic,fregoli,3.973684210526316,100.0,38,40690.0
+2015-11-02,Netherlands,nl,/portal/record/2021633/AtlantisPubliek_detail_aspx_xmldescid_15141080.html,Returning Visitor,google / organic,title:'Confectie industrie Lambooy',2.013333333333333,100.0,75,3208.0
+2015-10-31,Italy,it-it,/portal/search.html,Returning Visitor,google / organic,Montecassino,1.9736842105263157,100.0,38,642.0
+2015-10-27,Brazil,en-us,/portal/search.html,New Visitor,direct / none,paris,1.168141592920354,100.0,226,2189.0
+2015-10-27,Denmark,it,/portal/record/2032012/SE_SOLLEFTEABILD_OBJECT_I21_ia_0018_04.html,Returning Visitor,direct / none,title:tivoli copenhagen,1.9736842105263157,100.0,38,9663.0
+2015-10-27,Hungary,hu-hu,/portal/search.html,Returning Visitor,google / organic,schola graphidis,3.973684210526316,100.0,38,14004.0
+2015-10-27,Israel,en-us,/portal/brief-doc.html,Returning Visitor,direct / none,Shlumberger,1.5066666666666666,50.66666666666667,75,62733.0
+2015-10-25,United States,en-us,/portal/search.html,New Visitor,blog.eogn.com / referral,europeana_collectionName:92*ewspapers*,1.5066666666666666,50.66666666666667,75,1321.0
+2015-10-24,United States,en-us,/portal/search.html,New Visitor,blog.eogn.com / referral,europeana_collectionName:92*ewspapers*,1.836283185840708,33.1858407079646,226,52768.0
+2015-10-21,Italy,it-it,/portal/record/9200386/BibliographicResource_3000045451656.html,Returning Visitor,google / organic,Leopardi,1.9736842105263157,100.0,38,4831.0
+2015-10-20,Croatia,hr-hr,/portal/search.html,Returning Visitor,direct / none,baumhorn lipót,1.336283185840708,66.3716814159292,113,9323.0
+2015-10-13,Cyprus,en-us,/portal/record/2058601/object_CUT_7233807.html,New Visitor,m.facebook.com / referral,Μαρωνίτες,1.0,50.66666666666667,75,3322.0
+2015-09-26,France,fr,/portal/search.html,Returning Visitor,google / organic,le blond nicolas,1.9736842105263157,100.0,38,151.0
+2015-09-16,Taiwan,zh-tw,/portal/record/2023705/7803F6D52921FA5203E4835878B4DA5E89DDBF3C.html,Returning Visitor,europhoto.eu.com / referral,1964 bailaora,2.52,50.66666666666667,75,38840.0
+2015-09-10,Israel,he-il,/portal/search.html,Returning Visitor,google / organic,Marrakech,2.973684210526316,100.0,38,1585.0
+2015-09-10,United States,en-us,/portal/record/9200397/BibliographicResource_3000126275014.html,Returning Visitor,google / organic,King arthur,1.9736842105263157,100.0,38,340.0
+2015-09-07,Brazil,pt-br,/portal/search.html,Returning Visitor,google / organic,Kock,9.921052631578947,100.0,38,8304.0
+2015-09-07,Czech Republic,cs,/portal/search.html,Returning Visitor,google / organic,kukelweid,1.0,50.66666666666667,75,340.0
+2015-08-26,Germany,de,/portal/search.html,Returning Visitor,google / organic,Doebbelin,4.973684210526316,100.0,38,2718.0
+2015-08-20,Portugal,pt-pt,/portal/search.html,Returning Visitor,search.creativecommons.org / referral,solidão AND RIGHTS:*creative* AND NOT RIGHTS:*nc* AND NOT RIGHTS:*nd*,1.5066666666666666,50.66666666666667,75,1019.0
+2015-08-20,Spain,ca,/portal/search.html,Returning Visitor,google / organic,what:palermo 1647,1.0,50.66666666666667,75,226.0
+2015-08-14,United Kingdom,en-gb,/portal/search.html,New Visitor,direct / none,west riding lunatic,1.0,66.3716814159292,113,2604.0
+2015-08-14,United Kingdom,en-us,/portal/search.html,New Visitor,mashable.com / referral,west riding lunatic,1.336283185840708,66.3716814159292,113,23251.0
+2015-08-06,Spain,es-es,/portal/search.html,Returning Visitor,m.facebook.com / referral,where:verges baix empordà,4.973684210526316,100.0,38,1736.0
+2015-07-27,Poland,pl-pl,/portal/search.html,Returning Visitor,google / organic,who:TopFoto.co.uk,1.336283185840708,66.3716814159292,113,17401.0
+2015-07-22,Italy,it,/portal/search.html,Returning Visitor,featureditem / portal,La Marmora,3.973684210526316,100.0,38,981.0
+2015-07-17,Poland,pl,/portal/record/11001/01682D8F9E3DE9CDD0271166BC97BE394AB26916.html,Returning Visitor,view.contextualyield.com / referral,who:Hryncewicz Ludwik,1.9736842105263157,100.0,38,1434.0
+2015-07-12,Germany,de,/portal/search.html,Returning Visitor,direct / none,samuel johnson dictionary,1.9736842105263157,100.0,38,151.0
+2015-07-08,Spain,it,/portal/record/2058808/UAH__96da2f590cd7246bbde0051047b0d6f7__artifact__cho.html,Returning Visitor,direct / none,hilas ninfas,1.9736842105263157,100.0,38,75.0
+2015-07-07,Spain,it,/portal/record/2022703/oai_euromuseos_mcu_es_euromuseos_MAN_38315BIS.html,Returning Visitor,direct / none,mosaico doce trabajos,1.9736842105263157,100.0,38,6983.0
+2015-07-04,Belgium,pt-pt,/portal/search.html,Returning Visitor,almada-virtual-museum.blogspot.be / referral,"what:'Cacilhas Concelho de Almada, Portugal'",1.9736842105263157,100.0,38,264.0
+2015-06-28,Russia,ru-ru,/portal/search.html,Returning Visitor,ceres.mcu.es / referral,porcelana NOT DATA_PROVIDER:'CER.ES: Red Digital de Colecciones de museos de España',1.0,50.66666666666667,75,189.0
+2015-06-26,Russia,ru-ru,/portal/search.html,Returning Visitor,ceres.mcu.es / referral,porcelana NOT DATA_PROVIDER:'CER.ES: Red Digital de Colecciones de museos de España',1.0,50.66666666666667,75,1321.0
+2015-06-20,Spain,es,/portal/search.html,Returning Visitor,bdh.bne.es / referral,who:España. Delegación del Estado para Prensa y Propaganda,2.973684210526316,100.0,38,415.0
+2015-06-16,Guatemala,es-419,/portal/search.html,Returning Visitor,google / organic,who:Kodak - Eastman,2.013333333333333,50.66666666666667,75,20383.0
+2015-06-15,Italy,it,/portal/search.html,Returning Visitor,google / organic,Musica d'oggi 1935,4.973684210526316,100.0,38,981.0
+2015-06-15,Spain,es,/portal/search.html,New Visitor,bibliotecaspublicas.es / referral,fortunata y jacinta,1.0,50.66666666666667,75,2302.0
+2015-06-05,Spain,en-us,/portal/record/2022701/BSC00RFAG_8p1d000000000000000ROAI.html,Returning Visitor,google / organic,biblia políglota,2.973684210526316,100.0,38,944.0
+2015-05-29,Saudi Arabia,ar,/portal/record/91626/tekm_object_TM43707.html,Returning Visitor,direct / none,SIEVERT,1.9736842105263157,100.0,38,226.0
+2015-05-27,Saudi Arabia,ar,/portal/search.html,Returning Visitor,direct / none,SIEVERT,1.9736842105263157,100.0,38,415.0
+2015-05-25,Italy,it,/portal/record/9200196/BibliographicResource_3000093795643_source.html,Returning Visitor,direct / none,romanziol,1.0,50.66666666666667,75,793.0
+2015-05-25,Romania,hu,/portal/search.html,Returning Visitor,google / organic,"title:'Reichstag, Berlin. Zweiter Wettbewerb'^0.3 OR who:'Busse'",3.973684210526316,100.0,38,8606.0
+2015-05-23,Romania,hu,/portal/search.html,Returning Visitor,google / organic,"title:'Reichstag, Berlin. Zweiter Wettbewerb'^0.3 OR who:'Busse'",9.921052631578947,100.0,38,18948.0
+2015-05-21,Germany,de,/portal/record/00902/1010497.html,Returning Visitor,geschkult.fu-berlin.de / referral,klagenfurt,1.336283185840708,100.0,113,75.0
+2015-05-21,Spain,es-es,/portal/record/9200376/BibliographicResource_3000100243126.html,Returning Visitor,google / organic,who:Jose Maria Repulles,1.9736842105263157,100.0,38,981.0
+2015-05-19,Germany,de,/portal/record/92061/E5B0EBFDCCFEB8A2EB3B7E7EE0CFD4034D067879.html,Returning Visitor,geschkult.fu-berlin.de / referral,klagenfurt,1.9736842105263157,100.0,38,75.0
+2015-05-19,Netherlands,nl,/portal/search.html,Returning Visitor,google / organic,Wenumse watermolen,1.0,50.66666666666667,75,604.0
+2015-05-13,Spain,es-es,/portal/search.html,Returning Visitor,direct / none,cerámica campaniense b NOT DATA_PROVIDER:'CER.ES: Red Digital de Colecciones de museos de España',2.013333333333333,50.66666666666667,75,5549.0
+2015-05-06,Poland,pl,/portal/record/09404/id_oai_dlibra_karta_org_pl_29708.html,Returning Visitor,google / organic,what:'skazani',1.5066666666666666,50.66666666666667,75,2416.0
+2015-05-05,United Kingdom,en-us,/portal/record/9200182/F90ACB226B85546EF6357B5C24926BB706842AB5.html,New Visitor,m.facebook.com / referral,"who:Charles, Geoff 1909-2002",1.336283185840708,33.6283185840708,113,2114.0
+2015-05-03,Spain,es-es,/portal/record/2048077/Athena_Plus_ProvidedCHO_Bildarchiv_Foto_Marburg_obj_20352052_120.html,Returning Visitor,google / organic,title:pantokrator daphni,1.0,50.66666666666667,75,1434.0
+2015-05-02,Germany,en-us,/portal/search.html,Returning Visitor,google / organic,what:αφροδίτη,2.973684210526316,100.0,38,1661.0
+2015-04-30,Croatia,hr-hr,/portal/search.html,Returning Visitor,google / organic,Frankfurt,2.973684210526316,100.0,38,604.0
+2015-04-25,United Kingdom,en-gb,/portal/record/9200182/FB77EDA9294F43BB351A06353470BE1B5D1475E5.html,Returning Visitor,google / organic,"what:'graphic MARC genre terms Washington, DC: Library of Congress '",2.0,49.668874172185426,151,141697.0
+2015-04-23,Slovenia,sl-si,/portal/search.html,Returning Visitor,direct / none,"Le Tourneux, Nicolas",1.0,50.66666666666667,75,868.0
+2015-04-21,Netherlands,nl-nl,/portal/record/2021630/foto_5c3efc98_97d0_11e3_ad22_37e43eeb76d3.html,New Visitor,m.facebook.com / referral,who:4881fe82-97d3-11e3-8dd6-c306b5807df9,1.5066666666666666,50.66666666666667,75,604.0
+2015-04-20,Russia,ru,/portal/search.html,Returning Visitor,yahoo / organic,Sucquet,1.9736842105263157,100.0,38,415.0
+2015-04-04,Austria,de-at,/portal/search.html,Returning Visitor,google / organic,what:'Wienansichten',2.52,50.66666666666667,75,2076.0
+2015-04-01,France,fr,/portal/record/9200386/BibliographicResource_3000095862999.html,Returning Visitor,google / organic,thesaurus latinae linguae,1.9736842105263157,100.0,38,1019.0
+2015-03-30,Netherlands,nl,/portal/search.html,Returning Visitor,facebook.com / referral,europeana_collectionName:9200397*,2.013333333333333,50.66666666666667,75,793.0
+2015-03-21,United States,en-us,/portal/search.html,New Visitor,aplus.com / referral,west riding lunatic,1.7989417989417988,20.105820105820104,189,2227.0
+2015-03-14,United States,en-us,/portal/record/9200386/BibliographicResource_3000073831492.html,Returning Visitor,google / organic,who:baronio cesare,1.9736842105263157,100.0,38,302.0
+2015-03-11,Yemen,en-us,/portal/record/2023601/oai_eu_dismarc_AMAT_USA370563966.html,Returning Visitor,direct / none,who:tchaikovsky,1.5066666666666666,50.66666666666667,75,2529.0
+2015-03-05,India,en-us,/portal/search.html,Returning Visitor,direct / none,Pegaeophyton scapiflorum,9.921052631578947,100.0,38,42955.0
+2015-03-01,Denmark,da-dk,/portal/search.html,New Visitor,m.facebook.com / referral,*:*,1.336283185840708,33.6283185840708,113,2152.0
+2015-02-26,India,en-us,/portal/search.html,Returning Visitor,direct / none,Parrya nudicaulis,3.973684210526316,100.0,38,1434.0
+2015-02-25,India,en-us,/portal/search.html,Returning Visitor,direct / none,Parrya pinnatifida,3.973684210526316,100.0,38,604.0
+2015-02-25,Italy,it-it,/portal/search.html,Returning Visitor,google / organic,de mura,1.9736842105263157,100.0,38,4945.0
+2015-02-24,Germany,de,/portal/search.html,Returning Visitor,google / organic,what:type specimen,5.947368421052632,100.0,38,7964.0
+2015-02-24,India,en-us,/portal/search.html,Returning Visitor,direct / none,Neslia paniculata,4.973684210526316,100.0,38,1963.0
+2015-02-20,France,fr-fr,/portal/search.html,Returning Visitor,culture.gouv.fr / referral,Perelle,1.9736842105263157,100.0,38,264.0
+2015-02-13,Spain,es,/portal/search.html,Returning Visitor,google / organic,NIJAR,1.0,50.66666666666667,75,491.0
+2015-02-12,Iran,en-us,/portal/search.html,Returning Visitor,google / organic,cousinia araneosa,1.9736842105263157,100.0,38,491.0
+2015-02-12,Japan,ja,/portal/search.html,Returning Visitor,l.facebook.com / referral,Stančić,1.0,50.66666666666667,75,75.0
+2015-02-10,Germany,de-de,/portal/record/2021616/nl_item_uri_http___www_rnaproject_org_data_f52a3d65_3766_4ecd_a333_c70a7765a3ba.html,Returning Visitor,feedburner / feed,europeana_collectionName:2021616*,1.5066666666666666,50.66666666666667,75,55939.0
+2015-02-05,France,fr,/portal/search.html,Returning Visitor,sbib.si.leschampslibres.fr / referral,canal de panama,2.5978835978835977,20.105820105820104,189,99686.0
+2015-02-02,Slovakia,cs,/portal/record/2023202/79C7D10695F5F0F75A26F516BF9E4E2AF1E9EBAC.html,Returning Visitor,google / organic,Divadelný ústav,1.9736842105263157,100.0,38,377.0
+2015-02-01,Germany,fr,/portal/search.html,Returning Visitor,google / organic,moyen âge animaux,1.0,50.66666666666667,75,566.0
+2015-02-01,Spain,es,/portal/search.html,Returning Visitor,google / organic,ALMERIA,1.0,50.66666666666667,75,113.0
+2015-01-24,Germany,de-de,/portal/record/2021616/nl_item_uri_http___www_rnaproject_org_data_f52a3d65_3766_4ecd_a333_c70a7765a3ba.html,Returning Visitor,feedburner / feed,europeana_collectionName:2021616*,1.5066666666666666,50.66666666666667,75,18495.0
+2015-01-24,Netherlands,nl,/portal/record/2021633/AtlantisPubliek_detail_aspx_xmldescid_14761139.html,Returning Visitor,direct / none,'s-hertogenbosch bier,1.0,50.66666666666667,75,75.0
+2015-01-18,Netherlands,nl,/portal/search.html,Returning Visitor,google / organic,'Francesco Borromini',1.6725663716814159,66.3716814159292,113,41671.0
+2015-01-16,Estonia,et,/portal/search.html,Returning Visitor,direct / none,*:*,1.0,79.8941798941799,189,604.0
+2015-01-16,Netherlands,nl,/portal/search.html,Returning Visitor,direct / none,*:*,1.5066666666666666,50.66666666666667,75,1397.0
+2015-01-16,Spain,es,/portal/search.html,Returning Visitor,google / organic,cassinello,1.5066666666666666,50.66666666666667,75,63035.0
+2015-01-15,Spain,es,/portal/search.html,Returning Visitor,google / organic,cassinello,3.013333333333333,100.0,75,61941.0
+2015-01-02,United Kingdom,en-us,/portal/record/2022362/_Royal_Museums_Greenwich__http___collections_rmg_co_uk_collections_objects_540410.html,Returning Visitor,direct / none,mediterranean,1.0,50.66666666666667,75,1472.0
+2014-12-29,Iran,en-us,/portal/search.html,Returning Visitor,google / organic,cousinia aintabensis,1.0,33.6283185840708,113,1132.0
+2014-12-26,Russia,ru,/portal/search.html,Returning Visitor,google / organic,Schweizerpfeife,1.9736842105263157,100.0,38,2114.0
+2014-12-19,Japan,ja-jp,/portal/search.html,Returning Visitor,google / organic,Diseases of the nervous system,1.0,50.66666666666667,75,679.0
+2014-12-18,Germany,es,/portal/search.html,Returning Visitor,google / organic,Festigkeitslehre,1.5066666666666666,50.66666666666667,75,51787.0
+2014-12-10,Poland,pl-pl,/portal/search.html,Returning Visitor,google / organic,*:*,1.6725663716814159,33.6283185840708,113,12305.0
+2014-12-07,Germany,de-de,/portal/record/2021616/nl_item_uri_http___www_rnaproject_org_data_f52a3d65_3766_4ecd_a333_c70a7765a3ba.html,Returning Visitor,feedburner / feed,europeana_collectionName:2021616*,2.013333333333333,50.66666666666667,75,77530.0
+2014-12-06,United Kingdom,en-us,/portal/record/9200166/BF862EA5C08E2DAFE9D12613201601BD0F2E51CA.html,Returning Visitor,search.creativecommons.org / referral,boat AND RIGHTS:*creative* AND NOT RIGHTS:*nc* AND NOT RIGHTS:*nd*,1.9736842105263157,100.0,38,566.0
+2014-12-04,Greece,el-gr,/portal/search.html,Returning Visitor,fa-elia-miet.blogspot.gr / referral,ελια,4.973684210526316,100.0,38,1472.0
+2014-12-04,Spain,en-us,/portal/search.html,Returning Visitor,babylon / organic,Cerrillo blanco,1.9736842105263157,100.0,38,453.0
+2014-12-01,Belgium,pt-pt,/portal/search.html,Returning Visitor,almada-virtual-museum.blogspot.be / referral,Cova da piedade,1.0,66.3716814159292,113,679.0
+2014-11-22,Portugal,de,/portal/search.html,Returning Visitor,google / organic,Gesnerus redivivus,1.2516556291390728,74.83443708609272,151,45370.0
+2014-11-21,Germany,de-de,/portal/record/2021616/nl_item_uri_http___www_rnaproject_org_data_f52a3d65_3766_4ecd_a333_c70a7765a3ba.html,Returning Visitor,feedburner / feed,europeana_collectionName:2021616*,1.336283185840708,66.3716814159292,113,24761.0
+2014-11-20,France,fr,/portal/record/9200105/BibliographicResource_3000006112126.html,New Visitor,direct / none,Hieronymus Bosch,1.5066666666666666,50.66666666666667,75,1283.0
+2014-11-20,France,fr,/portal/record/9200143/BibliographicResource_2000069288598.html,Returning Visitor,google / organic,Hölderlin Zinkernagel,1.9736842105263157,100.0,38,53976.0
+2014-11-20,United States,en-us,/portal/record/9200105/BibliographicResource_3000006112126.html,New Visitor,direct / none,Hieronymus Bosch,1.9736842105263157,100.0,38,2038.0
+2014-11-20,United States,en-us,/portal/search.html,New Visitor,direct / none,Mucha,2.52,50.66666666666667,75,1019.0
+2014-11-19,Netherlands,nl,/portal/record/09003/1E45A42E6024E24B5A02C931B7810AED7F6D5781.html,Returning Visitor,google / organic,greenpeace,1.5066666666666666,100.0,75,264.0
+2014-11-19,Philippines,en-us,/portal/search.html,Returning Visitor,google / organic,Filipijnen,1.9736842105263157,100.0,38,151.0
+2014-11-19,Portugal,en-us,/portal/search.html,Returning Visitor,direct / none,title:'Velma - Suchard pour croquer sans rival : [affiche]'^1.0 OR DATA_PROVIDER:'National Library of France'^0.1 OR what:'image fixe' OR 'estampe' OR 'engraving' OR 'Chocolat -- Publicité' OR 'Alimentation'^0.8 NOT europeana_id:'/9200365/BibliographicResource_2000081578599',1.2516556291390728,74.83443708609272,151,27366.0
+2014-11-17,Poland,pl,/portal/record/09404/id_oai_mbc_malopolska_pl_9958.html,Returning Visitor,google / organic,*:*,1.0,50.66666666666667,75,868.0
+2014-11-16,Netherlands,nl-nl,/portal/search.html,Returning Visitor,google / organic,where:den haag,1.5066666666666666,50.66666666666667,75,33065.0
+2014-11-13,France,fr,/portal/search.html,Returning Visitor,encyclopedia.1914-1918-online.net / referral,"Europe--History AND Nationalism--Europe--History AND 'World War, 1914-1918'",2.973684210526316,100.0,38,113.0
+2014-11-13,United Kingdom,en-us,/portal/search.html,Returning Visitor,blog.europeana.eu / referral,Rembrandt Harmensz. van Rijn,1.9736842105263157,100.0,38,491.0
+2014-11-10,Netherlands,nl-nl,/portal/search.html,Returning Visitor,search.creativecommons.org / referral,where:den haag,1.2516556291390728,74.83443708609272,151,15740.0
+2014-11-10,Spain,es,/portal/search.html,Returning Visitor,google / organic,napoli,2.973684210526316,100.0,38,377.0
+2014-11-06,United States,en-us,/portal/search.html,Returning Visitor,direct / none,Gu ling jie shao nian sha ren shi jian 牯嶺街少年殺人事件,1.9736842105263157,100.0,38,15929.0
+2014-11-04,Lithuania,en-us,/portal/search.html,Returning Visitor,google / organic,Ladislaus IV,1.9736842105263157,100.0,38,491.0
+2014-11-01,Poland,pl,/portal/search.html,Returning Visitor,google / organic,bregensis,1.9736842105263157,100.0,38,566.0
+2014-10-28,France,fr-fr,/portal/record/2048708/TRIANON_MV3893.html,Returning Visitor,google / organic,3d,1.9736842105263157,100.0,38,14645.0
+2014-10-27,Spain,ca-es,/portal/search.html,Returning Visitor,google / organic,Le nouveau cuisinier universel,1.5066666666666666,50.66666666666667,75,2076.0
+2014-10-20,Czech Republic,cs,/portal/search.html,Returning Visitor,google / organic,banér,1.9736842105263157,100.0,38,113.0
+2014-10-19,United Kingdom,en-us,/portal/search.html,Returning Visitor,google / organic,who:Σολωμός Διονύσιος,2.973684210526316,100.0,38,491.0
+2014-10-18,Netherlands,nl,/portal/record/2021609/objecten_71793.html,Returning Visitor,google / organic,"what:'tol, dobbelsteen, spelstuk, ontspanningsmiddel'",2.973684210526316,100.0,38,793.0
+2014-10-17,Portugal,pt-pt,/portal/search.html,Returning Visitor,direct / none,guimarães,1.5066666666666666,50.66666666666667,75,1623.0
+2014-10-04,United States,en-us,/portal/record/2026108/Partage_Plus_ProvidedCHO_Digitalt_Museum_107850.html,Returning Visitor,google / organic,title:u 68,1.9736842105263157,100.0,38,3473.0
+2014-09-09,Russia,ru-ru,/portal/record/2021801/recordDescription_ARCH_1301_1_14.html,Returning Visitor,google / organic,who:Kamajų Šv. Kazimiero Romos katalikų bažnyčia Ecclesia Romana Catholica S. Casimiri Komaiensis,1.5066666666666666,50.66666666666667,75,4794.0
+2014-09-09,Russia,ru-ru,/portal/search.html,Returning Visitor,google / organic,who:Radviliškio Švč. Mergelės Marijos Gimimo Romos katalikų bažnyčia Ecclesia Romana Catholica Nativitatis Beatae Mariae Virginis,1.0,74.83443708609272,151,1963.0
+2014-09-08,United States,en-us,/portal/search.html,New Visitor,search.creativecommons.org / referral,bullying AND RIGHTS:*creative* AND NOT RIGHTS:*nc* AND NOT RIGHTS:*nd*,2.973684210526316,100.0,38,226.0
+2014-08-29,Italy,it,/portal/search.html,New Visitor,forzalucchese.net / referral,what:club Lucchese,2.013333333333333,50.66666666666667,75,793.0
+2014-08-25,Spain,en-us,/portal/record/08701/238EEFAA52FD16E0463BB5996F3F2C45BC159AE4.html,Returning Visitor,google / organic,Pygmies,1.9736842105263157,100.0,38,868.0
+2014-08-24,Netherlands,nl,/portal/search.html,Returning Visitor,google / organic,"who:Sluysen, Charles Joseph Jean van der",13.08,50.66666666666667,75,35934.0
+2014-08-23,Germany,de,/portal/record/09404/id_oai_www_wbc_poznan_pl_3115.html,Returning Visitor,google / organic,"who:Jabłonowski, Aleksander",3.973684210526316,100.0,38,18420.0
+2014-08-20,Spain,es,/portal/search.html,Returning Visitor,bivizar.es / referral,alcañiz,1.9736842105263157,100.0,38,1132.0
+2014-08-19,Germany,de,/portal/record/09428/urn_nbn_de_gbv_3_1_335718.html,Returning Visitor,google / organic,sophie Albrecht,1.9736842105263157,100.0,38,8795.0
+2014-08-19,United Kingdom,en-us,/portal/search.html,Returning Visitor,google / organic,"who:Simoner, Otto",1.0,50.66666666666667,75,302.0
+2014-08-18,United Kingdom,en-us,/portal/search.html,Returning Visitor,google / organic,"who:Simoner, Otto",2.0,25.165562913907287,151,10456.0
+2014-08-17,United Kingdom,en-us,/portal/search.html,Returning Visitor,google / organic,"who:Simoner, Otto",1.7989417989417988,20.105820105820104,189,3171.0
+2014-08-16,United Kingdom,en-us,/portal/search.html,Returning Visitor,google / organic,"who:Simoner, Otto",2.004424778761062,33.1858407079646,226,18533.0
+2014-08-08,South Korea,ko,/portal/search.html,New Visitor,gongu.copyright.or.kr / referral,"who:'Gogh, Vincent van'",1.0,50.66666666666667,75,566.0
+2014-08-06,Germany,de,/portal/search.html,Returning Visitor,google.de / referral,"title:'Preußisches Kultusministerium in Berlin'^1.0 OR who:'Kühn, Bernhard'^0.5 OR DATA_PROVIDER:'Architekturmuseum der Technischen Universität Berlin in der Universitätsbibliothe'^0.1 OR what:'",2.973684210526316,100.0,38,1434.0
+2014-07-29,Spain,es-es,/portal/search.html,Returning Visitor,google / organic,Trachoma,1.9736842105263157,100.0,38,14343.0
+2014-07-19,United Kingdom,en-us,/portal/record/15402/4F5D5451E6AEB3AA494F993845D4F8FD983E5A1F.html,Returning Visitor,google / organic,16 Warren Street Dublin,1.4966887417218544,74.83443708609272,151,7172.0
+2014-07-18,United Kingdom,en-us,/portal/record/15402/4F5D5451E6AEB3AA494F993845D4F8FD983E5A1F.html,Returning Visitor,google / organic,16 Warren Street Dublin,3.013333333333333,50.66666666666667,75,95610.0
+2014-07-14,France,fr,/portal/search.html,Returning Visitor,google / organic,tamizey de larroque,1.0,50.66666666666667,75,566.0
+2014-07-09,France,fr-fr,/portal/search.html,Returning Visitor,google / organic,what:mapa dublin,1.0,50.66666666666667,75,49673.0
+2014-07-09,United Kingdom,en-us,/portal/record/15402/4F5D5451E6AEB3AA494F993845D4F8FD983E5A1F.html,Returning Visitor,google / organic,16 Warren Street Dublin,2.013333333333333,50.66666666666667,75,53486.0
+2014-07-07,Italy,it-it,/portal/record/9200218/BibliographicResource_3000052900583_source.html,Returning Visitor,direct / none,Ferretti Pietro tortona,1.5066666666666666,50.66666666666667,75,1434.0
+2014-07-04,Australia,en-us,/portal/search.html,Returning Visitor,direct / none,kommagene,1.9736842105263157,100.0,38,38236.0
+2014-06-25,United States,en-us,/portal/record/9200103/BibliographicResource_3000094742107.html,Returning Visitor,google / organic,"what:'Albanie, Principauté indépendante d'",2.973684210526316,100.0,38,4265.0
+2014-06-09,Spain,es,/portal/search.html,Returning Visitor,google / organic,who:Copin,1.5066666666666666,50.66666666666667,75,1208.0
+2014-06-04,Russia,ru,/portal/search.html,Returning Visitor,direct / none,what:'Generale staven',1.0,50.66666666666667,75,2227.0
+2014-06-01,Italy,it,/portal/search.html,Returning Visitor,direct / none,jean baptiste dubos,1.9736842105263157,100.0,38,1057.0
+2014-05-29,Turkey,tr,/portal/search.html,Returning Visitor,google / organic,camelina lasiocarpa,2.013333333333333,50.66666666666667,75,453.0
+2014-05-23,Sweden,sv-se,/portal/search.html,New Visitor,direct / none,europeana_collectionName:2048007*,1.0,50.66666666666667,75,1019.0
+2014-05-20,India,en-us,/portal/search.html,Returning Visitor,direct / none,"'Daniell, Thomas'",1.9736842105263157,100.0,38,604.0
+2014-05-14,Spain,es-es,/portal/search.html,New Visitor,blog.europeana.eu / referral,what:'map',1.0,50.66666666666667,75,1095.0
+2014-05-13,France,en-us,/portal/record/2024913/photography_ProvidedCHO_Parisienne_de_Photographie_1464_12.html,Returning Visitor,google / organic,*:*,1.9736842105263157,100.0,38,38.0
+2014-05-12,Russia,ru-ru,/portal/brief-doc.html,Returning Visitor,direct / none,*:*,2.973684210526316,100.0,38,1170.0
+2014-05-01,Norway,nb-no,/portal/record/08613/586BCF35A3751402678C5867A6FA04B315D285F1.html,New Visitor,m.facebook.com / referral,Skating,1.336283185840708,33.6283185840708,113,1434.0
+2014-04-29,Spain,es,/portal/search.html,Returning Visitor,direct / none,what:wren christopher,1.9736842105263157,100.0,38,340.0
+2014-04-28,Hungary,en-gb,/portal/search.html,Returning Visitor,google / organic,"who:Caymox, Balthasar ;",2.013333333333333,100.0,75,528.0
+2014-04-23,Greece,en-us,/portal/search.html,Returning Visitor,google / organic,who:Leonardo,1.9736842105263157,100.0,38,1095.0
+2014-04-17,Romania,ro-ro,/portal/record/09215/B980ED7003DF2C9267410E1C20F2099DF3C0B1AD.html,New Visitor,l.facebook.com / referral,medgidia,1.0,50.66666666666667,75,189.0
+2014-04-13,France,fr,/portal/search.html,Returning Visitor,google / organic,tamizey de larroque,1.0,50.66666666666667,75,1019.0
+2014-04-10,Germany,de-de,/portal/search.html,Returning Visitor,google / organic,Orotava,2.013333333333333,50.66666666666667,75,25139.0
+2014-04-10,Philippines,en-us,/portal/search.html,Returning Visitor,google / organic,santisima trinidad,1.5066666666666666,50.66666666666667,75,1208.0
+2014-04-07,Denmark,da,/portal/search.html,Returning Visitor,google / organic,huerta,2.973684210526316,100.0,38,35254.0
+2014-04-03,United States,en-us,/portal/record/2024913/photography_ProvidedCHO_Parisienne_de_Photographie_561_9.html,Returning Visitor,search.creativecommons.org / referral,what:weightlifting,1.9736842105263157,100.0,38,1019.0
+2014-04-01,Italy,it-it,/portal/record/2024910/photography_ProvidedCHO_POLFOTO_32341998.html,Returning Visitor,google / organic,Damgaard,1.9736842105263157,100.0,38,5888.0
+2014-03-25,Belgium,en-us,/portal/record/2024901/photography_ProvidedCHO_Alinari_Archives_ACA_F_000016_0000.html,Returning Visitor,google / organic,DATA_PROVIDER:'Alinari Archives',3.973684210526316,100.0,38,944.0
+2014-03-24,United States,en-us,/portal/search.html,Returning Visitor,google / organic,golf course,2.973684210526316,100.0,38,604.0
+2014-03-19,Germany,de,/portal/record/08535/C586F533B788047773A32417C4D95166D9CF2D5A.html,Returning Visitor,google / organic,Kaserne Berlin,2.973684210526316,100.0,38,1510.0
+2014-03-13,Russia,ru-ru,/portal/search.html,Returning Visitor,google / organic,"Klee, Katholische Dogmatik",2.52,50.66666666666667,75,1887.0
+2014-03-10,Poland,pl,/portal/record/03486/urn_resolver_pl_urn_urn_nbn_de_bvb_12_bsb10223605_1.html,Returning Visitor,direct / none,who: a matre dei,1.5066666666666666,100.0,75,113.0
+2014-02-20,Italy,it,/portal/record/03486/urn_resolver_pl_urn_urn_nbn_de_bvb_12_bsb10867491_0.html,Returning Visitor,google / organic,montecassino,1.9736842105263157,100.0,38,113.0
+2014-02-19,Spain,es,/portal/search.html,Returning Visitor,facebook.com / referral,what:mapas,1.2516556291390728,74.83443708609272,151,5360.0
+2014-02-18,United States,en-us,/portal/search.html,New Visitor,fastcolabs.com / referral,Plastic Surgery,1.5066666666666666,50.66666666666667,75,679.0
+2014-02-14,Argentina,es-ar,/portal/search.html,Returning Visitor,direct / none,title: mapas argentina,1.9736842105263157,100.0,38,491.0
+2014-02-09,United States,en-us,/portal/search.html,New Visitor,retronaut.com / referral,japan,1.0,50.66666666666667,75,528.0
+2014-02-05,Denmark,da,/portal/search.html,Returning Visitor,google / organic,title:'Nina Bang',3.973684210526316,100.0,38,604.0
+2014-02-03,France,fr,/portal/search.html,New Visitor,google / organic,*:*,1.0,50.66666666666667,75,679.0
+2014-01-30,Germany,de-de,/portal/record/2020601/contributions_1881.html,Returning Visitor,google / organic,Soldaten,2.973684210526316,100.0,38,4794.0
+2014-01-29,Serbia,en-us,/portal/record/2020601/attachments_48567_4085_48567_original_48567_jpg.html,New Visitor,reddit.com / referral,bosna,1.0,50.66666666666667,75,6605.0
+2014-01-29,Spain,es,/portal/search.html,Returning Visitor,google / organic,what:mapas,1.336283185840708,66.3716814159292,113,23063.0
+2014-01-23,Spain,es,/portal/search.html,Returning Visitor,google / organic,what:mapas,2.973684210526316,100.0,38,528.0
+2014-01-20,Italy,it-it,/portal/search.html,Returning Visitor,google / organic,who:'Annibale Fontana',2.973684210526316,100.0,38,151.0
+2014-01-20,Netherlands,nl,/portal/record/91658/MM_objekt_4899.html,Returning Visitor,google / organic,who:'Yukuna',1.5066666666666666,100.0,75,264.0
+2014-01-19,United States,en-us,/portal/search.html,New Visitor,catalogue.nli.ie / referral,bridget fitzpatrick tyrone,1.0,50.66666666666667,75,1623.0
+2014-01-16,United States,es,/portal/search.html,Returning Visitor,google / organic,title:españa antigua,1.5066666666666666,50.66666666666667,75,57826.0
+2014-01-11,France,en-us,/portal/search.html,Returning Visitor,direct / none,marie laurencin,10.921052631578947,100.0,38,1208.0
+2014-01-09,Belgium,nl-be,/portal/record/2023703/AFB38BD7BADAFE2F1EE0812491E95F33DA848C3D.html,Returning Visitor,google / organic,title:'BELGIUM ARCHIVES OPENING EXHIBITION VILLAGE KIJKDORP KNOKKE-HEIST',2.336283185840708,33.6283185840708,113,93572.0
+2014-01-04,Poland,pl,/portal/record/9200103/ark__12148_btv1b84165658.html,Returning Visitor,direct / none,chopin monument,1.5066666666666666,50.66666666666667,75,20836.0
+2014-01-04,Spain,es-es,/portal/search.html,Returning Visitor,google / organic,Fama fraternitatis,1.0,66.3716814159292,113,377.0
+2014-01-03,Spain,es-es,/portal/search.html,Returning Visitor,google / organic,Fama fraternitatis,13.894736842105264,100.0,38,107538.0
+2013-12-29,Germany,de,/portal/record/03486/urn_resolver_pl_urn_urn_nbn_de_bvb_12_bsb10250962_8.html,New Visitor,direct / none,1868 boltz,1.5066666666666666,50.66666666666667,75,6304.0
+2013-12-29,Romania,en-gb,/portal/record/05811/17FB6005D8D50F2CB84C1296D5268D6D4480FFB2.html,Returning Visitor,direct / none,cucuteni,2.52,50.66666666666667,75,106028.0
+2013-12-26,Denmark,da-dk,/portal/record/2023707/7CF2310051B0DC48A14E1B62D2309CCD4109034E.html,New Visitor,m.facebook.com / referral,berdino,1.0,50.66666666666667,75,906.0
+2013-12-23,Hungary,hu-hu,/portal/record/2023710/16D75DB0DB7CDC9E80E01867E16E8D28088C0EFF.html,Returning Visitor,direct / none,title:'Életkép - Krebs Sándor - Vígh Erzsébet sportoló házaspár',1.0,50.66666666666667,75,1397.0
+2013-12-17,Finland,fi-fi,/portal/search.html,Returning Visitor,google / organic,bynkershoek barbeyrac,2.013333333333333,50.66666666666667,75,84097.0
+2013-12-17,Japan,ja,/portal/search.html,Returning Visitor,google / organic,massacres de Scio,2.973684210526316,100.0,38,453.0
+2013-12-16,United States,en-us,/portal/search.html,New Visitor,livebinders.com / referral,taj mahal,1.0,50.66666666666667,75,755.0
+2013-12-03,Ukraine,ru,/portal/search.html,Returning Visitor,google / organic,Costumes des différentes nations,2.973684210526316,100.0,38,453.0
+2013-11-28,Spain,es,/portal/record/2022703/EDE6513189AC051F4A4A1CA8F0069087D8DC3B04.html,Returning Visitor,google / organic,what:'Industria lítica',2.973684210526316,100.0,38,151.0
+2013-11-27,Greece,el,/portal/search.html,Returning Visitor,google / organic,what:alas,1.0,33.6283185840708,113,340.0
+2013-11-23,Italy,en,/portal/search.html,Returning Visitor,google / organic,caballo ernesto,2.973684210526316,100.0,38,151.0
+2013-11-23,United States,en-us,/portal/search.html,New Visitor,Retronaut Subscribers / email,japan,1.143939393939394,85.60606060606061,264,566.0
+2013-11-20,Russia,ru-ru,/portal/search.html,Returning Visitor,google / organic,what:Michel Ney,3.973684210526316,100.0,38,642.0
+2013-11-20,Russia,ru-ru,/portal/search.html,Returning Visitor,google / organic,what:Wurmser,1.9736842105263157,100.0,38,868.0
+2013-11-11,Slovakia,cs,/portal/search.html,Returning Visitor,google / organic,europeana_collectionName:2024901*,1.9736842105263157,100.0,38,113.0
+2013-11-08,United States,en-us,/portal/search.html,New Visitor,retronaut.com / referral,corset,1.0,33.6283185840708,113,830.0
+2013-11-04,Poland,pl,/portal/record/9200109/0C38F315AF4598CFBAFC0841FD33D919FB5C52DD.html,Returning Visitor,beta.fbc.pionier.net.pl / referral,Lauenburg AND NOT PROVIDER:'Federacja Bibliotek Cyfrowych',1.9736842105263157,100.0,38,10418.0
+2013-10-29,Spain,es-es,/portal/record/9200127/99E9875CBEB399C6897500C76D17BFD19973BF68.html,Returning Visitor,google / organic,carlos cabezón,1.0,50.66666666666667,75,58204.0
+2013-10-24,Hungary,hu-hu,/portal/search.html,New Visitor,direct / none,title:Plastic Surgery,1.0,50.66666666666667,75,642.0
+2013-10-23,Hungary,en,/portal/search.html,New Visitor,direct / none,title:Plastic Surgery,1.336283185840708,66.3716814159292,113,340.0
+2013-10-23,Hungary,hu,/portal/search.html,New Visitor,divany.hu / referral,title:Plastic Surgery,2.2205882352941178,22.058823529411764,340,6153.0
+2013-10-23,Hungary,hu-hu,/portal/search.html,New Visitor,divany.hu / referral,title:Plastic Surgery,2.1258278145695364,37.41721854304636,302,5662.0
+2013-10-22,Hungary,en-gb,/portal/search.html,Returning Visitor,direct / none,title:Plastic Surgery,3.013333333333333,50.66666666666667,75,1736.0
+2013-10-22,Hungary,en-us,/portal/search.html,New Visitor,divany.hu / referral,title:Plastic Surgery,2.4462444771723124,33.28424153166421,679,22723.0
+2013-10-22,Hungary,hu,/portal/record/9200105/wellcomeimages_org_record_L0024849.html,New Visitor,direct / none,title:Plastic Surgery,1.3968253968253967,20.105820105820104,189,5737.0
+2013-10-22,Hungary,hu,/portal/search.html,New Visitor,divany.hu / referral,title:Plastic Surgery,3.2570712495524528,12.17329036877909,2793,75038.0
+2013-10-22,Hungary,hu,/portal/search.html,New Visitor,m.divany.hu / referral,title:Plastic Surgery,1.668141592920354,66.8141592920354,226,1585.0
+2013-10-22,Hungary,hu,/portal/search.html,Returning Visitor,divany.hu / referral,title:Plastic Surgery,4.0,25.165562913907287,151,10607.0
+2013-10-22,Hungary,hu-hu,/portal/record/9200105/wellcomeimages_org_record_L0024849.html,New Visitor,direct / none,title:Plastic Surgery,2.004424778761062,16.8141592920354,226,10380.0
+2013-10-22,Hungary,hu-hu,/portal/search.html,New Visitor,direct / none,title:Plastic Surgery,5.496688741721854,49.668874172185426,151,7134.0
+2013-10-22,Hungary,hu-hu,/portal/search.html,New Visitor,divany.hu / referral,title:Plastic Surgery,2.0997792494481238,13.333333333333334,2265,101121.0
+2013-10-22,Hungary,hu-hu,/portal/search.html,New Visitor,direct / none,title:Plastic Surgery,1.0,39.682539682539684,189,1736.0
+2013-10-22,United Kingdom,en-us,/portal/search.html,New Visitor,divany.hu / referral,title:Plastic Surgery,3.0,25.165562913907287,151,3020.0
+2013-10-21,Hungary,en,/portal/search.html,New Visitor,direct / none,title:Plastic Surgery,1.1957671957671958,59.78835978835979,189,1057.0
+2013-10-21,Hungary,hu,/portal/record/9200105/wellcomeimages_org_record_L0024849.html,New Visitor,direct / none,title:Plastic Surgery,1.336283185840708,16.8141592920354,226,3359.0
+2013-10-21,Hungary,hu,/portal/search.html,New Visitor,direct / none,title:Plastic Surgery,4.973684210526316,100.0,38,1132.0
+2013-10-21,Hungary,hu,/portal/search.html,New Visitor,divany.hu / referral,title:Plastic Surgery,2.7054735013032145,8.210251954821894,2302,91760.0
+2013-10-21,Hungary,hu-hu,/portal/search.html,New Visitor,divany.hu / referral,title:Plastic Surgery,2.5669291338582676,18.89763779527559,1397,31329.0
+2013-10-21,Hungary,hu-hu,/portal/search.html,New Visitor,direct / none,title:Plastic Surgery,1.0,16.8141592920354,226,2378.0
+2013-10-14,United States,en-us,/portal/search.html,New Visitor,retronaut.com / referral,title:Plastic Surgery,1.2516556291390728,25.165562913907287,151,1095.0
+2013-10-12,United States,en-us,/portal/search.html,New Visitor,retronaut.com / referral,what:'Coloured etching',1.0,66.3716814159292,113,151.0
+2013-10-10,Spain,es,/portal/record/91916/2FE9404A6B055D7D4B32218B5E34330A35A4CB82.html,Returning Visitor,direct / none,barcelona mapa,1.9736842105263157,100.0,38,264.0
+2013-10-10,United States,en-us,/portal/record/9200103/ark__12148_btv1b6928979c.html,New Visitor,miniaturewargaming.com / referral,DATA_PROVIDER:'French National Library - Bibliothèque Nationale de France',1.0,50.66666666666667,75,226.0
+2013-10-04,United States,en-us,/portal/search.html,New Visitor,retronaut.com / referral,volkswagen vw,1.0,66.3716814159292,113,566.0
+2013-10-03,United States,en-us,/portal/search.html,New Visitor,retronaut.com / referral,volkswagen vw,1.5066666666666666,50.66666666666667,75,1208.0
+2013-10-02,Germany,de-de,/portal/record/09404/340A27CEC5E73D4F6B99437C9A3F2C087E04F86A.html,Returning Visitor,direct / none,title:'Karkonosze - schronisko Forstbaude',1.5066666666666666,50.66666666666667,75,5964.0
+2013-10-01,Ukraine,ru,/portal/search.html,New Visitor,vk.com / referral,what:'Kowel Ukraina - ikonografia',2.0,66.3716814159292,113,1359.0
+2013-09-30,France,fr,/portal/search.html,Returning Visitor,bnf.fr / referral,vinci codex d,1.9736842105263157,100.0,38,1132.0
+2013-09-26,Morocco,fr-fr,/portal/search.html,Returning Visitor,direct / none,constitution d'athenes,1.0,50.66666666666667,75,1925.0
+2013-09-25,United States,en-us,/portal/search.html,New Visitor,retronaut.com / referral,toppop,1.5066666666666666,50.66666666666667,75,1472.0
+2013-09-24,Spain,ca,/portal/record/91907/82DF347385C2552D3789640AD68D7281FFD17ADF.html,Returning Visitor,google / organic,TAÜLL,1.9736842105263157,100.0,38,189.0
+2013-09-24,Spain,es,/portal/record/01004/31A49625359150FBCEA1A6E698212358869F2F63.html,Returning Visitor,intranet.mec.es / referral,fluvial,1.9736842105263157,100.0,38,75.0
+2013-09-23,Spain,es,/portal/search.html,Returning Visitor,google / organic,where:cadiz,2.973684210526316,100.0,38,453.0
+2013-09-10,Spain,es,/portal/record/2022701/oai_bivaldioai_gva_es_7326.html,New Visitor,skyscrapercity.com / referral,valencia,1.0,50.66666666666667,75,717.0
+2013-09-06,Switzerland,en-us,/portal/record/15802/001D7B8BB3C7D034556863335CDCC82A8D23513F.html,Returning Visitor,google / organic,sadeler animaux arche,1.9736842105263157,100.0,38,2982.0
+2013-09-02,Ukraine,ru,/portal/search.html,Returning Visitor,google / organic,what:'Συναλλαγματική',1.9736842105263157,100.0,38,65829.0
+2013-08-30,Belgium,fr,/portal/search.html,Returning Visitor,us-mg6.mail.yahoo.com / referral,what:map livonie,2.973684210526316,100.0,38,944.0
+2013-08-20,United States,en-us,/portal/search.html,Returning Visitor,google / organic,toscanini,5.008849557522124,33.6283185840708,113,2604.0
+2013-08-19,France,fr-fr,/portal/record/10001/A65999C3070BD2F2BE4F832099AD35BEEA60CAAC.html,Returning Visitor,direct / none,what:'Marinos Aristarque',2.973684210526316,100.0,38,679.0
+2013-08-13,Spain,es-es,/portal/search.html,Returning Visitor,google / organic,gallaecia ojea,1.9736842105263157,100.0,38,52089.0
+2013-08-12,Spain,es-es,/portal/search.html,Returning Visitor,google / organic,duque del infantado,1.9736842105263157,100.0,38,377.0
+2013-07-30,United States,en-us,/portal/record/9200110/EB4BF61D764EDE96131246CF44D665D38140AC2C.html,Returning Visitor,direct / none,Libros legendi,1.9736842105263157,100.0,38,830.0
+2013-07-15,Spain,es-es,/portal/search.html,Returning Visitor,google / organic,Willy Pragher Mallorca,2.973684210526316,100.0,38,793.0
+2013-07-07,Spain,es-es,/portal/search.html,Returning Visitor,google / organic,juan de avila,6.947368421052632,100.0,38,2869.0
+2013-07-04,Russia,ru-ru,/portal/search.html,Returning Visitor,direct / none,what:portraits 1789 1799,2.973684210526316,100.0,38,944.0
+2013-07-01,Ukraine,ru-ru,/portal/record/2023831/92DCC3E8817AA93FDDD15D15BC74EFE66C4BB5EB.html,Returning Visitor,facebook.com / referral,who:'Ленчин Виталий Иванович',1.0,50.66666666666667,75,226.0
+2013-06-30,United States,en-us,/portal/record/92037/BF631D2CCCB25DA8B2F5C1E473B3A1EA8CA8CCB9.html,New Visitor,forums.bharat-rakshak.com / referral,what:'South Asia -- History',1.9736842105263157,100.0,38,793.0
+2013-06-30,United States,en-us,/portal/search.html,Returning Visitor,direct / none,Meditationes,1.5066666666666666,50.66666666666667,75,2001.0
+2013-06-28,Italy,it,/portal/search.html,Returning Visitor,direct / none,senecae de beneficiis,8.947368421052632,100.0,38,4492.0
+2013-06-17,Netherlands,en-us,/portal/record/03486/1E4CD66942C8B59990D55B3EF8D965457A077131.html,Returning Visitor,direct / none,der Sünde und vom Versöhner,2.973684210526316,100.0,38,151.0
+2013-06-16,Poland,pl,/portal/record/09404/347C1C53C10CA245830DD25C1756204D853AFD7E.html,Returning Visitor,google / organic,"who:'Gorski, Konstanty 1868-1934. Il.'",1.9736842105263157,100.0,38,38.0
+2013-06-16,United States,en-us,/portal/search.html,Returning Visitor,google / organic,alfonso x cronica,1.9736842105263157,100.0,38,340.0
+2013-06-07,France,fr,/portal/record/09428/7BCE20DB80D318FE0E570ED27B1B76EC91E9B56E.html,Returning Visitor,google / organic,Bödiker,1.9736842105263157,100.0,38,264.0
+2013-06-06,Poland,pl,/portal/record/03486/608680E7B788BD24E532BD24E76DC7EB14B9E35B.html,Returning Visitor,google / organic,title:'Jahrbücher der Stadt Breslau 5',2.973684210526316,100.0,38,340.0
+2013-06-04,Netherlands,en-us,/portal/search.html,Returning Visitor,direct / none,title:'Scriptum super librum De anima Aristotelis',1.0,50.66666666666667,75,75.0
+2013-06-03,United States,pt-br,/portal/search.html,New Visitor,search.creativecommons.org / referral,spiritism AND RIGHTS:*creative* AND NOT RIGHTS:*nc* AND NOT RIGHTS:*nd*,1.0,50.66666666666667,75,604.0
+2013-06-02,Russia,ru-ru,/portal/search.html,Returning Visitor,google.ru / referral,"who:Callot, Jacques, 1592-1635",2.52,50.66666666666667,75,51598.0
+2013-06-01,Netherlands,en-us,/portal/search.html,Returning Visitor,direct / none,title:'Scriptum super librum De anima Aristotelis',1.9736842105263157,100.0,38,189.0
+2013-05-31,Spain,es-es,/portal/record/9200110/026594B21A9C6786899D9360FBD76737C668FC40.html,Returning Visitor,google / organic,bartolome de molina,1.5066666666666666,50.66666666666667,75,717.0
+2013-05-21,Netherlands,en-us,/portal/record/03903/E1E7E136BD4A9E46D0AD9403A846DB46B4AB574D.html,Returning Visitor,test.remix.eanadev.org / referral,europeana_uri:'http://www.europeana.eu/resolve/record/03903/FD09B71529F1F9B9A735332EED2A8D12928FDFFA',1.9736842105263157,100.0,38,1774.0
+2013-05-20,Lithuania,en-us,/portal/record/09404/1D38BE7823DA2A9BA86158E7B5D39C5C980BDEC2.html,Returning Visitor,google / organic,who:Selle Götz von,1.5066666666666666,50.66666666666667,75,13551.0
+2013-05-08,Italy,it,/portal/search.html,Returning Visitor,google / organic,mondo secreto,6.947368421052632,100.0,38,1887.0
+2013-05-02,Germany,de,/portal/search.html,Returning Visitor,direct / none,what:'Richtersdorf',1.9736842105263157,100.0,38,226.0
+2013-04-29,Netherlands,nl,/portal/search.html,Returning Visitor,facebook.com / referral,*:*,1.0,50.66666666666667,75,755.0
+2013-04-29,Netherlands,nl,/portal/search.html,Returning Visitor,google / organic,europeana_collectionName:08614*,1.0,50.66666666666667,75,1736.0
+2013-04-27,France,fr-fr,/portal/record/9200143/ED4519847C33D4D8D54D7AA1EE97F89C9A5BDB79.html,Returning Visitor,direct / none,Nogent le rotrou,2.973684210526316,100.0,38,755.0
+2013-04-24,United States,en-us,/portal/search.html,Returning Visitor,google / organic,alexander dalrymple,1.9736842105263157,100.0,38,340.0
+2013-04-22,Netherlands,en-gb,/portal/record/9200193/8ACE8490CC8F4289FD0E0DEFE7CD60839311C278.html,Returning Visitor,google / organic,europeana_collectionName:9200193*,1.0,50.66666666666667,75,38.0
+2013-04-22,Ukraine,ru,/portal/search.html,Returning Visitor,google / organic,Onderzoek naar de oorsprong van de wisselbrieven,1.5066666666666666,100.0,75,22534.0
+2013-04-20,Bulgaria,bg,/portal/record/08506/F26C620C24569B5D0C0CAD93EF71851FB069B701.html,New Visitor,google / organic,Levski,1.0,50.66666666666667,75,113.0
+2013-04-17,United Kingdom,en-us,/portal/record/10106/ADF1BFD69E97AC5E4E2ECADF6870FC902E214AD7.html,Returning Visitor,google / organic,title:Brachyurus,1.9736842105263157,100.0,38,264.0
+2013-04-15,Mexico,fr,/portal/record/03486/D01CDAE6FAD65B2F6419C3C5245ED7816BCD0815.html,Returning Visitor,google / organic,stewart elements,1.9736842105263157,100.0,38,3661.0
+2013-04-14,Greece,el-gr,/portal/record/2023809/342428A7677B5D21EEF528BF1EBEF22A592FEFB1.html,Returning Visitor,google / organic,DATA_PROVIDER:'The Cyprus Institute - STARC / Βυζαντινό Μουσείο Ιδρύματος Αρχιεπισκόπου Μακαρίου Γ΄',2.013333333333333,100.0,75,717.0
+2013-04-09,Portugal,pt,/portal/search.html,Returning Visitor,search.creativecommons.org / referral,love AND RIGHTS:*creative* AND NOT RIGHTS:*nc* AND NOT RIGHTS:*nd*,1.0,50.66666666666667,75,34953.0
+2013-04-09,Spain,es-es,/portal/search.html,Returning Visitor,google / organic,kings of heralds,2.973684210526316,100.0,38,679.0
+2013-04-04,Russia,ru-ru,/portal/search.html,Returning Visitor,google.ru / referral,"who:Callot, Jacques, 1592-1635",1.336283185840708,66.3716814159292,113,58506.0
+2013-04-03,Spain,es-es,/portal/search.html,New Visitor,pendientedemigracion.ucm.es / referral,europeana_collectionName:9200207*,1.0,50.66666666666667,75,793.0
+2013-03-29,United Kingdom,en-gb,/portal/record/2022317/696558505683561783EDD7B5923FFE28005411C4.html,Returning Visitor,direct / none,Taunt,1.9736842105263157,100.0,38,340.0
+2013-03-25,United States,en-us,/portal/search.html,New Visitor,bushcraftusa.com / referral,who:Säters Yxfabrik AB,1.5066666666666666,50.66666666666667,75,302.0
+2013-03-22,Spain,es,/portal/record/2022701/B95BEA761269E267A7C23F2DE386045CC8FAB0E9.html,Returning Visitor,google / organic,fabrica de anclas passages,1.0,50.66666666666667,75,415.0
+2013-03-21,United States,en-us,/portal/record/92065/E3808B5197C09EC79CD5A6B17380D51CA465207B.html,Returning Visitor,direct / none,"who:Volden, Theodor von",1.0,50.66666666666667,75,1623.0
+2013-03-16,United Kingdom,en-gb,/portal/record/08533/4084DAE99A3D3F2BE57E02ED24418E407A897B47.html,Returning Visitor,direct / none,Robinson' projections,1.5066666666666666,50.66666666666667,75,32612.0
+2013-03-14,Germany,de,/portal/record/2022037/866CFD959C0BDBD261B077E3DB76CE3F4BCEBB47.html,Returning Visitor,direct / none,"what:Nieding, Norbert von",1.0,66.3716814159292,113,51598.0
+2013-03-12,Poland,pl,/portal/record/08535/BBDC2E3C33182D64C25B1FE623DF4155F2BCFA7D.html,New Visitor,bolec.info / referral,"what:Seminar-Turnhalle,",1.0,50.66666666666667,75,1095.0
+2013-03-10,Germany,de,/portal/search.html,Returning Visitor,google / organic,"who:Schinkel, Karl Friedrich",2.013333333333333,50.66666666666667,75,56883.0
+2013-03-06,Australia,en-us,/portal/search.html,Returning Visitor,google / organic,artist,1.0,50.66666666666667,75,1321.0
+2013-03-06,Germany,de,/portal/search.html,Returning Visitor,google / organic,"who:Schinkel, Karl Friedrich",2.973684210526316,100.0,38,57751.0
+2013-03-02,France,fr-fr,/portal/search.html,Returning Visitor,direct / none,farouk,1.0,50.66666666666667,75,566.0
+2013-03-01,France,fr,/portal/record/92034/B4EA35A9B1C2B6AB9434A6AA75FC506AA323FA0E.html,Returning Visitor,google / organic,gordelsluiting,1.9736842105263157,100.0,38,415.0
+2013-02-25,Ukraine,ru,/portal/record/92033/AF58EFE3F71CB825BE0BFF9092EC6B8F44CE1A5B.html,Returning Visitor,fbc.pionier.net.pl / referral,FISZ ZENON,1.9736842105263157,100.0,38,113.0
+2013-02-22,India,en-us,/portal/search.html,New Visitor,nextbigwhat.com / referral,europeana_collectionName:9200154*,1.0,50.66666666666667,75,415.0
+2013-02-22,United States,en-us,/portal/search.html,New Visitor,nextbigwhat.com / referral,europeana_collectionName:9200154*,1.3968253968253967,39.682539682539684,189,7247.0
+2013-02-17,Denmark,da,/portal/record/2023707/95C3469E01D2065E757C95813E29DA1CEABF7C17.html,New Visitor,facebook.com / referral,abdul sule,1.0,50.66666666666667,75,453.0
+2013-02-12,Bulgaria,en-us,/portal/search.html,Returning Visitor,direct / none,Балканска война,1.5066666666666666,50.66666666666667,75,22081.0
+2013-02-10,United Arab Emirates,en-us,/portal/search.html,Returning Visitor,google / organic,"who:Douverman, Henrik",2.973684210526316,100.0,38,302.0
+2013-02-09,Mexico,es-mx,/portal/record/2020601/5CD1401577FF9D64C2413201B0CE1C7D690348C6.html,Returning Visitor,pearltrees.com / referral,Fahrrad,1.0,50.66666666666667,75,50391.0
+2013-02-09,Mexico,es-mx,/portal/record/2022026/BB5F0EEB8FCD89C18AF234DF39163A1E63E8490E.html,Returning Visitor,pearltrees.com / referral,Fahrrad,1.5066666666666666,100.0,75,377.0
+2013-02-09,United States,en-us,/portal/search.html,Returning Visitor,google / organic,prayer,2.973684210526316,100.0,38,340.0
+2013-02-06,France,en-us,/portal/record/9200105/7C635A2FE545180EEB0DC9CC1CD9D9CA9C08A705.html,Returning Visitor,direct / none,John thomson,1.9736842105263157,100.0,38,6907.0
+2013-02-06,Mexico,es-mx,/portal/record/2020601/5CD1401577FF9D64C2413201B0CE1C7D690348C6.html,Returning Visitor,pearltrees.com / referral,Fahrrad,1.9736842105263157,100.0,38,113.0
+2013-01-28,Ukraine,ru,/portal/record/92033/457715DE590C966371C7799A4AC2C636FB3F3D35.html,Returning Visitor,polpred.com / referral,fisz zenon,1.9736842105263157,100.0,38,2416.0
+2013-01-27,Croatia,hr-hr,/portal/record/9200103/5AC892BBD6CAF3CCC758C666AB9E2E9AF656F4F7.html,Returning Visitor,google / organic,what:Rijeka ;,1.9736842105263157,100.0,38,5133.0
+2013-01-20,Italy,it-it,/portal/record/08501/583AA2EEDE2B6DAE4415016453A93D2E95E781BD.html,Returning Visitor,google / organic,what:Viole,1.9736842105263157,100.0,38,28234.0
+2013-01-18,Slovenia,sl-si,/portal/record/09428/541A11B06A406A7260534CB17607D6711A390249.html,Returning Visitor,direct / none,Tractatus de Potestate et Primatu Papae 1537,1.9736842105263157,100.0,38,226.0
+2013-01-15,France,fr-fr,/portal/search.html,Returning Visitor,google / organic,"who:Hosius, Stanislaus. ;",1.1957671957671958,100.0,189,10607.0
+2013-01-14,Germany,de,/portal/search.html,New Visitor,direct / none,europeana_dataProvider:'Architekturmuseum der Technischen Universität Berlin in der Universitätsbibliothek',1.9736842105263157,100.0,38,679.0
+2013-01-12,France,fr-fr,/portal/search.html,Returning Visitor,google / organic,"who:Hosius, Stanislaus. ;",2.973684210526316,100.0,38,52806.0
+2013-01-12,Lithuania,lt,/portal/search.html,Returning Visitor,google / organic,troškūnų,2.973684210526316,100.0,38,1057.0
+2013-01-10,Mexico,es-es,/portal/search.html,Returning Visitor,google / organic,what:Dibujos de maquinaria e inventos,1.5066666666666666,50.66666666666667,75,944.0
+2013-01-02,Hungary,hu-hu,/portal/search.html,New Visitor,users.atw.hu / referral,szentgotthárd,2.013333333333333,50.66666666666667,75,755.0
+2012-12-31,Serbia,en-us,/portal/record/09428/84BF14E0A80A22A37D330EC561D9250C247BFE38.html,Returning Visitor,google / organic,who:Kaiserlich-Königliches Militär-Geographisches Institut,1.9736842105263157,100.0,38,10984.0
+2012-12-25,Sweden,sv-se,/portal/search.html,Returning Visitor,google / organic,rembrandt,1.0,50.66666666666667,75,302.0
+2012-12-20,United Kingdom,en-gb,/portal/search.html,Returning Visitor,google / organic,description of British library collections',1.9736842105263157,100.0,38,642.0
+2012-12-10,Italy,it,/portal/search.html,Returning Visitor,site.project.europhoto.org / referral,europeana_collectionName:2023710*,3.973684210526316,100.0,38,1019.0
+2012-12-10,Latvia,en-us,/portal/search.html,New Visitor,forum.myriga.info / referral,Riga und Seine Bauten,1.5066666666666666,50.66666666666667,75,528.0
+2012-12-08,Germany,de,/portal/search.html,Returning Visitor,google / organic,domenico toschi,5.947368421052632,100.0,38,2152.0
+2012-12-07,Bulgaria,bg,/portal/record/08506/6CD11E3C4FA74B606705F13A5BF7B0349687CCBD.html,Returning Visitor,google / organic,Levski,1.0,50.66666666666667,75,3473.0
+2012-12-04,Czech Republic,cs,/portal/search.html,New Visitor,direct / none,"europeana_dataProvider:'Natural History Museum, Vienna - Herbarium W'",1.5066666666666666,50.66666666666667,75,604.0
+2012-12-03,Brazil,pt-br,/portal/search.html,Returning Visitor,google / organic,fiodor,2.52,100.0,75,6832.0
+2012-12-02,Brazil,pt-br,/portal/search.html,Returning Visitor,google / organic,fiodor,2.973684210526316,100.0,38,2944.0
+2012-11-30,Germany,de,/portal/record/03486/68B62A739B2DF6C655D1E9B7B414366D401BE28B.html,Returning Visitor,google / organic,Rosencreutz,1.9736842105263157,100.0,38,415.0
+2012-11-28,United States,en-us,/portal/record/09405b/92421BA09FE6DCF9969AE55673A7109020676358.html,Returning Visitor,direct / none,illumination,1.9736842105263157,100.0,38,415.0
+2012-11-21,United States,en-us,/portal/search.html,New Visitor,direct / none,carare,2.52,50.66666666666667,75,16721.0
+2012-11-21,United States,en-us,/portal/search.html,New Visitor,36ohk6dgmcd1n-c.c.yom.mail.yahoo.net / referral,carare,1.0,50.66666666666667,75,491.0
+2012-11-17,Nepal,en-us,/portal/search.html,Returning Visitor,google / organic,Gentiana prostrata,2.52,50.66666666666667,75,3133.0
+2012-11-16,Belarus,ru,/portal/search.html,Returning Visitor,google / organic,"what:Latvija--Kartes, tūrisma",2.973684210526316,100.0,38,264.0
+2012-11-14,Spain,pt-br,/portal/search.html,Returning Visitor,google / organic,franquismo,1.143939393939394,85.60606060606061,264,41143.0
+2012-11-13,Denmark,de-de,/portal/search.html,Returning Visitor,de.wikipedia.org / referral,Diarium Europaeum,1.2516556291390728,25.165562913907287,151,1321.0
+2012-11-13,Spain,pt-br,/portal/search.html,Returning Visitor,google / organic,franquismo,1.7159090909090908,71.5909090909091,264,54203.0
+2012-11-12,Denmark,de-de,/portal/search.html,Returning Visitor,de.wikipedia.org / referral,Diarium Europaeum,1.0,50.66666666666667,75,1359.0
+2012-11-12,Spain,pt-br,/portal/search.html,Returning Visitor,google / organic,franquismo,2.5,24.834437086092713,302,139470.0
+2012-11-11,Spain,pt-br,/portal/search.html,Returning Visitor,google / organic,franquismo,1.168141592920354,83.6283185840708,226,50806.0
+2012-11-10,Sweden,sv-se,/portal/record/08807/58A85AC8256EEA6A59AE8C08084C612F60C07C39.html,Returning Visitor,featureditem / portal,Fredriksdal,2.973684210526316,100.0,38,28838.0
+2012-11-09,France,fr,/portal/record/9200103/1D798A6CAA4E3334AC43BF6490C0E1DB12A64864.html,Returning Visitor,search.creativecommons.org / referral,"who:Pierre, Étienne",1.0,50.66666666666667,75,1132.0
+2012-11-09,Spain,pt-br,/portal/search.html,Returning Visitor,google / organic,franquismo,1.455421686746988,63.614457831325296,415,209866.0
+2012-11-08,Spain,pt-br,/portal/search.html,Returning Visitor,google / organic,franquismo,1.7483443708609272,74.83443708609272,151,7209.0
+2012-11-07,Spain,pt-br,/portal/search.html,Returning Visitor,google / organic,vigilancia,1.597883597883598,59.78835978835979,189,85494.0
+2012-11-06,Spain,pt-br,/portal/search.html,Returning Visitor,google / organic,vigilancia,1.3968253968253967,59.78835978835979,189,43785.0
+2012-11-05,Greece,en-us,/portal/record/2023901/F2A7E30C7448E4D6939FC983D513D1CAA0DE7D1E.html,Returning Visitor,direct / none,europeana_dataProvider:'natural history museum of crete - university of crete',1.9736842105263157,100.0,38,604.0
+2012-11-05,Spain,pt-br,/portal/search.html,Returning Visitor,google / organic,vigilancia,1.3741721854304636,74.83443708609272,302,136413.0
+2012-11-04,Spain,es,/portal/search.html,Returning Visitor,google / organic,tartessus,1.9736842105263157,100.0,38,679.0
+2012-11-04,Spain,pt-br,/portal/search.html,Returning Visitor,google / organic,vigilancia,1.0,83.6283185840708,226,75.0
+2012-11-01,Poland,pl,/portal/record/09404/EB83BE624558F8190AF9DAA1B3F4FBF43683AFED.html,Returning Visitor,google / organic,what:modlitewnik,1.5066666666666666,50.66666666666667,75,415.0
+2012-11-01,Sweden,sv-se,/portal/search.html,Returning Visitor,featureditem / portal,Tapet,1.5066666666666666,50.66666666666667,75,793.0
+2012-10-31,Poland,pl,/portal/record/09404/EB83BE624558F8190AF9DAA1B3F4FBF43683AFED.html,Returning Visitor,google / organic,what:modlitewnik,3.013333333333333,50.66666666666667,75,3208.0
+2012-10-29,Spain,es-es,/portal/search.html,Returning Visitor,google.es / referral,"who:Häring, Hugo",1.5066666666666666,50.66666666666667,75,415.0
+2012-10-27,Italy,it,/portal/search.html,New Visitor,skyscrapercity.com / referral,milano,2.013333333333333,50.66666666666667,75,1434.0
+2012-10-26,Finland,fi-fi,/portal/record/9200105/F2CCB4EB72E4C4A8B16A6EAC89337EDCDCCBFD02.html,Returning Visitor,paths.sheffield.ac.uk / referral,anatomy,1.9736842105263157,100.0,38,264.0
+2012-10-13,Finland,fi,/portal/search.html,Returning Visitor,direct / none,strix,1.5066666666666666,50.66666666666667,75,2755.0
+2012-10-12,Italy,it-it,/portal/record/08602/63A2EF0FE9C4B0FF42870B23A6779227852E5879.html,New Visitor,facebook.com / referral,what:Aeroporto Luigi Ridolfi di Forlì,1.0,50.66666666666667,75,528.0
+2012-09-24,Russia,ru,/portal/search.html,Returning Visitor,bing / organic,patricia millardet,1.0,50.66666666666667,75,793.0
+2012-09-20,Germany,de-de,/portal/search.html,Returning Visitor,google / organic,arhardt,1.9736842105263157,100.0,38,264.0
+2012-09-18,China,zh-cn,/portal/record/09314/11FF5DFA80E57F56E997E11941225EBAC33C1FA3.html,Returning Visitor,weibo.com / referral,colin self,1.0,50.66666666666667,75,3661.0
+2012-09-13,Russia,ru,/portal/search.html,New Visitor,dirty.ru / referral,Henry Fox Talbot,2.52,50.66666666666667,75,2265.0
+2012-09-13,Russia,ru,/portal/search.html,New Visitor,dirty.ru / referral,Kafka's manuscripts,1.5044247787610618,33.1858407079646,226,1548.0
+2012-09-13,Russia,ru-ru,/portal/search.html,New Visitor,direct / none,Henry Fox Talbot,1.0,50.66666666666667,75,830.0
+2012-09-12,Denmark,da,/portal/record/08506/C806A7836179F100356081B2C5FF2FDD21D3E128.html,Returning Visitor,facebook.com / referral,Levski,1.0,50.66666666666667,75,415.0
+2012-09-11,Kuwait,ar,/portal/record/08602/03C378AB025A97A8275A774E23BAA27364FB6ADC.html,Returning Visitor,google / organic,what:Massaua,1.5066666666666666,100.0,75,113.0
+2012-09-10,France,fr,/portal/record/9200103/BA3B6E05291E65A9DC19F53000378DB7C6C36E0B.html,Returning Visitor,europeana.eu / referral,théâtre don juan,1.5066666666666666,50.66666666666667,75,39180.0
+2012-09-10,Romania,en-us,/portal/search.html,Returning Visitor,direct / none,europeana_dataProvider:'The National Library of Poland - Biblioteka Narodowa',1.6725663716814159,100.0,113,755.0
+2012-09-08,Netherlands,nl-nl,/portal/search.html,Returning Visitor,google / organic,brand suikerfabriek tjomal/java,1.5066666666666666,50.66666666666667,75,528.0
+2012-09-06,United States,en-us,/portal/record/09411/A83494752BCD15185B5B9274476C83B1DF7C6903.html,Returning Visitor,google / organic,"who:Μπονάνος, Σ",4.973684210526316,100.0,38,16948.0
+2012-09-04,Poland,pl,/portal/record/09404/73E76DFF5CF870C42BCFAE687DECD643F50892C4.html,Returning Visitor,google / organic,monstrancja,1.6725663716814159,66.3716814159292,113,43181.0
+2012-09-03,United Kingdom,en-us,/portal/search.html,Returning Visitor,google / organic,"what:Zákynthos, Île",1.5066666666666666,50.66666666666667,75,1472.0
+2012-08-31,Poland,pl,/portal/record/09404/DBD4025F60B8DFFF3E698F463A5CD9C01D61EF83.html,Returning Visitor,direct / none,what:modlitewnik,1.0,50.66666666666667,75,604.0
+2012-08-28,France,fr,/portal/search.html,Returning Visitor,bing / organic,europeana_dataProvider:'Teylers museum',1.5066666666666666,50.66666666666667,75,48352.0
+2012-08-27,Belgium,nl,/portal/record/2022005/1585A8EA7944E9A371F784B0623F8C50F195E4B6.html,Returning Visitor,labourhistory.net / referral,AMSAB,1.9736842105263157,100.0,38,717.0
+2012-08-26,Poland,pl,/portal/record/09404/DBD4025F60B8DFFF3E698F463A5CD9C01D61EF83.html,Returning Visitor,direct / none,what:modlitewnik,1.5066666666666666,50.66666666666667,75,5813.0
+2012-08-26,Poland,pl,/portal/record/09404/E77573FCD5CC78F6C492899475BFBE48126C361B.html,Returning Visitor,direct / none,what:książka kucharska,1.9736842105263157,100.0,38,226.0
+2012-08-25,Germany,de-de,/portal/record/03486/A9DC7737AE56FD5AAA807AB6772597F806F7B1D7.html,Returning Visitor,featureditem / portal,"who:Hentschel, Ernst Julius",2.013333333333333,50.66666666666667,75,1774.0
+2012-08-21,United States,en-us,/portal/record/08809/659898779BDD2E99AF8406827352A78030F6150B.html,Returning Visitor,google / organic,murat kaloshi,1.9736842105263157,100.0,38,604.0
+2012-08-19,France,fr-fr,/portal/search.html,Returning Visitor,google / organic,"who:Sergent, Émile",3.973684210526316,100.0,38,1434.0
+2012-08-19,Poland,pl,/portal/record/09404/73E76DFF5CF870C42BCFAE687DECD643F50892C4.html,Returning Visitor,google / organic,monstrancja,1.2516556291390728,74.83443708609272,151,31782.0
+2012-08-18,Poland,pl,/portal/record/09404/51FADA6049112F2E958F5A868878E69EBD112CD6.html,Returning Visitor,direct / none,what:książka do nabożeństwa,2.013333333333333,50.66666666666667,75,22232.0
+2012-08-17,Poland,pl,/portal/record/09404/345C8C730133E8B60F851E30E5CBD917781094DC.html,Returning Visitor,direct / none,what:przepisy kulinarne,1.9736842105263157,100.0,38,1208.0
+2012-08-09,Germany,de,/portal/search.html,Returning Visitor,bing / organic,"who:Richter, Ludwig",1.0,50.66666666666667,75,4077.0
+2012-08-08,Finland,fi-fi,/portal/record/2021002/7985834C32E8640842236E834749E0E59470D08D.html,Returning Visitor,featureditem / portal,Blanka ateneumin,2.0,66.3716814159292,113,83946.0
+2012-08-06,Poland,pl,/portal/record/02302/3CECD11884D94170F0001B81086533F8B7E54906.html,Returning Visitor,google / organic,cellini,2.52,50.66666666666667,75,94553.0
+2012-08-04,Italy,it,/portal/search.html,Returning Visitor,google / organic,who:Prince Toy Co Ltd,1.9736842105263157,100.0,38,7096.0
+2012-07-25,Switzerland,de,/portal/record/09428/EAD266E78A0FD7ACCD97E9B04B9AF1C9F749C8AE.html,Returning Visitor,direct / none,Holtermanni De Nequitia,3.973684210526316,100.0,38,24874.0
+2012-07-22,France,fr,/portal/search.html,Returning Visitor,bing / organic,europeana_dataProvider:'Teylers museum',9.053333333333333,50.66666666666667,75,2680.0
+2012-07-20,France,fr,/portal/search.html,Returning Visitor,bing / organic,europeana_dataProvider:'Teylers museum',12.921052631578947,100.0,38,1472.0
+2012-07-18,Czech Republic,cs,/portal/search.html,Returning Visitor,direct / none,Meleager,1.9736842105263157,100.0,38,302.0
+2012-07-15,Netherlands,en-us,/portal/search.html,Returning Visitor,google.com / referral,P-MTCZ-1,1.168141592920354,83.6283185840708,226,64432.0
+2012-07-15,Poland,pl,/portal/record/02302/3CECD11884D94170F0001B81086533F8B7E54906.html,Returning Visitor,google / organic,cellini,2.672566371681416,33.6283185840708,113,135998.0
+2012-07-13,Netherlands,en-us,/portal/search.html,Returning Visitor,google.com / referral,P-MTCZ-1,1.2483443708609272,74.83443708609272,302,35594.0
+2012-07-12,Netherlands,en-us,/portal/search.html,Returning Visitor,google.com / referral,P-MTCZ-1,1.3968253968253967,79.8941798941799,189,5435.0
+2012-07-12,Poland,pl,/portal/record/02302/3CECD11884D94170F0001B81086533F8B7E54906.html,Returning Visitor,featureditem / portal,cellini,1.2516556291390728,74.83443708609272,151,17854.0
+2012-07-11,Poland,pl,/portal/record/02302/3CECD11884D94170F0001B81086533F8B7E54906.html,Returning Visitor,featureditem / portal,cellini,1.5066666666666666,50.66666666666667,75,35368.0
+2012-07-10,Netherlands,nl,/portal/record/92034/A724871ADE192CBC44742D4681678D4E1837B0F8.html,Returning Visitor,google / organic,muntendam,1.9736842105263157,100.0,38,189.0
+2012-07-08,Poland,pl,/portal/record/02302/3CECD11884D94170F0001B81086533F8B7E54906.html,Returning Visitor,featureditem / portal,cellini,1.4966887417218544,74.83443708609272,151,67112.0
+2012-07-03,Poland,pl,/portal/record/92033/9D10861674B812F4C9687A20E805CADE1EAB20C9.html,New Visitor,inwestycje.kalisz.pl / referral,Kalisz,1.0,50.66666666666667,75,830.0
+2012-06-24,France,fr,/portal/search.html,Returning Visitor,google / organic,halbharnisch,3.973684210526316,100.0,38,755.0
+2012-06-22,Turkey,tr,/portal/search.html,Returning Visitor,direct / none,edirne,1.0,25.165562913907287,151,1585.0
+2012-06-18,Germany,de-de,/portal/search.html,Returning Visitor,google / organic,jugendstil,1.9736842105263157,100.0,38,6455.0
+2012-06-14,Hungary,hu,/portal/search.html,Returning Visitor,google / organic,Medalie dedicată încoronării ungariei,1.0,33.6283185840708,113,1170.0
+2012-06-11,Romania,ro,/portal/search.html,Returning Visitor,bcu.ulbsibiu.ro / referral,imperfect competition,1.0,50.66666666666667,75,1548.0
+2012-06-06,Australia,en-us,/portal/search.html,Returning Visitor,google / organic,libellus de natura animalium,1.9736842105263157,100.0,38,226.0
+2012-06-04,Hong Kong,zh-hk,/portal/search.html,Returning Visitor,direct / none,"Pierre, J.",1.7483443708609272,25.165562913907287,151,11663.0
+2012-06-03,South Korea,ko,/portal/record/92034/A1030324F86225DB322997942C51E826D382F658.html,Returning Visitor,direct / none,vincent van gogh,2.973684210526316,100.0,38,101347.0
+2012-05-31,Finland,fi-fi,/portal/record/9200113/24B02FE7BCE4A7023249F2488708D7EF1667BE55.html,Returning Visitor,direct / none,Free access,1.9736842105263157,100.0,38,1812.0
+2012-05-17,South Korea,ko-kr,/portal/record/08701/57EE79E945412BBDAE639D29BA51077036F22843.html,Returning Visitor,ko.wikipedia.org / referral,berry,1.5066666666666666,50.66666666666667,75,15702.0
+2012-05-16,Spain,es,/portal/search.html,Returning Visitor,featureditem / portal,europeana_collectionName:02428*,1.5066666666666666,50.66666666666667,75,793.0
+2012-05-11,Germany,de-de,/portal/record/08705/DBFB66C1653C59071E8B40A2CC879D5603130E54.html,Returning Visitor,direct / none,notes royal botanical garden edinburgh 1937,1.5066666666666666,50.66666666666667,75,14306.0
+2012-05-09,Malta,en-us,/portal/search.html,Returning Visitor,google / organic,valletta,2.973684210526316,100.0,38,90892.0
+2012-05-07,Germany,de-de,/portal/record/08547/5F253A48444C5A4E8CC58D48DCB08A1F95D30C3F.html,Returning Visitor,direct / none,what:Leipzig / Universität / Jubiläum,1.5066666666666666,50.66666666666667,75,9474.0
+2012-05-03,Germany,de-de,/portal/record/2020601/8CE30CFD17898E1FB9BF2CEB5010DED58A43E7CE.html,New Visitor,perlentaucher.de / referral,postcard hitler,1.0,50.66666666666667,75,415.0
+2012-05-03,Germany,de-de,/portal/record/2020601/8CE30CFD17898E1FB9BF2CEB5010DED58A43E7CE.html,New Visitor,spiegel.de / referral,postcard hitler,1.5066666666666666,50.66666666666667,75,453.0
+2012-05-03,Italy,it,/portal/record/08504/C3437DDF9720D95040570474140E45E10E2366B8.html,Returning Visitor,google / organic,botticelli venere,2.013333333333333,100.0,75,2567.0
+2012-04-30,Spain,es,/portal/search.html,Returning Visitor,google / organic,what:Illuminated manuscript,1.9736842105263157,100.0,38,302.0
+2012-04-29,Spain,es,/portal/record/9200112/A40D7C58CC5E1BCE89603A7916C62AB785D91EDF.html,Returning Visitor,google / organic,isidor hispalensis,2.973684210526316,100.0,38,13739.0
+2012-04-28,Croatia,en-us,/portal/record/09405a/9F897C53B2B664306587A58DBD68CD4C45DC1E61.html,Returning Visitor,en.wikipedia.org / referral,Seton-Watson,1.9736842105263157,100.0,38,415.0
+2012-04-26,Ukraine,ru-ru,/portal/record/9200115/004B0A75F7E6E4F4B66DA2D8E7F5D6AECB8DC965.html,Returning Visitor,april2012newsletter / email,europeana_collectionName:9200115*,2.013333333333333,100.0,75,1321.0
+2012-04-18,Germany,de-de,/portal/record/08705/DBFB66C1653C59071E8B40A2CC879D5603130E54.html,Returning Visitor,direct / none,notes royal botanical garden edinburgh 1937,1.336283185840708,100.0,113,151.0
+2012-04-18,United Kingdom,en-us,/portal/search.html,Returning Visitor,featureditem / portal,molendijk,2.973684210526316,100.0,38,679.0
+2012-04-16,United Kingdom,en-us,/portal/search.html,Returning Visitor,direct / none,what:Nationalsozialismus,1.9736842105263157,100.0,38,3322.0
+2012-04-15,Switzerland,de,/portal/record/03486/51E8B7686B755BCEE3F74C185F217DE2855C3DDD.html,Returning Visitor,search-results / organic,steganographia,2.973684210526316,100.0,38,2038.0
+2012-04-12,Netherlands,en-us,/portal/search.html,Returning Visitor,featureditem / portal,benelux tunnel,4.026666666666666,50.66666666666667,75,26648.0
+2012-04-10,Spain,es-es,/portal/search.html,Returning Visitor,direct / none,polyanthea,1.0,50.66666666666667,75,1510.0
+2012-04-04,United States,en-us,/portal/record/92037/8A9CC3199060F9E1AFD3EC7D71B8537D2B34E371.html,Returning Visitor,tumblr.com / referral,dress,2.973684210526316,100.0,38,2001.0
+2012-03-31,Poland,pl,/portal/search.html,Returning Visitor,google / organic,"who:Pusch, Maurycy",1.5066666666666666,50.66666666666667,75,1019.0
+2012-03-29,Germany,de-de,/portal/search.html,New Visitor,direct / none,*:*,1.9736842105263157,100.0,38,604.0
+2012-03-27,Belgium,nl,/portal/search.html,Returning Visitor,carousel / portal,*:*,1.0,50.66666666666667,75,528.0
+2012-03-23,Greece,el,/portal/search.html,New Visitor,Piraeus Bank Group Cultural Foundation List / email,μεταξουργία,1.0,50.66666666666667,75,453.0
+2012-03-22,Poland,pl,/portal/search.html,Returning Visitor,google / organic,europeana_dataProvider:'Wielkopolska Biblioteka Cyfrowa',2.973684210526316,100.0,38,189.0
+2012-03-21,Mexico,es-es,/portal/search.html,Returning Visitor,direct / none,theaterspielfiguren,2.013333333333333,50.66666666666667,75,63300.0
+2012-03-18,Germany,de-de,/portal/search.html,Returning Visitor,google / organic,henri sauvage,1.9736842105263157,100.0,38,377.0
+2012-03-13,Germany,de-de,/portal/search.html,Returning Visitor,direct / none,baatz,1.6725663716814159,66.3716814159292,113,264.0
+2012-03-09,Russia,ru,/portal/search.html,New Visitor,direct / none,what:Entwurf,1.0,50.66666666666667,75,189.0
+2012-03-08,Italy,it-it,/portal/search.html,Returning Visitor,marciana.venezia.sbn.it / referral,cartiera,2.973684210526316,100.0,38,1359.0
+2012-03-03,Spain,es-es,/portal/search.html,Returning Visitor,google / organic,Galba,2.973684210526316,100.0,38,642.0
+2012-02-19,Argentina,en-us,/portal/search.html,Returning Visitor,google / organic,viollet dictionnaire architecture,1.9736842105263157,100.0,38,377.0
+2012-02-19,Germany,de-de,/portal/search.html,Returning Visitor,google / organic,piesni,11.921052631578947,100.0,38,5473.0
+2012-02-15,Austria,de,/portal/record/03486/B824734E2F139D9E5E17386CE78D3C5FC60EC4B8.html,Returning Visitor,google / organic,don juan d'austria,2.973684210526316,100.0,38,3171.0
+2012-02-12,Slovenia,en,/portal/record/92034/32F407F35B77962E40746BACBB4EA0B3F10D5FBA.html,Returning Visitor,carousel / portal,sprookjes OR fairy tales OR grimm OR Perrault OR 'Contes des fees' OR 'basn' OR 'fiaba',1.5066666666666666,50.66666666666667,75,46125.0
+2012-02-12,Spain,es-es,/portal/search.html,Returning Visitor,my.xmarks.com / referral,santillana del mar,2.973684210526316,100.0,38,340.0
+2012-01-26,France,fr,/portal/search.html,Returning Visitor,google / organic,plan seminarios nobles,2.973684210526316,100.0,38,1283.0

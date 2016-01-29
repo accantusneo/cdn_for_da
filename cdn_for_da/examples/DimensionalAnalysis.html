@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TS Design v3</title>
+    <link rel="stylesheet" type="text/css" href="/lib/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../lib/css/bootstrap-switch.min.css">
+    <link rel="stylesheet" type="text/css" href="../src/css/modal.css">
+    <link rel="stylesheet" type="text/css" href="../src/css/style-guide.css">
+    <link rel="stylesheet" type="text/css" href="../src/css/timeseries.css">
+    <link rel="stylesheet" type="text/css" href="../src/css/modal.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+      .show {
+        display: block !important;
+      }
+
+      .comcharts-TS-sidebar-content {
+        display: none;
+      }
+
+      .comcharts-TS-dashboard {
+        margin-top: 10px;
+      }
+
+      .comcharts-TS-suggestions-div-select-dashboard {
+        margin-top: 10px;
+      }
+
+      .comcharts-TS-dashboards-dropdown {
+        width: 30%;
+      }
+    </style>
+    <link rel="stylesheet" type="text/css" href="../src/css/style-guide-v3.css">
+</head>
+<body>
+    <div id="chart1" style="width:100%;"></div>
+  <!--  <div id="side-bar-menu" style="width:100%;"></div>-->
+    <button id="dimensional_analysis_button">Dimensional Analysis</button>
+
+    <script type="text/javascript" src="../lib/js/d3.min.js"></script>
+    <script type="text/javascript" src="../lib/js/crossfilter.js"></script>
+    <script type="text/javascript" src="../lib/js/papaparser.js"></script>
+    <script type="text/javascript" src="../lib/js/jquery.js"></script>
+    <script type="text/javascript" src="../lib/js/moment.min.js"></script>
+    <script type="text/javascript" src="../lib/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../lib/js/bootstrap-switch.min.js"></script>
+    <script type="text/javascript" src="../lib/js/active-query.1.0.0.min.js"></script>
+    <script type="text/javascript" src="../lib/js/activequeryhelpers.1.0.0.min.js"></script>
+
+    <script type="text/javascript" src="../src/js/chart/global_objects.js"></script>
+    <script type="text/javascript" src="../src/js/chart/mediator.js"></script>
+    <script type="text/javascript" src="../src/js/chart/utility.js"></script>
+    <script type="text/javascript" src="../src/js/chart/errors.js"></script>
+
+    <script type="text/javascript" src="../src/js/chart/api.js"></script>
+
+    <script type="text/javascript" src="../src/js/data/dataquery.js"></script>
+    <script type="text/javascript" src="../src/js/data/data_manipulation.js"></script>
+    <script type="text/javascript" src="../src/js/data/get_data.js"></script>
+    <script type="text/javascript" src="../src/js/data/number_format.js"></script>
+
+    <script type="text/javascript" src="../src/js/chart/date_format.js"></script>
+
+    <script type="text/javascript" src="../src/js/chart/config_validation.js"></script>
+    <script type="text/javascript" src="../src/js/chart/caption_subCaption.js"></script>
+    <script type="text/javascript" src="../src/js/chart/svg.js"></script>
+    <script type="text/javascript" src="../src/js/chart/x_axis.js"></script>
+    <script type="text/javascript" src="../src/js/chart/y_axis.js"></script>
+    <script type="text/javascript" src="../src/js/chart/crosshair.js"></script>
+    <script type="text/javascript" src="../../src/js/chart/column_chart_ordinal.js"></script>
+    <script type="text/javascript" src="../src/js/view/modal.js"></script>
+    <script type="text/javascript" src="../src/js/chart/dimensional_analysis.js"></script>
+    <script type="text/javascript" src="../src/js/view/timeseries-dom.js"></script>
+
+    <script type="text/javascript">
+      var options = {
+        width: 400,
+        height: 500,
+        data: "../data/weather.csv",
+        dataFormat: "csv",
+        dataSource: "",
+        dataName: "Weather.csv",
+        dataDescription: "This file contains weather data with Surface Pressure, Precipitation, Humidity, Ozone and Temperature",
+        selector: "chart1",
+        showCaption: true,
+        caption: "Views across time",
+        "dateColumnName": "Date",
+        "metricsColumnName": ["Surface Pressure","Page 2"]
+      };
+
+      document.getElementById("dimensional_analysis_button").onclick = function() {
+        seeDimensionalAnalysis(options);
+      };
+    </script>
+</body>
+</html>
